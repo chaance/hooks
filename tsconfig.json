@@ -18,6 +18,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./"
   },
-  "include": ["./ts/**/*"],
+  "include": ["./src/ts/**/*"],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./ts/"
+    "doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./src/ts/"
   },
   "devDependencies": {
     "@types/json2mq": "^0.2.0",
