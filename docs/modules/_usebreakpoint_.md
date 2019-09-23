@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useBreakpoint"](_usebreakpoint_.md)
+[Globals](../globals.md) › ["useBreakpoint"](_usebreakpoint_.md)
 
 # External module: "useBreakpoint"
 

@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useUpdateEffect"](_useupdateeffect_.md)
+[Globals](../globals.md) › ["useUpdateEffect"](_useupdateeffect_.md)
 
 # External module: "useUpdateEffect"
 

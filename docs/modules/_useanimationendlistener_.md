@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useAnimationEndListener"](_useanimationendlistener_.md)
+[Globals](../globals.md) › ["useAnimationEndListener"](_useanimationendlistener_.md)
 
 # External module: "useAnimationEndListener"
 

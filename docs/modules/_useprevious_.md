@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["usePrevious"](_useprevious_.md)
+[Globals](../globals.md) › ["usePrevious"](_useprevious_.md)
 
 # External module: "usePrevious"
 

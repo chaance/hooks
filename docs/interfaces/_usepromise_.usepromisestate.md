@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["usePromise"](../modules/_usepromise_.md) › [UsePromiseState](_usepromise_.usepromisestate.md)
+[Globals](../globals.md) › ["usePromise"](../modules/_usepromise_.md) › [UsePromiseState](_usepromise_.usepromisestate.md)
 
 # Interface: UsePromiseState
 

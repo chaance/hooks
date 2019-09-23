@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useScrollPosition"](_usescrollposition_.md)
+[Globals](../globals.md) › ["useScrollPosition"](_usescrollposition_.md)
 
 # External module: "useScrollPosition"
 

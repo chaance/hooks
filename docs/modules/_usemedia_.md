@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useMedia"](_usemedia_.md)
+[Globals](../globals.md) › ["useMedia"](_usemedia_.md)
 
 # External module: "useMedia"
 

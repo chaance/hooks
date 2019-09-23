@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useStateWithHistory"](_usestatewithhistory_.md)
+[Globals](../globals.md) › ["useStateWithHistory"](_usestatewithhistory_.md)
 
 # External module: "useStateWithHistory"
 

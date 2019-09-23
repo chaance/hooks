@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useForceUpdate"](_useforceupdate_.md)
+[Globals](../globals.md) › ["useForceUpdate"](_useforceupdate_.md)
 
 # External module: "useForceUpdate"
 

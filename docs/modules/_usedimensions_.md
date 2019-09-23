@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useDimensions"](_usedimensions_.md)
+[Globals](../globals.md) › ["useDimensions"](_usedimensions_.md)
 
 # External module: "useDimensions"
 

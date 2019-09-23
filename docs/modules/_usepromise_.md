@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["usePromise"](_usepromise_.md)
+[Globals](../globals.md) › ["usePromise"](_usepromise_.md)
 
 # External module: "usePromise"
 

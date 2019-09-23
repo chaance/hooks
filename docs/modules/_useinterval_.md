@@ -1,4 +1,4 @@
-[undefined](../README.md) › [Globals](../globals.md) › ["useInterval"](_useinterval_.md)
+[Globals](../globals.md) › ["useInterval"](_useinterval_.md)
 
 # External module: "useInterval"
 
