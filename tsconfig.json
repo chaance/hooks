@@ -6,18 +6,24 @@
     "strict": true,
     "allowJs": true,
     "checkJs": false,
-    "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "module": "commonjs",
-    "target": "esnext",
+    "module": "esnext",
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "importHelpers": true,
+    "declaration": true,
+    "rootDir": "./src",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    }
   },
-  "include": ["./src/ts/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src", "test/*", "types"]
 }

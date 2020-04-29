@@ -2,4 +2,6 @@
 logs
 *.log
 node_modules
+.cache
+dist
 /haters

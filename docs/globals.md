@@ -1,17 +1,18 @@
-[Globals](globals.md)
+[@chancestrickland/hooks](README.md) › [Globals](globals.md)
 
-### External modules
+# @chancestrickland/hooks
+
+## Index
+
+### Modules
 
 * ["index"](modules/_index_.md)
-* ["useAnimationEndListener"](modules/_useanimationendlistener_.md)
-* ["useBreakpoint"](modules/_usebreakpoint_.md)
-* ["useDimensions"](modules/_usedimensions_.md)
-* ["useForceUpdate"](modules/_useforceupdate_.md)
-* ["useId"](modules/_useid_.md)
-* ["useInterval"](modules/_useinterval_.md)
-* ["useMedia"](modules/_usemedia_.md)
-* ["usePrevious"](modules/_useprevious_.md)
-* ["usePromise"](modules/_usepromise_.md)
-* ["useScrollPosition"](modules/_usescrollposition_.md)
-* ["useStateWithHistory"](modules/_usestatewithhistory_.md)
-* ["useUpdateEffect"](modules/_useupdateeffect_.md)
+* ["use-event-listener"](modules/_use_event_listener_.md)
+* ["use-force-update"](modules/_use_force_update_.md)
+* ["use-interval"](modules/_use_interval_.md)
+* ["use-media"](modules/_use_media_.md)
+* ["use-previous"](modules/_use_previous_.md)
+* ["use-promise"](modules/_use_promise_.md)
+* ["use-state-with-history"](modules/_use_state_with_history_.md)
+* ["use-timeout"](modules/_use_timeout_.md)
+* ["use-update-effect"](modules/_use_update_effect_.md)

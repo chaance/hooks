@@ -2,15 +2,16 @@
 
 Handy React hooks I find myself using regularly.
 
-* ["useAnimationEndListener"](docs/modules/_useanimationendlistener_.md)
-* ["useBreakpoint"](docs/modules/_usebreakpoint_.md)
-* ["useDimensions"](docs/modules/_usedimensions_.md)
-* ["useForceUpdate"](docs/modules/_useforceupdate_.md)
-* ["useId"](docs/modules/_useid_.md)
-* ["useInterval"](docs/modules/_useinterval_.md)
-* ["useMedia"](docs/modules/_usemedia_.md)
-* ["usePrevious"](docs/modules/_useprevious_.md)
-* ["usePromise"](docs/modules/_usepromise_.md)
-* ["useScrollPosition"](docs/modules/_usescrollposition_.md)
-* ["useStateWithHistory"](docs/modules/_usestatewithhistory_.md)
-* ["useUpdateEffect"](docs/modules/_useupdateeffect_.md)
+```sh
+yarn add @chancestrickland/hooks
+```
+
+* ["useEventListener"](docs/modules/_use_event_listener_.md)
+* ["useForceUpdate"](docs/modules/_use_force_update_.md)
+* ["useInterval"](docs/modules/_use_interval_.md)
+* ["useMedia"](docs/modules/_use_media_.md)
+* ["usePrevious"](docs/modules/_use_previous_.md)
+* ["usePromise"](docs/modules/_use_promise_.md)
+* ["useStateWithHistory"](docs/modules/_use_state_with_history_.md)
+* ["useTimeout"](docs/modules/_use_timeout_.md)
+* ["useUpdateEffect"](docs/modules/_use_update_effect_.md)
