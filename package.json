@@ -1,6 +1,6 @@
 {
   "name": "@chancestrickland/hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Chance Strickland <hi@chancedigital.io>",
   "module": "dist/hooks.esm.js",
   "files": [
