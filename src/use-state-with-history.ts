@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 
-export function useStateWithHistory<T>(defaultValue: T) {
+export function useStateWithHistory<ValueType>(defaultValue: ValueType) {
   const history = useRef([defaultValue]);
   const [index, setIndex] = useState(0);
 
@@ -12,7 +12,7 @@ export function useStateWithHistory<T>(defaultValue: T) {
     setIndex((i) => (i < history.current.length - 1 ? i + 1 : i));
   }, []);
 
-  const setValue = useCallback(function setValue(newValue: T) {
+  const setValue = useCallback(function setValue(newValue: ValueType) {
     history.current.push(newValue);
     setIndex((i) => i + 1);
   }, []);

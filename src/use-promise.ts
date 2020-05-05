@@ -1,27 +1,29 @@
 import { useReducer, useEffect } from 'react';
 
-enum PromiseActionTypes {
+export enum PromiseStates {
   Loading = 0,
   Resolved = 1,
   Error = 2,
 }
 
-export function usePromise<T = any, E = any>(promise: () => Promise<T>) {
+export function usePromise<ResolvedType = any, ErrorType = any>(
+  promise: () => Promise<ResolvedType>
+) {
   const [state, dispatch] = useReducer(
     (
-      state: PromiseState<T, E>,
-      action: PromiseActions<T, E>
-    ): PromiseState<T, E> => {
+      state: PromiseState<ResolvedType, ErrorType>,
+      action: PromiseActions<ResolvedType, ErrorType>
+    ): PromiseState<ResolvedType, ErrorType> => {
       switch (action.type) {
-        case PromiseActionTypes.Loading:
+        case PromiseStates.Loading:
           return { ...state, loading: true };
-        case PromiseActionTypes.Resolved:
+        case PromiseStates.Resolved:
           return {
             loading: false,
             response: action.response,
             error: null,
           };
-        case PromiseActionTypes.Error:
+        case PromiseStates.Error:
           return {
             loading: false,
             response: null,
@@ -40,14 +42,14 @@ export function usePromise<T = any, E = any>(promise: () => Promise<T>) {
 
   useEffect(() => {
     let isCurrent = true;
-    dispatch({ type: PromiseActionTypes.Loading });
+    dispatch({ type: PromiseStates.Loading });
     promise()
       .then((response) => {
         if (!isCurrent) return;
-        dispatch({ type: PromiseActionTypes.Resolved, response });
+        dispatch({ type: PromiseStates.Resolved, response });
       })
-      .catch((error) => {
-        dispatch({ type: PromiseActionTypes.Error, error });
+      .catch((error: ErrorType) => {
+        dispatch({ type: PromiseStates.Error, error });
       });
     return () => {
       isCurrent = false;
@@ -59,13 +61,13 @@ export function usePromise<T = any, E = any>(promise: () => Promise<T>) {
 
 export default usePromise;
 
-type PromiseState<T, E> = {
+type PromiseState<ResolvedType, ErrorType> = {
   loading: boolean;
-  response: null | T;
-  error: null | E;
+  response: null | ResolvedType;
+  error: null | ErrorType;
 };
 
-type PromiseActions<T, E> =
-  | { type: PromiseActionTypes.Loading }
-  | { type: PromiseActionTypes.Resolved; response: T }
-  | { type: PromiseActionTypes.Error; error: E };
+type PromiseActions<ResolvedType, ErrorType> =
+  | { type: PromiseStates.Loading }
+  | { type: PromiseStates.Resolved; response: ResolvedType }
+  | { type: PromiseStates.Error; error: ErrorType };
