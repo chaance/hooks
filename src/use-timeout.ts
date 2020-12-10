@@ -1,22 +1,19 @@
-import { useRef, useEffect } from 'react';
+import * as React from 'react';
+import { useStableCallback } from './use-stable-callback';
 
 export function useTimeout(callback: () => void, delay: number | null) {
-  const savedCallback = useRef<typeof callback>();
+  const stableCallback = useStableCallback(callback);
 
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     function tick() {
-      savedCallback.current?.();
+      stableCallback();
     }
-    if (delay !== null) {
+    if (delay != null) {
       const id = window.setTimeout(tick, delay);
       return () => window.clearTimeout(id);
     }
     return;
-  }, [delay]);
+  }, [delay, stableCallback]);
 }
 
 export default useTimeout;

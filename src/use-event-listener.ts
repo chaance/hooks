@@ -1,43 +1,36 @@
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import * as React from 'react';
+import { useStableCallback } from './use-stable-callback';
 
-function createUseEventListener(
-  effect: (
-    effect: React.EffectCallback,
-    deps?: React.DependencyList | undefined
-  ) => void
-) {
+function createUseEventListener(effect: typeof React.useEffect) {
   return function <
-    ElementType extends Window | Document | Element,
+    ElementType extends (Window & typeof globalThis) | Document | Element,
     ListenerType extends keyof EventMap
   >(
     eventName: ListenerType,
     callback: (event: EventMap[ListenerType]) => void,
     // @ts-ignore
-    element: ElementType = global
+    element: ElementType = window
   ) {
-    const savedCallback = useRef<typeof callback>();
+    const stableCallback = useStableCallback(callback, effect);
     effect(() => {
-      savedCallback.current = callback;
-    }, [callback, element]);
-
-    effect(() => {
-      if (!(element && element.addEventListener)) {
-        return;
-      }
-      element.addEventListener(eventName, listener as any);
+      element?.addEventListener?.(eventName, listener as any);
       return () => {
-        element.removeEventListener(eventName, listener as any);
+        element?.removeEventListener?.(eventName, listener as any);
       };
       function listener(event: EventMap[ListenerType]) {
-        savedCallback.current?.(event);
+        stableCallback(event);
       }
-    }, [element, eventName]);
+    }, [element, eventName, stableCallback]);
   };
 }
 
-export const useEventListener = createUseEventListener(useEffect);
-export const useLayoutEventListener = createUseEventListener(useLayoutEffect);
-
-export default useEventListener;
-
+export const useEventListener = createUseEventListener(React.useEffect);
+export const useEventListenerLayoutEffect = createUseEventListener(
+  React.useLayoutEffect
+);
+/**
+ * @alias useEventListenerLayoutEffect
+ * @deprecated
+ */
+export const useLayoutEventListener = useEventListenerLayoutEffect
 export type EventMap = ElementEventMap & DocumentEventMap & WindowEventMap;

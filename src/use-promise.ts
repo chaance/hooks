@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from 'react';
+import * as React from 'react';
 
 export enum PromiseStates {
   Loading = 0,
@@ -9,7 +9,7 @@ export enum PromiseStates {
 export function usePromise<ResolvedType = any, ErrorType = any>(
   promise: () => Promise<ResolvedType>
 ) {
-  const [state, dispatch] = useReducer(
+  const [state, dispatch] = React.useReducer(
     (
       state: PromiseState<ResolvedType, ErrorType>,
       action: PromiseActions<ResolvedType, ErrorType>
@@ -40,7 +40,7 @@ export function usePromise<ResolvedType = any, ErrorType = any>(
     }
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     let isCurrent = true;
     dispatch({ type: PromiseStates.Loading });
     promise()

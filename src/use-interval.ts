@@ -1,22 +1,19 @@
-import { useRef, useEffect } from 'react';
+import * as React from 'react';
+import { useStableCallback } from './use-stable-callback';
 
 export function useInterval(callback: () => void, interval: number | null) {
-  const savedCallback = useRef<typeof callback>();
+  const stableCallback = useStableCallback(callback);
 
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
+  React.useEffect(() => {
     function tick() {
-      savedCallback.current?.();
+      stableCallback();
     }
     if (interval !== null) {
       const id = setInterval(tick, interval);
       return () => clearInterval(id);
     }
     return;
-  }, [interval]);
+  }, [interval, stableCallback]);
 }
 
 export default useInterval;

@@ -1,17 +1,25 @@
+**[@chance/hooks](README.md)**
+
+> [Globals](globals.md)
+
 # React Hooks ↪️
 
 Handy React hooks I find myself using regularly.
 
 ```sh
-yarn add @chancestrickland/hooks
+yarn add @chance/hooks
 ```
 
-* ["useEventListener"](docs/modules/_use_event_listener_.md)
-* ["useForceUpdate"](docs/modules/_use_force_update_.md)
-* ["useInterval"](docs/modules/_use_interval_.md)
-* ["useMedia"](docs/modules/_use_media_.md)
-* ["usePrevious"](docs/modules/_use_previous_.md)
-* ["usePromise"](docs/modules/_use_promise_.md)
-* ["useStateWithHistory"](docs/modules/_use_state_with_history_.md)
-* ["useTimeout"](docs/modules/_use_timeout_.md)
-* ["useUpdateEffect"](docs/modules/_use_update_effect_.md)
+* ["use-event-listener"](docs/modules/_src_use_event_listener_.md)
+* ["use-force-update"](docs/modules/_src_use_force_update_.md)
+* ["use-interval"](docs/modules/_src_use_interval_.md)
+* ["use-isomorphic-layout-effect"](docs/modules/_src_use_isomorphic_layout_effect_.md)
+* ["use-match-media"](docs/modules/_src_use_match_media_.md)
+* ["use-media"](docs/modules/_src_use_media_.md)
+* ["use-prefers-reduced-motion"](docs/modules/_src_use_prefers_reduced_motion_.md)
+* ["use-previous"](docs/modules/_src_use_previous_.md)
+* ["use-promise"](docs/modules/_src_use_promise_.md)
+* ["use-stable-callback"](docs/modules/_src_use_stable_callback_.md)
+* ["use-state-with-history"](docs/modules/_src_use_state_with_history_.md)
+* ["use-timeout"](docs/modules/_src_use_timeout_.md)
+* ["use-update-effect"](docs/modules/_src_use_update_effect_.md)

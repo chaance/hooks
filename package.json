@@ -1,6 +1,6 @@
 {
-  "name": "@chancestrickland/hooks",
-  "version": "0.1.1",
+  "name": "@chance/hooks",
+  "version": "0.2.0",
   "author": "Chance Strickland <hi@chancedigital.io>",
   "module": "dist/hooks.esm.js",
   "files": [
@@ -22,10 +22,10 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "prepare": "tsdx build",
-    "doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./src/"
+    "doc": "typedoc --mode modules --plugin typedoc-plugin-markdown --out ./docs/ ./src/"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16.8"
   },
   "prettier": {
     "singleQuote": true
@@ -39,21 +39,21 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/dom": "^7.2.2",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/react": "^10.0.3",
+    "@testing-library/dom": "^7.28.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
     "@types/json2mq": "^0.2.0",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.7",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tsdx": "^0.13.2",
-    "tslib": "^1.11.1",
-    "typedoc": "^0.17.6",
-    "typedoc-plugin-markdown": "^2.2.17",
-    "typescript": "^3.8.3"
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "husky": "^4.3.5",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.1.0",
+    "typescript": "4.0.2"
   },
   "dependencies": {
     "json2mq": "^0.2.0"
