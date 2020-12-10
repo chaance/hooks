@@ -2,6 +2,10 @@
   "name": "@chance/hooks",
   "version": "0.2.0",
   "author": "Chance Strickland <hi@chancedigital.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaance/hooks"
+  },
   "module": "dist/hooks.esm.js",
   "files": [
     "README.md",
