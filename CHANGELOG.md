@@ -13,3 +13,7 @@
 - Renamed `useMedia` to `useMatchMedia` and `useLayoutMedia` to `useMatchMediaLayoutEffect`
 - Renamed `useLayoutEventListener` to `useEventListenerLayoutEffect`
 - Added `useStableCallback`, `usePrefersReducedMotion`, `useIsomorphicLayoutEffect`
+
+## v0.2.1
+
+- `useEventListener`: Add support for options parameter
