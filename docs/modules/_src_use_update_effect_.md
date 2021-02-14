@@ -21,7 +21,7 @@
 
 • `Const` **useUpdateEffect**: useUpdateEffectHook = createUseUpdateEffect(React.useEffect)
 
-*Defined in [src/use-update-effect.ts:20](https://github.com/chaance/hooks/blob/1abfd2e/src/use-update-effect.ts#L20)*
+*Defined in [src/use-update-effect.ts:20](https://github.com/chaance/hooks/blob/8a20513/src/use-update-effect.ts#L20)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • `Const` **useUpdateLayoutEffect**: useUpdateEffectHook = createUseUpdateEffect( React.useLayoutEffect)
 
-*Defined in [src/use-update-effect.ts:21](https://github.com/chaance/hooks/blob/1abfd2e/src/use-update-effect.ts#L21)*
+*Defined in [src/use-update-effect.ts:21](https://github.com/chaance/hooks/blob/8a20513/src/use-update-effect.ts#L21)*
 
 ## Functions
 
@@ -37,7 +37,7 @@ ___
 
 ▸ **createUseUpdateEffect**(`effect`: *typeof* useEffect): useUpdateEffectHook
 
-*Defined in [src/use-update-effect.ts:3](https://github.com/chaance/hooks/blob/1abfd2e/src/use-update-effect.ts#L3)*
+*Defined in [src/use-update-effect.ts:3](https://github.com/chaance/hooks/blob/8a20513/src/use-update-effect.ts#L3)*
 
 #### Parameters:
 

@@ -16,7 +16,7 @@
 
 ▸ **useStableCallback**<T\>(`callback`: T, `effect?`: *typeof* useEffect): T
 
-*Defined in src/use-stable-callback.ts:3*
+*Defined in [src/use-stable-callback.ts:3](https://github.com/chaance/hooks/blob/8a20513/src/use-stable-callback.ts#L3)*
 
 #### Type parameters:
 

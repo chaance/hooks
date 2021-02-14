@@ -21,7 +21,7 @@
 
 • `Const` **PREFERS\_REDUCED\_MOTION\_NO\_PREF\_QUERY**: \"(prefers-reduced-motion: no-preference)\" = "(prefers-reduced-motion: no-preference)"
 
-*Defined in src/use-prefers-reduced-motion.ts:3*
+*Defined in [src/use-prefers-reduced-motion.ts:3](https://github.com/chaance/hooks/blob/8a20513/src/use-prefers-reduced-motion.ts#L3)*
 
 ## Functions
 
@@ -29,7 +29,7 @@
 
 ▸ **onPrefersReducedMotionChange**(`callback`: (prefers: boolean) => any, `globalWindow`: Window & *typeof* globalThis): (Anonymous function)
 
-*Defined in src/use-prefers-reduced-motion.ts:17*
+*Defined in [src/use-prefers-reduced-motion.ts:17](https://github.com/chaance/hooks/blob/8a20513/src/use-prefers-reduced-motion.ts#L17)*
 
 #### Parameters:
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **usePrefersReducedMotion**(`nodeRef`: RefObject<Element\>): boolean
 
-*Defined in src/use-prefers-reduced-motion.ts:6*
+*Defined in [src/use-prefers-reduced-motion.ts:6](https://github.com/chaance/hooks/blob/8a20513/src/use-prefers-reduced-motion.ts#L6)*
 
 #### Parameters:
 

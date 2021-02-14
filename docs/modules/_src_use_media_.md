@@ -17,7 +17,7 @@
 
 • `Const` **useLayoutMedia**: (Anonymous function) = useMatchMediaLayoutEffect
 
-*Defined in [src/use-media.ts:17](https://github.com/chaance/hooks/blob/1abfd2e/src/use-media.ts#L17)*
+*Defined in [src/use-media.ts:17](https://github.com/chaance/hooks/blob/8a20513/src/use-media.ts#L17)*
 
 **`alias`** useMatchMediaLayoutEffect
 
@@ -29,7 +29,7 @@ ___
 
 • `Const` **useMedia**: (Anonymous function) = useMatchMedia
 
-*Defined in [src/use-media.ts:11](https://github.com/chaance/hooks/blob/1abfd2e/src/use-media.ts#L11)*
+*Defined in [src/use-media.ts:11](https://github.com/chaance/hooks/blob/8a20513/src/use-media.ts#L11)*
 
 **`alias`** useMatchMedia
 

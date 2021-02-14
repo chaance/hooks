@@ -16,7 +16,7 @@
 
 ▸ **useStateWithHistory**<ValueType\>(`defaultValue`: ValueType): (ValueType \| setValue)[]
 
-*Defined in [src/use-state-with-history.ts:3](https://github.com/chaance/hooks/blob/1abfd2e/src/use-state-with-history.ts#L3)*
+*Defined in [src/use-state-with-history.ts:3](https://github.com/chaance/hooks/blob/8a20513/src/use-state-with-history.ts#L3)*
 
 #### Type parameters:
 

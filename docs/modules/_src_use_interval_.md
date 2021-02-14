@@ -16,7 +16,7 @@
 
 ▸ **useInterval**(`callback`: () => void, `interval`: number \| null): void
 
-*Defined in [src/use-interval.ts:4](https://github.com/chaance/hooks/blob/1abfd2e/src/use-interval.ts#L4)*
+*Defined in [src/use-interval.ts:4](https://github.com/chaance/hooks/blob/8a20513/src/use-interval.ts#L4)*
 
 #### Parameters:
 

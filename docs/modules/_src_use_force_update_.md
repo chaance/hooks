@@ -16,6 +16,6 @@
 
 ▸ **useForceUpdate**(): (Anonymous function)
 
-*Defined in [src/use-force-update.ts:3](https://github.com/chaance/hooks/blob/1abfd2e/src/use-force-update.ts#L3)*
+*Defined in [src/use-force-update.ts:3](https://github.com/chaance/hooks/blob/8a20513/src/use-force-update.ts#L3)*
 
 **Returns:** (Anonymous function)

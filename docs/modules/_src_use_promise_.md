@@ -25,7 +25,7 @@
 
 Ƭ  **PromiseActions**<ResolvedType, ErrorType\>: { type: [Loading](../enums/_src_use_promise_.promisestates.md#loading)  } \| { response: ResolvedType ; type: [Resolved](../enums/_src_use_promise_.promisestates.md#resolved)  } \| { error: ErrorType ; type: [Error](../enums/_src_use_promise_.promisestates.md#error)  }
 
-*Defined in [src/use-promise.ts:70](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L70)*
+*Defined in [src/use-promise.ts:70](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L70)*
 
 #### Type parameters:
 
@@ -40,7 +40,7 @@ ___
 
 Ƭ  **PromiseState**<ResolvedType, ErrorType\>: { error: null \| ErrorType ; loading: boolean ; response: null \| ResolvedType  }
 
-*Defined in [src/use-promise.ts:64](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L64)*
+*Defined in [src/use-promise.ts:64](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L64)*
 
 #### Type parameters:
 
@@ -63,7 +63,7 @@ Name | Type |
 
 ▸ **usePromise**<ResolvedType, ErrorType\>(`promise`: () => Promise<ResolvedType\>): [null \| ResolvedType, boolean, null \| ErrorType]
 
-*Defined in [src/use-promise.ts:9](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L9)*
+*Defined in [src/use-promise.ts:9](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L9)*
 
 #### Type parameters:
 

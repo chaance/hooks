@@ -18,7 +18,7 @@
 
 •  **Error**:  = 2
 
-*Defined in [src/use-promise.ts:6](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L6)*
+*Defined in [src/use-promise.ts:6](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L6)*
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 •  **Loading**:  = 0
 
-*Defined in [src/use-promise.ts:4](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L4)*
+*Defined in [src/use-promise.ts:4](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L4)*
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 •  **Resolved**:  = 1
 
-*Defined in [src/use-promise.ts:5](https://github.com/chaance/hooks/blob/1abfd2e/src/use-promise.ts#L5)*
+*Defined in [src/use-promise.ts:5](https://github.com/chaance/hooks/blob/8a20513/src/use-promise.ts#L5)*

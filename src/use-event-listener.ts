@@ -9,15 +9,19 @@ function createUseEventListener(effect: typeof React.useEffect) {
     eventName: ListenerType,
     callback: (event: EventMap[ListenerType]) => void,
     // @ts-ignore
-    element: ElementType = window
+    element: ElementType = global,
+    options: AddEventListenerOptions = {}
   ) {
+    const { capture, passive, once } = options;
     const stableCallback = useStableCallback(callback, effect);
     effect(() => {
-      element?.addEventListener?.(eventName, listener as any);
+      const options = { capture, passive, once };
+      element.addEventListener(eventName, listener, options);
       return () => {
-        element?.removeEventListener?.(eventName, listener as any);
+        element.removeEventListener(eventName, listener, options);
       };
-      function listener(event: EventMap[ListenerType]) {
+
+      function listener(event: any) {
         stableCallback(event);
       }
     }, [element, eventName, stableCallback]);
@@ -28,9 +32,10 @@ export const useEventListener = createUseEventListener(React.useEffect);
 export const useEventListenerLayoutEffect = createUseEventListener(
   React.useLayoutEffect
 );
+
 /**
  * @alias useEventListenerLayoutEffect
  * @deprecated
  */
-export const useLayoutEventListener = useEventListenerLayoutEffect
+export const useLayoutEventListener = useEventListenerLayoutEffect;
 export type EventMap = ElementEventMap & DocumentEventMap & WindowEventMap;

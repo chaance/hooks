@@ -26,7 +26,7 @@
 
 Ƭ  **EventMap**: ElementEventMap & DocumentEventMap & WindowEventMap
 
-*Defined in [src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/1abfd2e/src/use-event-listener.ts#L36)*
+*Defined in [src/use-event-listener.ts:41](https://github.com/chaance/hooks/blob/8a20513/src/use-event-listener.ts#L41)*
 
 ## Variables
 
@@ -34,7 +34,7 @@
 
 • `Const` **useEventListener**: (Anonymous function) = createUseEventListener(React.useEffect)
 
-*Defined in [src/use-event-listener.ts:27](https://github.com/chaance/hooks/blob/1abfd2e/src/use-event-listener.ts#L27)*
+*Defined in [src/use-event-listener.ts:31](https://github.com/chaance/hooks/blob/8a20513/src/use-event-listener.ts#L31)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • `Const` **useEventListenerLayoutEffect**: (Anonymous function) = createUseEventListener( React.useLayoutEffect)
 
-*Defined in [src/use-event-listener.ts:28](https://github.com/chaance/hooks/blob/1abfd2e/src/use-event-listener.ts#L28)*
+*Defined in [src/use-event-listener.ts:32](https://github.com/chaance/hooks/blob/8a20513/src/use-event-listener.ts#L32)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • `Const` **useLayoutEventListener**: (Anonymous function) = useEventListenerLayoutEffect
 
-*Defined in [src/use-event-listener.ts:35](https://github.com/chaance/hooks/blob/1abfd2e/src/use-event-listener.ts#L35)*
+*Defined in [src/use-event-listener.ts:40](https://github.com/chaance/hooks/blob/8a20513/src/use-event-listener.ts#L40)*
 
 **`alias`** useEventListenerLayoutEffect
 
@@ -62,7 +62,7 @@ ___
 
 ▸ **createUseEventListener**(`effect`: *typeof* useEffect): (Anonymous function)
 
-*Defined in [src/use-event-listener.ts:4](https://github.com/chaance/hooks/blob/1abfd2e/src/use-event-listener.ts#L4)*
+*Defined in [src/use-event-listener.ts:4](https://github.com/chaance/hooks/blob/8a20513/src/use-event-listener.ts#L4)*
 
 #### Parameters:
 

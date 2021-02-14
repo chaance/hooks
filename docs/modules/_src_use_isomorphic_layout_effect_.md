@@ -21,7 +21,7 @@
 
 • `Const` **useIsomorphicLayoutEffect**: useLayoutEffect = canUseDOM() ? React.useLayoutEffect : noop
 
-*Defined in src/use-isomorphic-layout-effect.ts:6*
+*Defined in [src/use-isomorphic-layout-effect.ts:6](https://github.com/chaance/hooks/blob/8a20513/src/use-isomorphic-layout-effect.ts#L6)*
 
 See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
@@ -31,7 +31,7 @@ See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
 ▸ **canUseDOM**(): boolean
 
-*Defined in src/use-isomorphic-layout-effect.ts:10*
+*Defined in [src/use-isomorphic-layout-effect.ts:10](https://github.com/chaance/hooks/blob/8a20513/src/use-isomorphic-layout-effect.ts#L10)*
 
 **Returns:** boolean
 
@@ -41,6 +41,6 @@ ___
 
 ▸ **noop**(): void
 
-*Defined in src/use-isomorphic-layout-effect.ts:18*
+*Defined in [src/use-isomorphic-layout-effect.ts:18](https://github.com/chaance/hooks/blob/8a20513/src/use-isomorphic-layout-effect.ts#L18)*
 
 **Returns:** void

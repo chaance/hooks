@@ -25,7 +25,7 @@
 
 Ƭ  **QueryObject**: { [property:string]: string \| number \| boolean;  }
 
-*Defined in src/use-match-media.ts:39*
+*Defined in [src/use-match-media.ts:39](https://github.com/chaance/hooks/blob/8a20513/src/use-match-media.ts#L39)*
 
 ## Variables
 
@@ -33,7 +33,7 @@
 
 • `Const` **useMatchMedia**: (Anonymous function) = createUseMatchMedia(React.useEffect)
 
-*Defined in src/use-match-media.ts:34*
+*Defined in [src/use-match-media.ts:34](https://github.com/chaance/hooks/blob/8a20513/src/use-match-media.ts#L34)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • `Const` **useMatchMediaLayoutEffect**: (Anonymous function) = createUseMatchMedia( React.useLayoutEffect)
 
-*Defined in src/use-match-media.ts:35*
+*Defined in [src/use-match-media.ts:35](https://github.com/chaance/hooks/blob/8a20513/src/use-match-media.ts#L35)*
 
 ## Functions
 
@@ -49,7 +49,7 @@ ___
 
 ▸ **createUseMatchMedia**(`effect`: *typeof* useEffect): (Anonymous function)
 
-*Defined in src/use-match-media.ts:4*
+*Defined in [src/use-match-media.ts:4](https://github.com/chaance/hooks/blob/8a20513/src/use-match-media.ts#L4)*
 
 #### Parameters:
 
