@@ -24,10 +24,13 @@
 
 - Simplified build tooling which removed some polyfills for older browsers
 - React v18+ is now a peer dependency
+- `useEventListener` no longer saves the handler in a ref. Consumers should be expected to provide their own memoized callback to prevent unnecessarily adding and removing the listener in every render cycle.
+- `useStableCallback` now updates the callback in `useLayoutEffect` instead of `useEffect` by default
 
 ### Features
 
 - Added `useIsHydrated` hook
+- `useEventListener` now supports `signal` option
 
 ### Bug-fixes
 

@@ -1,8 +1,9 @@
 import * as React from "react";
+import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
 export function useStableCallback<T extends (...args: any[]) => any>(
 	callback: T,
-	effect: typeof React.useEffect = React.useEffect
+	effect: typeof React.useEffect = useLayoutEffect
 ): T {
 	const savedCallback = React.useRef<typeof callback>();
 	effect(() => {

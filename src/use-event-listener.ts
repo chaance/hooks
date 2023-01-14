@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStableCallback } from "./use-stable-callback";
+import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
 function createUseEventListener(effect: typeof React.useEffect) {
 	return function <
@@ -10,28 +10,32 @@ function createUseEventListener(effect: typeof React.useEffect) {
 		callback: (event: EventMap[ListenerType]) => void,
 		// @ts-ignore
 		element: ElementType = global,
-		options: AddEventListenerOptions = {}
+		options?: AddEventListenerOptions
 	) {
-		const { capture, passive, once } = options;
-		const stableCallback = useStableCallback(callback, effect);
+		let {
+			capture,
+			once,
+			// default is inconsistent between browsers
+			// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#specifications
+			passive = false,
+			signal,
+		} = options || {};
 		effect(() => {
-			const options = { capture, passive, once };
-			element.addEventListener(eventName, listener, options);
+			let opts = { capture, passive, once, signal };
+			element.addEventListener(eventName, listener, opts);
 			return () => {
-				element.removeEventListener(eventName, listener, options);
+				element.removeEventListener(eventName, listener, opts);
 			};
-
 			function listener(event: any) {
-				stableCallback(event);
+				callback(event);
 			}
-		}, [element, eventName, stableCallback]);
+		}, [element, eventName, callback, capture, passive, once, signal]);
 	};
 }
 
 export const useEventListener = createUseEventListener(React.useEffect);
-export const useEventListenerLayoutEffect = createUseEventListener(
-	React.useLayoutEffect
-);
+export const useEventListenerLayoutEffect =
+	createUseEventListener(useLayoutEffect);
 
 /**
  * @alias useEventListenerLayoutEffect
