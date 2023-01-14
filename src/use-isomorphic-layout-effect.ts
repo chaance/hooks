@@ -1,18 +1,18 @@
-import * as React from 'react';
+import * as React from "react";
 
 /**
  * See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
  */
 export const useIsomorphicLayoutEffect = canUseDOM()
-  ? React.useLayoutEffect
-  : noop;
+	? React.useLayoutEffect
+	: noop;
 
 function canUseDOM() {
-  return !!(
-    typeof window !== 'undefined' &&
-    window.document &&
-    window.document.createElement
-  );
+	return !!(
+		typeof window !== "undefined" &&
+		window.document &&
+		window.document.createElement
+	);
 }
 
 function noop() {}

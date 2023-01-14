@@ -1,8 +1,5 @@
-import {
-  useMatchMedia,
-  useMatchMediaLayoutEffect,
-  QueryObject,
-} from './use-match-media';
+import type { QueryObject } from "./use-match-media";
+import { useMatchMedia, useMatchMediaLayoutEffect } from "./use-match-media";
 
 /**
  * @alias useMatchMedia
