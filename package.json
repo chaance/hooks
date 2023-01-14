@@ -1,65 +1,67 @@
 {
-  "name": "@chance/hooks",
-  "version": "0.2.1",
-  "author": "Chance Strickland <hi@chancedigital.io>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chaance/hooks"
-  },
-  "module": "dist/hooks.esm.js",
-  "files": [
-    "README.md",
-    "dist",
-    "src"
-  ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "prepare": "tsdx build",
-    "doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./src/"
-  },
-  "peerDependencies": {
-    "react": ">=16.8"
-  },
-  "prettier": {
-    "useTabs": true,
-    "tabWidth": 2
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/setupTests.ts"
-    ]
-  },
-  "devDependencies": {
-    "@testing-library/dom": "^8.1.0",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@types/json2mq": "0.2.0",
-    "@types/react": "^17.0.13",
-    "@types/react-dom": "^17.0.8",
-    "prettier": "^2.3.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "tsdx": "0.14.1",
-    "tslib": "^2.3.0",
-    "typedoc": "0.21.2",
-    "typedoc-plugin-markdown": "^3.10.2",
-    "typescript": "4.3.5"
-  },
-  "dependencies": {
-    "json2mq": "0.2.0"
-  }
+	"name": "@chance/hooks",
+	"version": "0.2.1",
+	"description": "Handy React hooks I use a lot ↪️",
+	"main": "src/index.ts",
+	"scripts": {
+		"build": "tsup",
+		"test": "vitest",
+		"coverage": "vitest run --coverage",
+		"doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./src/"
+	},
+	"author": "Chance Strickland <hi@chance.dev>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chaance/hooks.git"
+	},
+	"license": "MIT",
+	"files": [
+		"dist",
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"devDependencies": {
+		"@testing-library/dom": "^8.19.1",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
+		"@types/json2mq": "0.2.0",
+		"@types/react": "^18.0.26",
+		"@types/react-dom": "^18.0.10",
+		"@types/node": "^18.11.18",
+		"@typescript-eslint/eslint-plugin": "^5.48.1",
+		"@typescript-eslint/parser": "^5.48.1",
+		"@vitest/coverage-c8": "^0.27.1",
+		"eslint": "^8.31.0",
+		"eslint-config-chance": "^2.0.2",
+		"eslint-import-resolver-node": "0.3.7",
+		"eslint-import-resolver-typescript": "^3.5.3",
+		"eslint-plugin-import": "^2.27.4",
+		"eslint-plugin-react": "^7.32.0",
+		"prettier": "^2.8.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"tsup": "^6.5.0",
+		"typedoc": "0.23.24",
+		"typedoc-plugin-markdown": "^3.14.0",
+		"typescript": "^4.9.4",
+		"vite": "^4.0.4",
+		"vitest": "^0.27.1"
+	},
+	"dependencies": {
+		"json2mq": "0.2.0"
+	},
+	"peerDependencies": {
+		"react": ">=18.0",
+		"react-dom": ">=18.0"
+	},
+	"engines": {
+		"node": ">=16"
+	},
+	"publishConfig": {
+		"access": "public",
+		"main": "dist/index.js",
+		"module": "dist/index.mjs",
+		"types": "dist/index.d.ts"
+	}
 }

@@ -1,29 +1,24 @@
 {
-  "compilerOptions": {
-    "noEmit": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "strict": true,
-    "allowJs": true,
-    "checkJs": false,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "module": "esnext",
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./",
-    "importHelpers": true,
-    "declaration": true,
-    "rootDir": "./src",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "paths": {
-      "*": ["src/*", "node_modules/*"]
-    }
-  },
-  "include": ["src", "test/*", "types"]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default",
+	"include": ["."],
+	"exclude": ["node_modules", "dist"],
+	"compilerOptions": {
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"target": "ES2019",
+		"jsx": "react-jsx",
+		"emitDeclarationOnly": true,
+		"declaration": true,
+		"declarationMap": true,
+		"downlevelIteration": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"inlineSources": false,
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true
+	}
 }

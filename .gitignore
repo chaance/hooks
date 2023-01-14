@@ -1,7 +1,6 @@
 .DS_Store
-logs
-*.log
+*.log*
 node_modules
-.cache
-dist
+/coverage
+/dist
 /haters
