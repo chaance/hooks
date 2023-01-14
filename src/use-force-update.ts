@@ -1,6 +1,6 @@
 import * as React from "react";
 
 export function useForceUpdate() {
-	const [value, set] = React.useState(true);
-	return () => set(!value);
+	let [, set] = React.useState(() => Object.create(null));
+	return React.useCallback(() => set(Object.create(null)), []);
 }

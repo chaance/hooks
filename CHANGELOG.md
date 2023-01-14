@@ -28,3 +28,7 @@
 ### Features
 
 - Added `useIsHydrated` hook
+
+### Bug-fixes
+
+- Memoize and stabilize `useForceUpdate` setter
