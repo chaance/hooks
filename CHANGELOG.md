@@ -17,3 +17,14 @@
 ## v0.2.1
 
 - `useEventListener`: Add support for options parameter
+
+## v0.3.0
+
+### Breaking Changes
+
+- Simplified build tooling which removed some polyfills for older browsers
+- React v18+ is now a peer dependency
+
+### Features
+
+- Added `useIsHydrated` hook

@@ -1,6 +1,7 @@
 export * from "./use-event-listener";
 export * from "./use-force-update";
 export * from "./use-interval";
+export * from "./use-is-hydrated";
 export * from "./use-isomorphic-layout-effect";
 export * from "./use-match-media";
 export * from "./use-media";
