@@ -1,29 +1,27 @@
 import * as React from "react";
 
-export enum PromiseStates {
-	Loading = 0,
-	Resolved = 1,
-	Error = 2,
-}
+const LOADING = 0;
+const RESOLVED = 1;
+const ERROR = 2;
 
 export function usePromise<ResolvedType = any, ErrorType = any>(
 	promise: () => Promise<ResolvedType>
 ) {
-	const [state, dispatch] = React.useReducer(
+	let [state, dispatch] = React.useReducer(
 		(
 			state: PromiseState<ResolvedType, ErrorType>,
 			action: PromiseActions<ResolvedType, ErrorType>
 		): PromiseState<ResolvedType, ErrorType> => {
 			switch (action.type) {
-				case PromiseStates.Loading:
+				case LOADING:
 					return { ...state, loading: true };
-				case PromiseStates.Resolved:
+				case RESOLVED:
 					return {
 						loading: false,
 						response: action.response,
 						error: null,
 					};
-				case PromiseStates.Error:
+				case ERROR:
 					return {
 						loading: false,
 						response: null,
@@ -42,14 +40,14 @@ export function usePromise<ResolvedType = any, ErrorType = any>(
 
 	React.useEffect(() => {
 		let isCurrent = true;
-		dispatch({ type: PromiseStates.Loading });
+		dispatch({ type: LOADING });
 		promise()
 			.then((response) => {
 				if (!isCurrent) return;
-				dispatch({ type: PromiseStates.Resolved, response });
+				dispatch({ type: RESOLVED, response });
 			})
 			.catch((error: ErrorType) => {
-				dispatch({ type: PromiseStates.Error, error });
+				dispatch({ type: ERROR, error });
 			});
 		return () => {
 			isCurrent = false;
@@ -59,8 +57,6 @@ export function usePromise<ResolvedType = any, ErrorType = any>(
 	return [state.response, state.loading, state.error] as const;
 }
 
-export default usePromise;
-
 type PromiseState<ResolvedType, ErrorType> = {
 	loading: boolean;
 	response: null | ResolvedType;
@@ -68,6 +64,6 @@ type PromiseState<ResolvedType, ErrorType> = {
 };
 
 type PromiseActions<ResolvedType, ErrorType> =
-	| { type: PromiseStates.Loading }
-	| { type: PromiseStates.Resolved; response: ResolvedType }
-	| { type: PromiseStates.Error; error: ErrorType };
+	| { type: typeof LOADING }
+	| { type: typeof RESOLVED; response: ResolvedType }
+	| { type: typeof ERROR; error: ErrorType };

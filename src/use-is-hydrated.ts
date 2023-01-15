@@ -2,7 +2,7 @@ import * as React from "react";
 
 let isHydrating = true;
 
-export function useHydrated() {
+export function useIsHydrated() {
 	let [isHydrated, setIsHydrated] = React.useState(() => !isHydrating);
 	React.useEffect(() => {
 		isHydrating = false;

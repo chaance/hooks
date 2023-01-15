@@ -4,11 +4,11 @@ const PREFERS_REDUCED_MOTION_NO_PREF_QUERY =
 	"(prefers-reduced-motion: no-preference)";
 
 export function usePrefersReducedMotion(nodeRef: React.RefObject<Element>) {
-	const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
+	let [prefersReducedMotion, setPrefersReducedMotion] = React.useState(false);
 	React.useEffect(() => {
 		return onPrefersReducedMotionChange(
 			setPrefersReducedMotion,
-			(nodeRef.current?.ownerDocument?.defaultView || window) as any
+			nodeRef.current?.ownerDocument?.defaultView || window
 		);
 	}, [nodeRef]);
 	return prefersReducedMotion;
@@ -19,16 +19,16 @@ function onPrefersReducedMotionChange(
 	globalWindow: Window & typeof globalThis
 ) {
 	try {
-		const mediaQueryList = globalWindow.matchMedia(
+		let mediaQueryList = globalWindow.matchMedia(
 			PREFERS_REDUCED_MOTION_NO_PREF_QUERY
 		);
 		mediaQueryList.addEventListener("change", listener);
-		return function () {
+		return () => {
 			mediaQueryList.removeEventListener("change", listener);
 		};
-	} catch (e) {}
-
-	return function () {};
+	} catch (e) {
+		return () => {};
+	}
 
 	function listener(event: MediaQueryListEvent) {
 		callback(!event.matches);

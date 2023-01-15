@@ -1,7 +1,8 @@
 import * as React from "react";
 import json2mq from "json2mq";
+import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
-export function createUseMatchMedia(effect: typeof React.useEffect) {
+export function createUseMatchMedia(useEffect: typeof React.useEffect) {
 	return function (
 		rawQuery: QueryObject | QueryObject[],
 		defaultState = false
@@ -9,7 +10,7 @@ export function createUseMatchMedia(effect: typeof React.useEffect) {
 		let [state, setState] = React.useState(defaultState);
 		let query = json2mq(rawQuery);
 
-		effect(() => {
+		useEffect(() => {
 			let current = true;
 			let mql = window.matchMedia(query);
 			mql.addEventListener("change", handleChange);
@@ -32,9 +33,7 @@ export function createUseMatchMedia(effect: typeof React.useEffect) {
 }
 
 export const useMatchMedia = createUseMatchMedia(React.useEffect);
-export const useMatchMediaLayoutEffect = createUseMatchMedia(
-	React.useLayoutEffect
-);
+export const useMatchMediaLayoutEffect = createUseMatchMedia(useLayoutEffect);
 
 export type QueryObject = {
 	[property: string]: string | number | boolean;

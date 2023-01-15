@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
-function createUseEventListener(effect: typeof React.useEffect) {
+function createUseEventListener(useEffect: typeof React.useEffect) {
 	return function <
 		ElementType extends (Window & typeof globalThis) | Document | Element,
 		ListenerType extends keyof EventMap
@@ -20,7 +20,7 @@ function createUseEventListener(effect: typeof React.useEffect) {
 			passive = false,
 			signal,
 		} = options || {};
-		effect(() => {
+		useEffect(() => {
 			let opts = { capture, passive, once, signal };
 			element.addEventListener(eventName, listener, opts);
 			return () => {

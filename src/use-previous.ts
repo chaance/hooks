@@ -1,5 +1,9 @@
 import * as React from "react";
 
+/**
+ * @deprecated This hook will give you a bad time with concurrent features in
+ * React 18. Do not use, probably.
+ */
 export function usePrevious<ValueType = any>(value: ValueType) {
 	const ref = React.useRef<ValueType | null>(null);
 	React.useEffect(() => {
@@ -7,5 +11,3 @@ export function usePrevious<ValueType = any>(value: ValueType) {
 	}, [value]);
 	return ref.current;
 }
-
-export default usePrevious;
