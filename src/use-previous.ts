@@ -5,7 +5,7 @@ import * as React from "react";
  * React 18. Do not use, probably.
  */
 export function usePrevious<ValueType = any>(value: ValueType) {
-	const ref = React.useRef<ValueType | null>(null);
+	let ref = React.useRef<ValueType | null>(null);
 	React.useEffect(() => {
 		ref.current = value;
 	}, [value]);
