@@ -3,11 +3,14 @@ import { render, act } from "@testing-library/react";
 import {
 	useStateWithHistory,
 	type HistoryState,
-	type Options as HookOptions,
+	type UseStateWithHistoryOptions,
 } from "../use-state-with-history";
 import { it, expect, describe } from "vitest";
 
-function setup<V>(defaultValue: V | (() => V), opts?: HookOptions) {
+function setup<V>(
+	defaultValue: V | (() => V),
+	opts?: UseStateWithHistoryOptions
+) {
 	let returnVal: HistoryState<V> = [] as any;
 	function TestComponent() {
 		Object.assign(returnVal, useStateWithHistory(defaultValue, opts));

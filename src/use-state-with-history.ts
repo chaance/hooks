@@ -6,7 +6,7 @@ const REDO = 2;
 
 export function useStateWithHistory<ValueType>(
 	defaultValue: ValueType | (() => ValueType),
-	opts: Options = {}
+	opts: UseStateWithHistoryOptions = {}
 ): HistoryState<ValueType> {
 	let { limit = -1 } = opts;
 	let [{ history, currentIndex }, send] = React.useReducer(
@@ -114,6 +114,6 @@ export type HistoryState<ValueType> = [
 	RedoFunction: () => void
 ];
 
-export interface Options {
+export interface UseStateWithHistoryOptions {
 	limit?: number;
 }
