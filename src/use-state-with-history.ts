@@ -66,7 +66,7 @@ function reducer<ValueType>(
 					  )
 					: event.next;
 
-			if (newValue === state.history[state.currentIndex]) {
+			if (Object.is(newValue, state.history[state.currentIndex])) {
 				return state;
 			}
 
