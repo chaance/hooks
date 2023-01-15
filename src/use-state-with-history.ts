@@ -6,13 +6,8 @@ const REDO = 2;
 
 export function useStateWithHistory<ValueType>(
 	defaultValue: ValueType | (() => ValueType),
-	opts: { limit?: number } = {}
-): [
-	State: ValueType,
-	Setter: React.Dispatch<React.SetStateAction<ValueType>>,
-	UndoFunction: () => void,
-	RedoFunction: () => void
-] {
+	opts: Options = {}
+): HistoryState<ValueType> {
 	let { limit = -1 } = opts;
 	let [{ history, currentIndex }, send] = React.useReducer(
 		reducer,
@@ -111,3 +106,14 @@ type Event<ValueType> =
 	  }
 	| { type: typeof UNDO; limit: number }
 	| { type: typeof REDO; limit: number };
+
+export type HistoryState<ValueType> = [
+	State: ValueType,
+	Setter: React.Dispatch<React.SetStateAction<ValueType>>,
+	UndoFunction: () => void,
+	RedoFunction: () => void
+];
+
+export interface Options {
+	limit?: number;
+}
