@@ -1,12 +1,27 @@
-// import fs from "node:fs";
-// import path from "node:path";
+import fs from "node:fs";
+import path from "node:path";
 import { defineConfig } from "tsup";
 import pkgJson from "./package.json";
 
 let { name: packageName, version: packageVersion } = pkgJson;
 
 export default defineConfig((options) => {
-	let entry = ["src/index.ts"];
+	let entry = fs
+		.readdirSync(path.join(__dirname, "src"))
+		.map((fileOrDirectoryName) => {
+			let filePath = path.join(__dirname, "src", fileOrDirectoryName);
+			if (
+				fs.statSync(filePath).isFile() &&
+				(path.extname(filePath) === ".ts" ||
+					path.extname(filePath) === ".tsx") &&
+				!/\.test\.(ts|tsx)$/.test(filePath)
+			) {
+				return `src/${fileOrDirectoryName}`;
+			}
+			return null;
+		})
+		.filter((v): v is string => v != null);
+
 	let external = ["react", "react-dom"];
 	let target = "es2019";
 	let banner = createBanner({
