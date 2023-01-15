@@ -67,3 +67,10 @@
 ### Other Changes
 
 - Deprecated `usePrevious`, you probably shouldn't use it
+
+## v0.3.1
+
+### Bug-fixes
+
+- `useStateWithHistory`: Do not update state or history state if the new value
+  is the same as the current value

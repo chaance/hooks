@@ -65,6 +65,11 @@ function reducer<ValueType>(
 							state.history[state.currentIndex]
 					  )
 					: event.next;
+
+			if (newValue === state.history[state.currentIndex]) {
+				return state;
+			}
+
 			if (limit > 0 && state.history.length > limit) {
 				// copy history array and remove oldest entry
 				let history = state.history.slice(1);
