@@ -16,7 +16,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"inlineSources": false,
 		"isolatedModules": true,
-		"moduleResolution": "Node16",
+		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true

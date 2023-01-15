@@ -33,7 +33,7 @@ export default defineConfig((options) => {
 	});
 
 	return [
-		// cjs.dev.js
+		// cjs
 		{
 			entry,
 			format: "cjs",
