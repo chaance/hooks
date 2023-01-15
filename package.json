@@ -1,6 +1,6 @@
 {
 	"name": "@chance/hooks",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "Handy React hooks I use a lot ↪️",
 	"scripts": {
 		"build": "tsup",
