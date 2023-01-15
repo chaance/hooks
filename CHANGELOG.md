@@ -74,3 +74,8 @@
 
 - `useStateWithHistory`: Do not update state or history state if the new value
   is the same as the current value
+- Fixed known bugs with `usePrevious` and un-marked it for deprecation. We no
+  longer return a ref value (which is not stateful, won't trigger effects and is
+  not safe in React 18), but a stateful value that updates only when React would
+  update the value being tracked. This approach should be concurrent-safe and
+  more reliable for rendering.
