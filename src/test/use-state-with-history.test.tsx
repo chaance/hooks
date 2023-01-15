@@ -57,6 +57,15 @@ describe("useStateWithHistory", () => {
 			act(undo);
 			expect(returnValue[0]).toBe("one");
 		});
+
+		it("does not update the stack if value is unchanged", async () => {
+			let returnValue = setup("one");
+			let [, set, undo] = returnValue;
+			act(() => set("two"));
+			act(() => set("two"));
+			act(undo);
+			expect(returnValue[0]).toBe("one");
+		});
 	});
 
 	describe("redo", () => {
