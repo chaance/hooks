@@ -16,7 +16,7 @@ function createUseEventListener(useEffect: typeof React.useEffect) {
 	function useEventListener<ListenerType extends keyof EventMap>(
 		type: ListenerType,
 		listener: (event: EventMap[ListenerType]) => void,
-		options?: CreateUseEventListenerOptions
+		options?: UseEventListenerOptions
 	): void;
 
 	/**
@@ -40,14 +40,14 @@ function createUseEventListener(useEffect: typeof React.useEffect) {
 		elementRef: React.RefObject<ElementType>,
 		type: ListenerType,
 		listener: (event: EventMap[ListenerType]) => void,
-		options?: CreateUseEventListenerOptions
+		options?: UseEventListenerOptions
 	): void;
 
 	function useEventListener(
 		elementOrType: unknown,
 		typeOrListener: unknown,
 		listenerOrOptions?: unknown,
-		options?: CreateUseEventListenerOptions
+		options?: UseEventListenerOptions
 	) {
 		let element: (Window & typeof globalThis) | Document | Element | undefined;
 		let type: keyof EventMap;
@@ -61,7 +61,7 @@ function createUseEventListener(useEffect: typeof React.useEffect) {
 				);
 			}
 			listener = typeOrListener as typeof listener;
-			options = (listenerOrOptions as CreateUseEventListenerOptions) || {};
+			options = (listenerOrOptions as UseEventListenerOptions) || {};
 		} else if (
 			elementOrType &&
 			typeof elementOrType === "object" &&
@@ -115,7 +115,7 @@ export const useEventListenerLayoutEffect =
 
 export type EventMap = ElementEventMap & DocumentEventMap & WindowEventMap;
 
-export interface CreateUseEventListenerOptions {
+export interface UseEventListenerOptions {
 	/**
 	 * A boolean value indicating that events of this type will be dispatched to
 	 * the registered `listener` before being dispatched to any `EventTarget`

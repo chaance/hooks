@@ -12,7 +12,7 @@
 
 ### useStableCallback
 
-▸ **useStableCallback**<`T`\>(`callback`, `effect?`): `T`
+▸ **useStableCallback**<`T`\>(`callback`, `useEffect?`): `T`
 
 #### Type parameters
 
@@ -22,10 +22,10 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | `T` |
-| `effect` | typeof `React.useEffect` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `callback` | `T` | `undefined` |
+| `useEffect` | (`effect`: `EffectCallback`, `deps?`: `DependencyList`) => `void` | `useLayoutEffect` |
 
 #### Returns
 
@@ -33,4 +33,4 @@
 
 #### Defined in
 
-[use-stable-callback.ts:3](https://github.com/chaance/hooks/blob/e2a7532/src/use-stable-callback.ts#L3)
+[src/use-stable-callback.ts:4](https://github.com/chaance/hooks/blob/f07c99b/src/use-stable-callback.ts#L4)

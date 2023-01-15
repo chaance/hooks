@@ -4,19 +4,9 @@
 
 ## Table of contents
 
-### References
-
-- [default](use_timeout.md#default)
-
 ### Functions
 
 - [useTimeout](use_timeout.md#usetimeout)
-
-## References
-
-### default
-
-Renames and exports: [useTimeout](use_timeout.md#usetimeout)
 
 ## Functions
 
@@ -29,7 +19,7 @@ Renames and exports: [useTimeout](use_timeout.md#usetimeout)
 | Name | Type |
 | :------ | :------ |
 | `callback` | () => `void` |
-| `delay` | `number` \| ``null`` |
+| `delay` | ``null`` \| `number` |
 
 #### Returns
 
@@ -37,4 +27,4 @@ Renames and exports: [useTimeout](use_timeout.md#usetimeout)
 
 #### Defined in
 
-[use-timeout.ts:4](https://github.com/chaance/hooks/blob/e2a7532/src/use-timeout.ts#L4)
+[src/use-timeout.ts:4](https://github.com/chaance/hooks/blob/f07c99b/src/use-timeout.ts#L4)

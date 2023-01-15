@@ -4,23 +4,9 @@
 
 ## Table of contents
 
-### References
-
-- [default](use_promise.md#default)
-
-### Enumerations
-
-- [PromiseStates](../enums/use_promise.promisestates.md)
-
 ### Functions
 
 - [usePromise](use_promise.md#usepromise)
-
-## References
-
-### default
-
-Renames and exports: [usePromise](use_promise.md#usepromise)
 
 ## Functions
 
@@ -47,4 +33,4 @@ readonly [``null`` \| `ResolvedType`, `boolean`, ``null`` \| `ErrorType`]
 
 #### Defined in
 
-[use-promise.ts:9](https://github.com/chaance/hooks/blob/e2a7532/src/use-promise.ts#L9)
+[src/use-promise.ts:7](https://github.com/chaance/hooks/blob/f07c99b/src/use-promise.ts#L7)

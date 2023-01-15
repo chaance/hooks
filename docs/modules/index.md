@@ -7,163 +7,156 @@
 ### References
 
 - [EventMap](index.md#eventmap)
-- [PromiseStates](index.md#promisestates)
+- [HistoryState](index.md#historystate)
 - [QueryObject](index.md#queryobject)
+- [UseEventListenerOptions](index.md#useeventlisteneroptions)
+- [UseStateWithHistoryOptions](index.md#usestatewithhistoryoptions)
 - [createUseMatchMedia](index.md#createusematchmedia)
-- [createUseUpdateEffect](index.md#createuseupdateeffect)
+- [useConstant](index.md#useconstant)
 - [useEventListener](index.md#useeventlistener)
 - [useEventListenerLayoutEffect](index.md#useeventlistenerlayouteffect)
 - [useForceUpdate](index.md#useforceupdate)
 - [useInterval](index.md#useinterval)
+- [useIsHydrated](index.md#useishydrated)
 - [useIsomorphicLayoutEffect](index.md#useisomorphiclayouteffect)
-- [useLayoutEventListener](index.md#uselayouteventlistener)
-- [useLayoutMedia](index.md#uselayoutmedia)
+- [useLayoutEffect](index.md#uselayouteffect)
 - [useMatchMedia](index.md#usematchmedia)
 - [useMatchMediaLayoutEffect](index.md#usematchmedialayouteffect)
-- [useMedia](index.md#usemedia)
 - [usePrefersReducedMotion](index.md#useprefersreducedmotion)
 - [usePrevious](index.md#useprevious)
 - [usePromise](index.md#usepromise)
 - [useStableCallback](index.md#usestablecallback)
 - [useStateWithHistory](index.md#usestatewithhistory)
 - [useTimeout](index.md#usetimeout)
-- [useUpdateEffect](index.md#useupdateeffect)
-- [useUpdateLayoutEffect](index.md#useupdatelayouteffect)
 
 ## References
 
 ### EventMap
 
-Re-exports: [EventMap](use_event_listener.md#eventmap)
+Re-exports [EventMap](use_event_listener.md#eventmap)
 
 ___
 
-### PromiseStates
+### HistoryState
 
-Re-exports: [PromiseStates](../enums/use_promise.promisestates.md)
+Re-exports [HistoryState](use_state_with_history.md#historystate)
 
 ___
 
 ### QueryObject
 
-Re-exports: [QueryObject](use_match_media.md#queryobject)
+Re-exports [QueryObject](use_match_media.md#queryobject)
+
+___
+
+### UseEventListenerOptions
+
+Re-exports [UseEventListenerOptions](../interfaces/use_event_listener.UseEventListenerOptions.md)
+
+___
+
+### UseStateWithHistoryOptions
+
+Re-exports [UseStateWithHistoryOptions](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md)
 
 ___
 
 ### createUseMatchMedia
 
-Re-exports: [createUseMatchMedia](use_match_media.md#createusematchmedia)
+Re-exports [createUseMatchMedia](use_match_media.md#createusematchmedia)
 
 ___
 
-### createUseUpdateEffect
+### useConstant
 
-Re-exports: [createUseUpdateEffect](use_update_effect.md#createuseupdateeffect)
+Re-exports [useConstant](use_constant.md#useconstant)
 
 ___
 
 ### useEventListener
 
-Re-exports: [useEventListener](use_event_listener.md#useeventlistener)
+Re-exports [useEventListener](use_event_listener.md#useeventlistener)
 
 ___
 
 ### useEventListenerLayoutEffect
 
-Re-exports: [useEventListenerLayoutEffect](use_event_listener.md#useeventlistenerlayouteffect)
+Re-exports [useEventListenerLayoutEffect](use_event_listener.md#useeventlistenerlayouteffect)
 
 ___
 
 ### useForceUpdate
 
-Re-exports: [useForceUpdate](use_force_update.md#useforceupdate)
+Re-exports [useForceUpdate](use_force_update.md#useforceupdate)
 
 ___
 
 ### useInterval
 
-Re-exports: [useInterval](use_interval.md#useinterval)
+Re-exports [useInterval](use_interval.md#useinterval)
+
+___
+
+### useIsHydrated
+
+Re-exports [useIsHydrated](use_is_hydrated.md#useishydrated)
 
 ___
 
 ### useIsomorphicLayoutEffect
 
-Re-exports: [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.md#useisomorphiclayouteffect)
+Re-exports [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.md#useisomorphiclayouteffect)
 
 ___
 
-### useLayoutEventListener
+### useLayoutEffect
 
-Re-exports: [useLayoutEventListener](use_event_listener.md#uselayouteventlistener)
-
-___
-
-### useLayoutMedia
-
-Re-exports: [useLayoutMedia](use_media.md#uselayoutmedia)
+Renames and re-exports [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.md#useisomorphiclayouteffect)
 
 ___
 
 ### useMatchMedia
 
-Re-exports: [useMatchMedia](use_match_media.md#usematchmedia)
+Re-exports [useMatchMedia](use_match_media.md#usematchmedia)
 
 ___
 
 ### useMatchMediaLayoutEffect
 
-Re-exports: [useMatchMediaLayoutEffect](use_match_media.md#usematchmedialayouteffect)
-
-___
-
-### useMedia
-
-Re-exports: [useMedia](use_media.md#usemedia)
+Re-exports [useMatchMediaLayoutEffect](use_match_media.md#usematchmedialayouteffect)
 
 ___
 
 ### usePrefersReducedMotion
 
-Re-exports: [usePrefersReducedMotion](use_prefers_reduced_motion.md#useprefersreducedmotion)
+Re-exports [usePrefersReducedMotion](use_prefers_reduced_motion.md#useprefersreducedmotion)
 
 ___
 
 ### usePrevious
 
-Re-exports: [usePrevious](use_previous.md#useprevious)
+Re-exports [usePrevious](use_previous.md#useprevious)
 
 ___
 
 ### usePromise
 
-Re-exports: [usePromise](use_promise.md#usepromise)
+Re-exports [usePromise](use_promise.md#usepromise)
 
 ___
 
 ### useStableCallback
 
-Re-exports: [useStableCallback](use_stable_callback.md#usestablecallback)
+Re-exports [useStableCallback](use_stable_callback.md#usestablecallback)
 
 ___
 
 ### useStateWithHistory
 
-Re-exports: [useStateWithHistory](use_state_with_history.md#usestatewithhistory)
+Re-exports [useStateWithHistory](use_state_with_history.md#usestatewithhistory)
 
 ___
 
 ### useTimeout
 
-Re-exports: [useTimeout](use_timeout.md#usetimeout)
-
-___
-
-### useUpdateEffect
-
-Re-exports: [useUpdateEffect](use_update_effect.md#useupdateeffect)
-
-___
-
-### useUpdateLayoutEffect
-
-Re-exports: [useUpdateLayoutEffect](use_update_effect.md#useupdatelayouteffect)
+Re-exports [useTimeout](use_timeout.md#usetimeout)

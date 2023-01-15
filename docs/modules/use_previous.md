@@ -4,25 +4,20 @@
 
 ## Table of contents
 
-### References
-
-- [default](use_previous.md#default)
-
 ### Functions
 
 - [usePrevious](use_previous.md#useprevious)
-
-## References
-
-### default
-
-Renames and exports: [usePrevious](use_previous.md#useprevious)
 
 ## Functions
 
 ### usePrevious
 
 ▸ **usePrevious**<`ValueType`\>(`value`): ``null`` \| `ValueType`
+
+**`Deprecated`**
+
+This hook will give you a bad time with concurrent features in
+React 18. Do not use, probably.
 
 #### Type parameters
 
@@ -42,4 +37,4 @@ Renames and exports: [usePrevious](use_previous.md#useprevious)
 
 #### Defined in
 
-[use-previous.ts:3](https://github.com/chaance/hooks/blob/e2a7532/src/use-previous.ts#L3)
+[src/use-previous.ts:7](https://github.com/chaance/hooks/blob/f07c99b/src/use-previous.ts#L7)

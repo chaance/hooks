@@ -4,25 +4,39 @@
 
 ## Table of contents
 
-### References
+### Interfaces
 
-- [default](use_state_with_history.md#default)
+- [UseStateWithHistoryOptions](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md)
+
+### Type Aliases
+
+- [HistoryState](use_state_with_history.md#historystate)
 
 ### Functions
 
 - [useStateWithHistory](use_state_with_history.md#usestatewithhistory)
 
-## References
+## Type Aliases
 
-### default
+### HistoryState
 
-Renames and exports: [useStateWithHistory](use_state_with_history.md#usestatewithhistory)
+Ƭ **HistoryState**<`ValueType`\>: [State: ValueType, Setter: React.Dispatch<React.SetStateAction<ValueType\>\>, UndoFunction: Function, RedoFunction: Function]
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `ValueType` |
+
+#### Defined in
+
+[src/use-state-with-history.ts:110](https://github.com/chaance/hooks/blob/f07c99b/src/use-state-with-history.ts#L110)
 
 ## Functions
 
 ### useStateWithHistory
 
-▸ **useStateWithHistory**<`ValueType`\>(`defaultValue`): (`ValueType` \| (`newValue`: `ValueType`) => `void`)[]
+▸ **useStateWithHistory**<`ValueType`\>(`defaultValue`, `opts?`): [`HistoryState`](use_state_with_history.md#historystate)<`ValueType`\>
 
 #### Type parameters
 
@@ -34,12 +48,13 @@ Renames and exports: [useStateWithHistory](use_state_with_history.md#usestatewit
 
 | Name | Type |
 | :------ | :------ |
-| `defaultValue` | `ValueType` |
+| `defaultValue` | `ValueType` \| () => `ValueType` |
+| `opts` | [`UseStateWithHistoryOptions`](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md) |
 
 #### Returns
 
-(`ValueType` \| (`newValue`: `ValueType`) => `void`)[]
+[`HistoryState`](use_state_with_history.md#historystate)<`ValueType`\>
 
 #### Defined in
 
-[use-state-with-history.ts:3](https://github.com/chaance/hooks/blob/e2a7532/src/use-state-with-history.ts#L3)
+[src/use-state-with-history.ts:7](https://github.com/chaance/hooks/blob/f07c99b/src/use-state-with-history.ts#L7)

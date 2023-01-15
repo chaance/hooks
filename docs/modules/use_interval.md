@@ -4,19 +4,9 @@
 
 ## Table of contents
 
-### References
-
-- [default](use_interval.md#default)
-
 ### Functions
 
 - [useInterval](use_interval.md#useinterval)
-
-## References
-
-### default
-
-Renames and exports: [useInterval](use_interval.md#useinterval)
 
 ## Functions
 
@@ -29,7 +19,7 @@ Renames and exports: [useInterval](use_interval.md#useinterval)
 | Name | Type |
 | :------ | :------ |
 | `callback` | () => `void` |
-| `interval` | `number` \| ``null`` |
+| `interval` | ``null`` \| `number` |
 
 #### Returns
 
@@ -37,4 +27,4 @@ Renames and exports: [useInterval](use_interval.md#useinterval)
 
 #### Defined in
 
-[use-interval.ts:4](https://github.com/chaance/hooks/blob/e2a7532/src/use-interval.ts#L4)
+[src/use-interval.ts:4](https://github.com/chaance/hooks/blob/f07c99b/src/use-interval.ts#L4)
