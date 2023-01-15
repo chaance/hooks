@@ -11,107 +11,109 @@ function setup<V>(
 	defaultValue: V | (() => V),
 	opts?: UseStateWithHistoryOptions
 ) {
-	let returnVal: HistoryState<V> = [] as any;
+	let ref: {
+		get: () => HistoryState<V>;
+		set: React.Dispatch<React.SetStateAction<V>>;
+		undo(): void;
+		redo(): void;
+	} = {} as any;
 	function TestComponent() {
-		Object.assign(returnVal, useStateWithHistory(defaultValue, opts));
+		let state = useStateWithHistory(defaultValue, opts);
+		Object.assign(ref, {
+			get: () => state[0],
+			set: state[1],
+			undo: state[2],
+			redo: state[3],
+		});
 		return null;
 	}
 	render(<TestComponent />);
-	return returnVal!;
+	return ref;
 }
 
 describe("useStateWithHistory", () => {
 	it("returns and updates state", async () => {
-		let returnValue = setup("one");
-		let set = returnValue[1];
-		expect(returnValue[0]).toBe("one");
-		act(() => set("two"));
-		expect(returnValue[0]).toBe("two");
+		let state = setup("one");
+		expect(state.get()).toBe("one");
+		act(() => state.set("two"));
+		expect(state.get()).toBe("two");
 	});
 
 	describe("undo", () => {
-		it("does nothing if history is empty", async () => {
-			let returnValue = setup("one");
-			let [, , undo] = returnValue;
-			expect(returnValue[0]).toBe("one");
-			act(undo);
-			expect(returnValue[0]).toBe("one");
+		it("does not update state if history is empty", async () => {
+			let state = setup("one");
+			expect(state.get()).toBe("one");
+			act(state.undo);
+			expect(state.get()).toBe("one");
 		});
 
 		it("reverts state change", async () => {
-			let returnValue = setup("one");
-			let [, set, undo] = returnValue;
-			act(() => set("two"));
-			act(() => set("three"));
-			act(undo);
-			expect(returnValue[0]).toBe("two");
+			let state = setup("one");
+			act(() => state.set("two"));
+			act(() => state.set("three"));
+			act(state.undo);
+			expect(state.get()).toBe("two");
 		});
 
 		it("reverts to first state if at the end of history stack", async () => {
-			let returnValue = setup("one");
-			let [, set, undo] = returnValue;
-			act(() => set("two"));
-			act(undo);
-			act(undo);
-			act(undo);
-			act(undo);
-			expect(returnValue[0]).toBe("one");
+			let state = setup("one");
+			act(() => state.set("two"));
+			act(state.undo);
+			act(state.undo);
+			act(state.undo);
+			act(state.undo);
+			expect(state.get()).toBe("one");
 		});
 
 		it("does not update the stack if value is unchanged", async () => {
-			let returnValue = setup("one");
-			let [, set, undo] = returnValue;
-			act(() => set("two"));
-			act(() => set("two"));
-			act(undo);
-			expect(returnValue[0]).toBe("one");
+			let state = setup("one");
+			act(() => state.set("two"));
+			act(() => state.set("two"));
+			act(state.undo);
+			expect(state.get()).toBe("one");
 		});
 	});
 
 	describe("redo", () => {
 		it("does nothing if history is empty", async () => {
-			let returnValue = setup("one");
-			let [, , , redo] = returnValue;
-			expect(returnValue[0]).toBe("one");
-			act(redo);
-			expect(returnValue[0]).toBe("one");
+			let state = setup("one");
+			expect(state.get()).toBe("one");
+			act(state.redo);
+			expect(state.get()).toBe("one");
 		});
 
 		it("reverts undo", async () => {
-			let returnValue = setup("one");
-			let [, set, undo, redo] = returnValue;
-			act(() => set("two"));
-			act(() => set("three"));
-			act(undo);
-			act(redo);
-			expect(returnValue[0]).toBe("three");
+			let state = setup("one");
+			act(() => state.set("two"));
+			act(() => state.set("three"));
+			act(state.undo);
+			act(state.redo);
+			expect(state.get()).toBe("three");
 		});
 
 		it("reverts to final state if at the end of history stack", async () => {
-			let returnValue = setup("one");
-			let [, set, undo, redo] = returnValue;
-			act(() => set("two"));
-			act(() => set("three"));
-			act(undo);
-			act(redo);
-			act(redo);
-			act(redo);
-			expect(returnValue[0]).toBe("three");
+			let state = setup("one");
+			act(() => state.set("two"));
+			act(() => state.set("three"));
+			act(state.undo);
+			act(state.redo);
+			act(state.redo);
+			act(state.redo);
+			expect(state.get()).toBe("three");
 		});
 	});
 
 	describe("with { limit }", () => {
 		it("limits undo history", async () => {
-			let returnValue = setup("one", { limit: 2 });
-			let [, set, undo] = returnValue;
-			act(() => set("two"));
-			act(() => set("three"));
-			act(() => set("four"));
-			act(undo);
-			act(undo);
-			act(undo);
-			act(undo);
-			expect(returnValue[0]).toBe("two");
+			let state = setup("one", { limit: 2 });
+			act(() => state.set("two"));
+			act(() => state.set("three"));
+			act(() => state.set("four"));
+			act(state.undo);
+			act(state.undo);
+			act(state.undo);
+			act(state.undo);
+			expect(state.get()).toBe("two");
 		});
 	});
 });
