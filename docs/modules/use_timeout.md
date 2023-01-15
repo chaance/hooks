@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/use-timeout.ts:4](https://github.com/chaance/hooks/blob/f07c99b/src/use-timeout.ts#L4)
+[src/use-timeout.ts:4](https://github.com/chaance/hooks/blob/8221fb1/src/use-timeout.ts#L4)

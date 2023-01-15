@@ -20,4 +20,4 @@
 
 #### Defined in
 
-[src/use-is-hydrated.ts:5](https://github.com/chaance/hooks/blob/f07c99b/src/use-is-hydrated.ts#L5)
+[src/use-is-hydrated.ts:5](https://github.com/chaance/hooks/blob/8221fb1/src/use-is-hydrated.ts#L5)

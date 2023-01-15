@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/use-event-listener.ts:116](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L116)
+[src/use-event-listener.ts:116](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L116)
 
 ## Functions
 
@@ -56,7 +56,7 @@ listener is attached in an effect hook and torn down in its cleanup phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L16)
+[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L16)
 
 ▸ **useEventListener**<`ElementType`, `ListenerType`\>(`elementRef`, `type`, `listener`, `options?`): `void`
 
@@ -86,7 +86,7 @@ phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L36)
+[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L36)
 
 ___
 
@@ -119,7 +119,7 @@ The event listener is added and removed within a `useLayoutEffect`.
 
 #### Defined in
 
-[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L16)
+[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L16)
 
 ▸ **useEventListenerLayoutEffect**<`ElementType`, `ListenerType`\>(`elementRef`, `type`, `listener`, `options?`): `void`
 
@@ -150,4 +150,4 @@ The event listener is added and removed within a `useLayoutEffect`.
 
 #### Defined in
 
-[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L36)
+[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L36)

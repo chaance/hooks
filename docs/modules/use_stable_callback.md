@@ -33,4 +33,4 @@
 
 #### Defined in
 
-[src/use-stable-callback.ts:4](https://github.com/chaance/hooks/blob/f07c99b/src/use-stable-callback.ts#L4)
+[src/use-stable-callback.ts:4](https://github.com/chaance/hooks/blob/8221fb1/src/use-stable-callback.ts#L4)

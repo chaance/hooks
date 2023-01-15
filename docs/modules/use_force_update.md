@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/use-force-update.ts:3](https://github.com/chaance/hooks/blob/f07c99b/src/use-force-update.ts#L3)
+[src/use-force-update.ts:3](https://github.com/chaance/hooks/blob/8221fb1/src/use-force-update.ts#L3)

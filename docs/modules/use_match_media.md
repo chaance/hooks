@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[src/use-match-media.ts:38](https://github.com/chaance/hooks/blob/f07c99b/src/use-match-media.ts#L38)
+[src/use-match-media.ts:38](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L38)
 
 ## Functions
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[src/use-match-media.ts:5](https://github.com/chaance/hooks/blob/f07c99b/src/use-match-media.ts#L5)
+[src/use-match-media.ts:5](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L5)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/f07c99b/src/use-match-media.ts#L6)
+[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L6)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/f07c99b/src/use-match-media.ts#L6)
+[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L6)

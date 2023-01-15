@@ -25,7 +25,7 @@ beneath it in the DOM tree. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:124](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L124)
+[src/use-event-listener.ts:124](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L124)
 
 ___
 
@@ -39,7 +39,7 @@ removed when invoked. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:130](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L130)
+[src/use-event-listener.ts:130](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L130)
 
 ___
 
@@ -54,7 +54,7 @@ a console warning. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:137](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L137)
+[src/use-event-listener.ts:137](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L137)
 
 ___
 
@@ -68,4 +68,4 @@ associated with the `listener`.
 
 #### Defined in
 
-[src/use-event-listener.ts:143](https://github.com/chaance/hooks/blob/f07c99b/src/use-event-listener.ts#L143)
+[src/use-event-listener.ts:143](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L143)

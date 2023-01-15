@@ -18,4 +18,4 @@
 
 #### Defined in
 
-[src/use-state-with-history.ts:118](https://github.com/chaance/hooks/blob/f07c99b/src/use-state-with-history.ts#L118)
+[src/use-state-with-history.ts:118](https://github.com/chaance/hooks/blob/8221fb1/src/use-state-with-history.ts#L118)
