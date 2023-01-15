@@ -30,13 +30,16 @@
 
 #### Defined in
 
-[src/use-state-with-history.ts:110](https://github.com/chaance/hooks/blob/8221fb1/src/use-state-with-history.ts#L110)
+[src/use-state-with-history.ts:117](https://github.com/chaance/hooks/blob/2f16b01/src/use-state-with-history.ts#L117)
 
 ## Functions
 
 ### useStateWithHistory
 
-▸ **useStateWithHistory**<`ValueType`\>(`defaultValue`, `opts?`): [`HistoryState`](use_state_with_history.md#historystate)<`ValueType`\>
+▸ **useStateWithHistory**<`ValueType`\>(`initialValue`, `opts?`): [`HistoryState`](use_state_with_history.md#historystate)<`ValueType`\>
+
+Returns a stateful value, a function to update it, and `undo`/`redo`
+functions to navigate through the state's history.
 
 #### Type parameters
 
@@ -46,10 +49,10 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `defaultValue` | `ValueType` \| () => `ValueType` |
-| `opts` | [`UseStateWithHistoryOptions`](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `initialValue` | `ValueType` \| () => `ValueType` | The initial state value or a function to initialize it |
+| `opts` | [`UseStateWithHistoryOptions`](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md) | Optional options object |
 
 #### Returns
 
@@ -57,4 +60,4 @@
 
 #### Defined in
 
-[src/use-state-with-history.ts:7](https://github.com/chaance/hooks/blob/8221fb1/src/use-state-with-history.ts#L7)
+[src/use-state-with-history.ts:14](https://github.com/chaance/hooks/blob/2f16b01/src/use-state-with-history.ts#L14)

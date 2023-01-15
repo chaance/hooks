@@ -16,6 +16,8 @@
 
 • `Optional` **limit**: `number`
 
+The maximum number of entries to keep in the history
+
 #### Defined in
 
-[src/use-state-with-history.ts:118](https://github.com/chaance/hooks/blob/8221fb1/src/use-state-with-history.ts#L118)
+[src/use-state-with-history.ts:128](https://github.com/chaance/hooks/blob/2f16b01/src/use-state-with-history.ts#L128)

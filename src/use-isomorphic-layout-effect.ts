@@ -7,6 +7,9 @@ const canUseDOM = !!(
 );
 
 /**
+ * `useLayoutEffect` but without the annoying hydration warning when called on
+ * the server.
+ *
  * See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
  */
 export const useIsomorphicLayoutEffect = canUseDOM

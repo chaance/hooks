@@ -4,19 +4,26 @@ const SET = 0;
 const UNDO = 1;
 const REDO = 2;
 
+/**
+ * Returns a stateful value, a function to update it, and `undo`/`redo`
+ * functions to navigate through the state's history.
+ *
+ * @param initialValue The initial state value or a function to initialize it
+ * @param opts Optional options object
+ */
 export function useStateWithHistory<ValueType>(
-	defaultValue: ValueType | (() => ValueType),
+	initialValue: ValueType | (() => ValueType),
 	opts: UseStateWithHistoryOptions = {}
 ): HistoryState<ValueType> {
 	let { limit = -1 } = opts;
 	let [{ history, currentIndex }, send] = React.useReducer(
 		reducer,
-		{ defaultValue },
-		({ defaultValue }) => {
+		{ initialValue },
+		({ initialValue }) => {
 			let history: ValueType[] = [
-				typeof defaultValue === "function"
-					? (defaultValue as () => ValueType)()
-					: defaultValue,
+				typeof initialValue === "function"
+					? (initialValue as () => ValueType)()
+					: initialValue,
 			];
 			return {
 				history,
@@ -115,5 +122,8 @@ export type HistoryState<ValueType> = [
 ];
 
 export interface UseStateWithHistoryOptions {
+	/**
+	 * The maximum number of entries to keep in the history
+	 */
 	limit?: number;
 }

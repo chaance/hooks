@@ -9,6 +9,7 @@
 ### Properties
 
 - [capture](use_event_listener.UseEventListenerOptions.md#capture)
+- [effectHook](use_event_listener.UseEventListenerOptions.md#effecthook)
 - [once](use_event_listener.UseEventListenerOptions.md#once)
 - [passive](use_event_listener.UseEventListenerOptions.md#passive)
 - [signal](use_event_listener.UseEventListenerOptions.md#signal)
@@ -25,7 +26,35 @@ beneath it in the DOM tree. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:124](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L124)
+[src/use-event-listener.ts:110](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L110)
+
+___
+
+### effectHook
+
+• `Optional` **effectHook**: (`effect`: `EffectCallback`, `deps?`: `DependencyList`) => `void`
+
+#### Type declaration
+
+▸ (`effect`, `deps?`): `void`
+
+Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
+`useEffect`.
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `effect` | `EffectCallback` |
+| `deps?` | `DependencyList` |
+
+##### Returns
+
+`void`
+
+#### Defined in
+
+[src/use-event-listener.ts:134](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L134)
 
 ___
 
@@ -39,7 +68,7 @@ removed when invoked. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:130](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L130)
+[src/use-event-listener.ts:116](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L116)
 
 ___
 
@@ -54,7 +83,7 @@ a console warning. If not specified, defaults to `false`.
 
 #### Defined in
 
-[src/use-event-listener.ts:137](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L137)
+[src/use-event-listener.ts:123](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L123)
 
 ___
 
@@ -68,4 +97,4 @@ associated with the `listener`.
 
 #### Defined in
 
-[src/use-event-listener.ts:143](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L143)
+[src/use-event-listener.ts:129](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L129)

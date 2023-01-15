@@ -39,7 +39,10 @@
   - The listener function is no longer saved in a ref internally, which means it
     will be attached/removed on every render unless you memoize it with
     `useCallback`
-  - `useLayoutEventListener` has been renamed to `useEventListenerLayoutEffect`
+  - `useLayoutEventListener` and `useEventListenerLayoutEffect` have been
+    removed. The options in `useEventListener` can now accept an `effectHook`
+    option which accepts either `useEffect` or `useLayoutEffect` to control the
+    phase in which the listener is attached and removed.
 
 - `useStableCallback` now updates the callback in `useLayoutEffect` instead of `useEffect` by default
 - The `history` array returned from `useStateWithHistory` is now stateful
@@ -47,6 +50,10 @@
   provided as a dependency, and it prevents issues with stale closures.
 - Removed `use-media` module. `useMatchMedia` should be imported from `use-match-media` instead
 - All default exports have been removed in favor of named exports
+- `useMatchMediaLayoutEffect` has been removed. The options in `useMatchMedia`
+  can now accept an `effectHook` option which accepts either `useEffect` or
+  `useLayoutEffect` to control the phase in which the listener is attached and
+  removed.
 
 ### Features
 

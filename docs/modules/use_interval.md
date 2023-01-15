@@ -19,7 +19,7 @@
 | Name | Type |
 | :------ | :------ |
 | `callback` | () => `void` |
-| `interval` | ``null`` \| `number` |
+| `interval` | `undefined` \| ``null`` \| `number` |
 
 #### Returns
 
@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[src/use-interval.ts:4](https://github.com/chaance/hooks/blob/8221fb1/src/use-interval.ts#L4)
+[src/use-interval.ts:4](https://github.com/chaance/hooks/blob/2f16b01/src/use-interval.ts#L4)

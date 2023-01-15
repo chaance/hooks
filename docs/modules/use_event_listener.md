@@ -15,7 +15,6 @@
 ### Functions
 
 - [useEventListener](use_event_listener.md#useeventlistener)
-- [useEventListenerLayoutEffect](use_event_listener.md#useeventlistenerlayouteffect)
 
 ## Type Aliases
 
@@ -25,7 +24,7 @@
 
 #### Defined in
 
-[src/use-event-listener.ts:116](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L116)
+[src/use-event-listener.ts:102](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L102)
 
 ## Functions
 
@@ -56,7 +55,7 @@ listener is attached in an effect hook and torn down in its cleanup phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L16)
+[src/use-event-listener.ts:14](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L14)
 
 ▸ **useEventListener**<`ElementType`, `ListenerType`\>(`elementRef`, `type`, `listener`, `options?`): `void`
 
@@ -86,68 +85,4 @@ phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L36)
-
-___
-
-### useEventListenerLayoutEffect
-
-▸ **useEventListenerLayoutEffect**<`ListenerType`\>(`type`, `listener`, `options?`): `void`
-
-A React hook that adds an event listener to a given element. If no element is
-specified, the listener is attached to the global object.
-
-The event listener is added and removed within a `useLayoutEffect`.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ListenerType` | extends ``"error"`` \| ``"load"`` \| ``"fullscreenchange"`` \| ``"fullscreenerror"`` \| ``"DOMContentLoaded"`` \| ``"pointerlockchange"`` \| ``"pointerlockerror"`` \| ``"readystatechange"`` \| ``"visibilitychange"`` \| ``"copy"`` \| ``"cut"`` \| ``"paste"`` \| ``"abort"`` \| ``"animationcancel"`` \| ``"animationend"`` \| ``"animationiteration"`` \| ``"animationstart"`` \| ``"auxclick"`` \| ``"beforeinput"`` \| ``"blur"`` \| ``"cancel"`` \| ``"canplay"`` \| ``"canplaythrough"`` \| ``"change"`` \| ``"click"`` \| ``"close"`` \| ``"compositionend"`` \| ``"compositionstart"`` \| ``"compositionupdate"`` \| ``"contextmenu"`` \| ``"cuechange"`` \| ``"dblclick"`` \| ``"drag"`` \| ``"dragend"`` \| ``"dragenter"`` \| ``"dragleave"`` \| ``"dragover"`` \| ``"dragstart"`` \| ``"drop"`` \| ``"durationchange"`` \| ``"emptied"`` \| ``"ended"`` \| ``"focus"`` \| ``"focusin"`` \| ``"focusout"`` \| ``"formdata"`` \| ``"gotpointercapture"`` \| ``"input"`` \| ``"invalid"`` \| ``"keydown"`` \| ``"keypress"`` \| ``"keyup"`` \| ``"loadeddata"`` \| ``"loadedmetadata"`` \| ``"loadstart"`` \| ``"lostpointercapture"`` \| ``"mousedown"`` \| ``"mouseenter"`` \| ``"mouseleave"`` \| ``"mousemove"`` \| ``"mouseout"`` \| ``"mouseover"`` \| ``"mouseup"`` \| ``"pause"`` \| ``"play"`` \| ``"playing"`` \| ``"pointercancel"`` \| ``"pointerdown"`` \| ``"pointerenter"`` \| ``"pointerleave"`` \| ``"pointermove"`` \| ``"pointerout"`` \| ``"pointerover"`` \| ``"pointerup"`` \| ``"progress"`` \| ``"ratechange"`` \| ``"reset"`` \| ``"resize"`` \| ``"scroll"`` \| ``"securitypolicyviolation"`` \| ``"seeked"`` \| ``"seeking"`` \| ``"select"`` \| ``"selectionchange"`` \| ``"selectstart"`` \| ``"slotchange"`` \| ``"stalled"`` \| ``"submit"`` \| ``"suspend"`` \| ``"timeupdate"`` \| ``"toggle"`` \| ``"touchcancel"`` \| ``"touchend"`` \| ``"touchmove"`` \| ``"touchstart"`` \| ``"transitioncancel"`` \| ``"transitionend"`` \| ``"transitionrun"`` \| ``"transitionstart"`` \| ``"volumechange"`` \| ``"waiting"`` \| ``"webkitanimationend"`` \| ``"webkitanimationiteration"`` \| ``"webkitanimationstart"`` \| ``"webkittransitionend"`` \| ``"wheel"`` \| ``"devicemotion"`` \| ``"deviceorientation"`` \| ``"gamepadconnected"`` \| ``"gamepaddisconnected"`` \| ``"orientationchange"`` \| ``"afterprint"`` \| ``"beforeprint"`` \| ``"beforeunload"`` \| ``"hashchange"`` \| ``"languagechange"`` \| ``"message"`` \| ``"messageerror"`` \| ``"offline"`` \| ``"online"`` \| ``"pagehide"`` \| ``"pageshow"`` \| ``"popstate"`` \| ``"rejectionhandled"`` \| ``"storage"`` \| ``"unhandledrejection"`` \| ``"unload"`` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `type` | `ListenerType` |
-| `listener` | (`event`: [`EventMap`](use_event_listener.md#eventmap)[`ListenerType`]) => `void` |
-| `options?` | [`UseEventListenerOptions`](../interfaces/use_event_listener.UseEventListenerOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/use-event-listener.ts:16](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L16)
-
-▸ **useEventListenerLayoutEffect**<`ElementType`, `ListenerType`\>(`elementRef`, `type`, `listener`, `options?`): `void`
-
-A React hook that adds an event listener to a given element. If no element is
-specified, the listener is attached to the global object.
-
-The event listener is added and removed within a `useLayoutEffect`.
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `ElementType` | extends `Window` & typeof `globalThis` \| `Document` \| `Element` |
-| `ListenerType` | extends ``"error"`` \| ``"load"`` \| ``"fullscreenchange"`` \| ``"fullscreenerror"`` \| ``"DOMContentLoaded"`` \| ``"pointerlockchange"`` \| ``"pointerlockerror"`` \| ``"readystatechange"`` \| ``"visibilitychange"`` \| ``"copy"`` \| ``"cut"`` \| ``"paste"`` \| ``"abort"`` \| ``"animationcancel"`` \| ``"animationend"`` \| ``"animationiteration"`` \| ``"animationstart"`` \| ``"auxclick"`` \| ``"beforeinput"`` \| ``"blur"`` \| ``"cancel"`` \| ``"canplay"`` \| ``"canplaythrough"`` \| ``"change"`` \| ``"click"`` \| ``"close"`` \| ``"compositionend"`` \| ``"compositionstart"`` \| ``"compositionupdate"`` \| ``"contextmenu"`` \| ``"cuechange"`` \| ``"dblclick"`` \| ``"drag"`` \| ``"dragend"`` \| ``"dragenter"`` \| ``"dragleave"`` \| ``"dragover"`` \| ``"dragstart"`` \| ``"drop"`` \| ``"durationchange"`` \| ``"emptied"`` \| ``"ended"`` \| ``"focus"`` \| ``"focusin"`` \| ``"focusout"`` \| ``"formdata"`` \| ``"gotpointercapture"`` \| ``"input"`` \| ``"invalid"`` \| ``"keydown"`` \| ``"keypress"`` \| ``"keyup"`` \| ``"loadeddata"`` \| ``"loadedmetadata"`` \| ``"loadstart"`` \| ``"lostpointercapture"`` \| ``"mousedown"`` \| ``"mouseenter"`` \| ``"mouseleave"`` \| ``"mousemove"`` \| ``"mouseout"`` \| ``"mouseover"`` \| ``"mouseup"`` \| ``"pause"`` \| ``"play"`` \| ``"playing"`` \| ``"pointercancel"`` \| ``"pointerdown"`` \| ``"pointerenter"`` \| ``"pointerleave"`` \| ``"pointermove"`` \| ``"pointerout"`` \| ``"pointerover"`` \| ``"pointerup"`` \| ``"progress"`` \| ``"ratechange"`` \| ``"reset"`` \| ``"resize"`` \| ``"scroll"`` \| ``"securitypolicyviolation"`` \| ``"seeked"`` \| ``"seeking"`` \| ``"select"`` \| ``"selectionchange"`` \| ``"selectstart"`` \| ``"slotchange"`` \| ``"stalled"`` \| ``"submit"`` \| ``"suspend"`` \| ``"timeupdate"`` \| ``"toggle"`` \| ``"touchcancel"`` \| ``"touchend"`` \| ``"touchmove"`` \| ``"touchstart"`` \| ``"transitioncancel"`` \| ``"transitionend"`` \| ``"transitionrun"`` \| ``"transitionstart"`` \| ``"volumechange"`` \| ``"waiting"`` \| ``"webkitanimationend"`` \| ``"webkitanimationiteration"`` \| ``"webkitanimationstart"`` \| ``"webkittransitionend"`` \| ``"wheel"`` \| ``"devicemotion"`` \| ``"deviceorientation"`` \| ``"gamepadconnected"`` \| ``"gamepaddisconnected"`` \| ``"orientationchange"`` \| ``"afterprint"`` \| ``"beforeprint"`` \| ``"beforeunload"`` \| ``"hashchange"`` \| ``"languagechange"`` \| ``"message"`` \| ``"messageerror"`` \| ``"offline"`` \| ``"online"`` \| ``"pagehide"`` \| ``"pageshow"`` \| ``"popstate"`` \| ``"rejectionhandled"`` \| ``"storage"`` \| ``"unhandledrejection"`` \| ``"unload"`` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `elementRef` | `RefObject`<`ElementType`\> |
-| `type` | `ListenerType` |
-| `listener` | (`event`: [`EventMap`](use_event_listener.md#eventmap)[`ListenerType`]) => `void` |
-| `options?` | [`UseEventListenerOptions`](../interfaces/use_event_listener.UseEventListenerOptions.md) |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[src/use-event-listener.ts:36](https://github.com/chaance/hooks/blob/8221fb1/src/use-event-listener.ts#L36)
+[src/use-event-listener.ts:34](https://github.com/chaance/hooks/blob/2f16b01/src/use-event-listener.ts#L34)

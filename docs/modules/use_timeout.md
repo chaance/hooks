@@ -12,14 +12,17 @@
 
 ### useTimeout
 
-▸ **useTimeout**(`callback`, `delay`): `void`
+▸ **useTimeout**(`callback`, `delay?`): `void`
+
+Sets a timer which executes a function or specified piece of code once the
+timer expires.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | () => `void` |
-| `delay` | ``null`` \| `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | () => `void` | A function to be executed after the timer expires |
+| `delay?` | ``null`` \| `number` | The time, in milliseconds that the timer should wait before the specified function or code is executed. If this parameter is omitted, a value of 0 is used, meaning execute in the next event cycle. |
 
 #### Returns
 
@@ -27,4 +30,4 @@
 
 #### Defined in
 
-[src/use-timeout.ts:4](https://github.com/chaance/hooks/blob/8221fb1/src/use-timeout.ts#L4)
+[src/use-timeout.ts:14](https://github.com/chaance/hooks/blob/2f16b01/src/use-timeout.ts#L14)

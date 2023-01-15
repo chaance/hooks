@@ -4,75 +4,29 @@
 
 ## Table of contents
 
-### Type Aliases
+### Interfaces
 
-- [QueryObject](use_match_media.md#queryobject)
+- [QueryObject](../interfaces/use_match_media.QueryObject.md)
+- [UseMatchMediaOptions](../interfaces/use_match_media.UseMatchMediaOptions.md)
 
 ### Functions
 
-- [createUseMatchMedia](use_match_media.md#createusematchmedia)
 - [useMatchMedia](use_match_media.md#usematchmedia)
-- [useMatchMediaLayoutEffect](use_match_media.md#usematchmedialayouteffect)
-
-## Type Aliases
-
-### QueryObject
-
-Ƭ **QueryObject**: `Object`
-
-#### Index signature
-
-▪ [property: `string`]: `string` \| `number` \| `boolean`
-
-#### Defined in
-
-[src/use-match-media.ts:38](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L38)
 
 ## Functions
 
-### createUseMatchMedia
-
-▸ **createUseMatchMedia**(`useEffect`): (`rawQuery`: [`QueryObject`](use_match_media.md#queryobject) \| [`QueryObject`](use_match_media.md#queryobject)[], `defaultState`: `boolean`) => `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `useEffect` | (`effect`: `EffectCallback`, `deps?`: `DependencyList`) => `void` |
-
-#### Returns
-
-`fn`
-
-▸ (`rawQuery`, `defaultState?`): `boolean`
-
-##### Parameters
-
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `rawQuery` | [`QueryObject`](use_match_media.md#queryobject) \| [`QueryObject`](use_match_media.md#queryobject)[] | `undefined` |
-| `defaultState` | `boolean` | `false` |
-
-##### Returns
-
-`boolean`
-
-#### Defined in
-
-[src/use-match-media.ts:5](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L5)
-
-___
-
 ### useMatchMedia
 
-▸ **useMatchMedia**(`rawQuery`, `defaultState?`): `boolean`
+▸ **useMatchMedia**(`rawQuery`, `options?`): `boolean`
+
+Returns whether or not a CSS media query matches.
 
 #### Parameters
 
-| Name | Type | Default value |
+| Name | Type | Description |
 | :------ | :------ | :------ |
-| `rawQuery` | [`QueryObject`](use_match_media.md#queryobject) \| [`QueryObject`](use_match_media.md#queryobject)[] | `undefined` |
-| `defaultState` | `boolean` | `false` |
+| `rawQuery` | `string` \| [`QueryObject`](../interfaces/use_match_media.QueryObject.md) \| [`QueryObject`](../interfaces/use_match_media.QueryObject.md)[] | A string, object or array of objects representing CSS media queries |
+| `options?` | [`UseMatchMediaOptions`](../interfaces/use_match_media.UseMatchMediaOptions.md) |  |
 
 #### Returns
 
@@ -80,20 +34,19 @@ ___
 
 #### Defined in
 
-[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L6)
+[src/use-match-media.ts:11](https://github.com/chaance/hooks/blob/2f16b01/src/use-match-media.ts#L11)
 
-___
+▸ **useMatchMedia**(`rawQuery`, `defaultState`, `options?`): `boolean`
 
-### useMatchMediaLayoutEffect
-
-▸ **useMatchMediaLayoutEffect**(`rawQuery`, `defaultState?`): `boolean`
+Returns whether or not a CSS media query matches.
 
 #### Parameters
 
-| Name | Type | Default value |
+| Name | Type | Description |
 | :------ | :------ | :------ |
-| `rawQuery` | [`QueryObject`](use_match_media.md#queryobject) \| [`QueryObject`](use_match_media.md#queryobject)[] | `undefined` |
-| `defaultState` | `boolean` | `false` |
+| `rawQuery` | `string` \| [`QueryObject`](../interfaces/use_match_media.QueryObject.md) \| [`QueryObject`](../interfaces/use_match_media.QueryObject.md)[] | A string, object or array of objects representing CSS media queries |
+| `defaultState` | `boolean` | The default state to return before the media query can be evaluated |
+| `options?` | [`UseMatchMediaOptions`](../interfaces/use_match_media.UseMatchMediaOptions.md) |  |
 
 #### Returns
 
@@ -101,4 +54,4 @@ ___
 
 #### Defined in
 
-[src/use-match-media.ts:6](https://github.com/chaance/hooks/blob/8221fb1/src/use-match-media.ts#L6)
+[src/use-match-media.ts:25](https://github.com/chaance/hooks/blob/2f16b01/src/use-match-media.ts#L25)

@@ -1,40 +1,76 @@
 import * as React from "react";
 import json2mq from "json2mq";
-import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
-export function createUseMatchMedia(useEffect: typeof React.useEffect) {
-	return function (
-		rawQuery: QueryObject | QueryObject[],
-		defaultState = false
-	) {
-		let [state, setState] = React.useState(defaultState);
-		let query = json2mq(rawQuery);
+/**
+ * Returns whether or not a CSS media query matches.
+ *
+ * @param rawQuery A string, object or array of objects representing CSS media
+ *                 queries
+ * @param options
+ */
+export function useMatchMedia(
+	rawQuery: string | QueryObject | QueryObject[],
+	options?: UseMatchMediaOptions
+): boolean;
 
-		useEffect(() => {
-			let current = true;
-			let mql = window.matchMedia(query);
-			mql.addEventListener("change", handleChange);
-			setState(mql.matches);
+/**
+ * Returns whether or not a CSS media query matches.
+ *
+ * @param rawQuery A string, object or array of objects representing CSS media
+ *                 queries
+ * @param defaultState The default state to return before the media query can be
+ *                     evaluated
+ * @param options
+ */
+export function useMatchMedia(
+	rawQuery: string | QueryObject | QueryObject[],
+	defaultState: boolean,
+	options?: UseMatchMediaOptions
+): boolean;
 
-			function handleChange() {
-				if (current) {
-					setState(mql.matches);
-				}
+export function useMatchMedia(
+	rawQuery: string | QueryObject | QueryObject[],
+	optionsOrDefaultState?: boolean | UseMatchMediaOptions,
+	options?: UseMatchMediaOptions
+): boolean {
+	let defaultState =
+		typeof optionsOrDefaultState === "boolean" ? optionsOrDefaultState : false;
+	let { effectHook: useEffect = React.useEffect } =
+		options || (optionsOrDefaultState as UseMatchMediaOptions) || {};
+
+	let [state, setState] = React.useState(defaultState);
+	let query = React.useMemo(
+		() => (typeof rawQuery === "object" ? json2mq(rawQuery) : rawQuery),
+		[rawQuery]
+	);
+
+	useEffect(() => {
+		let current = true;
+		let mql = window.matchMedia(query);
+		mql.addEventListener("change", handleChange);
+		setState(mql.matches);
+		return () => {
+			current = false;
+			mql.removeEventListener("change", handleChange);
+		};
+		function handleChange() {
+			if (current) {
+				setState(mql.matches);
 			}
+		}
+	}, [query]);
 
-			return () => {
-				current = false;
-				mql.removeEventListener("change", handleChange);
-			};
-		}, [query]);
-
-		return state;
-	};
+	return state;
 }
 
-export const useMatchMedia = createUseMatchMedia(React.useEffect);
-export const useMatchMediaLayoutEffect = createUseMatchMedia(useLayoutEffect);
-
-export type QueryObject = {
+export interface QueryObject {
 	[property: string]: string | number | boolean;
-};
+}
+
+export interface UseMatchMediaOptions {
+	/**
+	 * Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
+	 * `useEffect`.
+	 */
+	effectHook?: typeof React.useEffect;
+}

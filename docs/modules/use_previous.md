@@ -37,4 +37,4 @@ React 18. Do not use, probably.
 
 #### Defined in
 
-[src/use-previous.ts:7](https://github.com/chaance/hooks/blob/8221fb1/src/use-previous.ts#L7)
+[src/use-previous.ts:7](https://github.com/chaance/hooks/blob/2f16b01/src/use-previous.ts#L7)

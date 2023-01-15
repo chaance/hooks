@@ -10,18 +10,16 @@
 - [HistoryState](index.md#historystate)
 - [QueryObject](index.md#queryobject)
 - [UseEventListenerOptions](index.md#useeventlisteneroptions)
+- [UseMatchMediaOptions](index.md#usematchmediaoptions)
 - [UseStateWithHistoryOptions](index.md#usestatewithhistoryoptions)
-- [createUseMatchMedia](index.md#createusematchmedia)
 - [useConstant](index.md#useconstant)
 - [useEventListener](index.md#useeventlistener)
-- [useEventListenerLayoutEffect](index.md#useeventlistenerlayouteffect)
 - [useForceUpdate](index.md#useforceupdate)
 - [useInterval](index.md#useinterval)
 - [useIsHydrated](index.md#useishydrated)
 - [useIsomorphicLayoutEffect](index.md#useisomorphiclayouteffect)
 - [useLayoutEffect](index.md#uselayouteffect)
 - [useMatchMedia](index.md#usematchmedia)
-- [useMatchMediaLayoutEffect](index.md#usematchmedialayouteffect)
 - [usePrefersReducedMotion](index.md#useprefersreducedmotion)
 - [usePrevious](index.md#useprevious)
 - [usePromise](index.md#usepromise)
@@ -45,7 +43,7 @@ ___
 
 ### QueryObject
 
-Re-exports [QueryObject](use_match_media.md#queryobject)
+Re-exports [QueryObject](../interfaces/use_match_media.QueryObject.md)
 
 ___
 
@@ -55,15 +53,15 @@ Re-exports [UseEventListenerOptions](../interfaces/use_event_listener.UseEventLi
 
 ___
 
-### UseStateWithHistoryOptions
+### UseMatchMediaOptions
 
-Re-exports [UseStateWithHistoryOptions](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md)
+Re-exports [UseMatchMediaOptions](../interfaces/use_match_media.UseMatchMediaOptions.md)
 
 ___
 
-### createUseMatchMedia
+### UseStateWithHistoryOptions
 
-Re-exports [createUseMatchMedia](use_match_media.md#createusematchmedia)
+Re-exports [UseStateWithHistoryOptions](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md)
 
 ___
 
@@ -76,12 +74,6 @@ ___
 ### useEventListener
 
 Re-exports [useEventListener](use_event_listener.md#useeventlistener)
-
-___
-
-### useEventListenerLayoutEffect
-
-Re-exports [useEventListenerLayoutEffect](use_event_listener.md#useeventlistenerlayouteffect)
 
 ___
 
@@ -118,12 +110,6 @@ ___
 ### useMatchMedia
 
 Re-exports [useMatchMedia](use_match_media.md#usematchmedia)
-
-___
-
-### useMatchMediaLayoutEffect
-
-Re-exports [useMatchMediaLayoutEffect](use_match_media.md#usematchmedialayouteffect)
 
 ___
 

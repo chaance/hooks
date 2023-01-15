@@ -24,6 +24,9 @@ Renames and re-exports [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.
 
 ▸ **useIsomorphicLayoutEffect**(`effect`, `deps?`): `void`
 
+`useLayoutEffect` but without the annoying hydration warning when called on
+the server.
+
 See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
 #### Parameters

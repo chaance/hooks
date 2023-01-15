@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/use-prefers-reduced-motion.ts:6](https://github.com/chaance/hooks/blob/8221fb1/src/use-prefers-reduced-motion.ts#L6)
+[src/use-prefers-reduced-motion.ts:6](https://github.com/chaance/hooks/blob/2f16b01/src/use-prefers-reduced-motion.ts#L6)
