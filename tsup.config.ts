@@ -6,25 +6,10 @@ import pkgJson from "./package.json";
 let { name: packageName, version: packageVersion } = pkgJson;
 
 export default defineConfig((options) => {
-	let entry = fs
-		.readdirSync(path.join(__dirname, "src"))
-		.map((fileOrDirectoryName) => {
-			let filePath = path.join(__dirname, "src", fileOrDirectoryName);
-			if (
-				fs.statSync(filePath).isFile() &&
-				(path.extname(filePath) === ".ts" ||
-					path.extname(filePath) === ".tsx") &&
-				!/\.test\.(ts|tsx)$/.test(filePath)
-			) {
-				return `src/${fileOrDirectoryName}`;
-			}
-			return null;
-		})
-		.filter((v): v is string => v != null);
-
-	let external = ["react", "react-dom"];
-	let target = "es2019";
-	let banner = createBanner({
+	const entry = getEntrypoints();
+	const external = ["react", "react-dom"];
+	const target = "es2020";
+	const banner = createBanner({
 		author: "Chance Strickland",
 		creationYear: 2022,
 		license: "MIT",
@@ -86,4 +71,26 @@ function createBanner({
  * @license ${license}
  */
 `;
+}
+
+function getEntrypoints() {
+	const srcDir = path.join(__dirname, "src");
+	return fs
+		.readdirSync(srcDir)
+		.map((fileOrDirectoryName) => {
+			let filePath = path.join(srcDir, fileOrDirectoryName);
+			if (isValidEntrypoint(filePath)) {
+				return `src/${fileOrDirectoryName}`;
+			}
+			return null;
+		})
+		.filter((v): v is string => v != null);
+}
+
+function isValidEntrypoint(filePath: string) {
+	return (
+		fs.statSync(filePath).isFile() &&
+		(path.extname(filePath) === ".ts" || path.extname(filePath) === ".tsx") &&
+		!/\.test\.(ts|tsx)$/.test(filePath)
+	);
 }
