@@ -1,3 +1,5 @@
+export * from "./use-composed-event-handlers";
+export * from "./use-composed-refs";
 export * from "./use-constant";
 export * from "./use-event-listener";
 export * from "./use-force-update";
