@@ -79,3 +79,16 @@
   not safe in React 18), but a stateful value that updates only when React would
   update the value being tracked. This approach should be concurrent-safe and
   more reliable for rendering.
+
+## v0.4.0
+
+### Breaking Changes
+
+- `useInterval` and `useTimeout` will now cancel their timers if `null` or
+  `undefined` is passed as the time value. For the old behavior, pass `0`
+  instead.
+- Bumped build output target from ES2019 to ES2020
+
+### Other Changes
+
+- Updated build dependencies
