@@ -1,4 +1,5 @@
-import * as React from "react";
+import type { EffectCallback, DependencyList } from "react";
+import { useEffect as react_useEffect } from "react";
 
 /**
  * A React hook that attaches an event listener to the global window. The
@@ -14,7 +15,7 @@ import * as React from "react";
 export function useEventListener<ListenerType extends keyof EventMap>(
 	type: ListenerType,
 	listener: (event: EventMap[ListenerType]) => void,
-	options?: UseEventListenerOptions
+	options?: UseEventListenerOptions,
 ): void;
 
 /**
@@ -33,19 +34,19 @@ export function useEventListener<ListenerType extends keyof EventMap>(
  */
 export function useEventListener<
 	ElementType extends (Window & typeof globalThis) | Document | Element,
-	ListenerType extends keyof EventMap
+	ListenerType extends keyof EventMap,
 >(
 	elementRef: React.RefObject<ElementType>,
 	type: ListenerType,
 	listener: (event: EventMap[ListenerType]) => void,
-	options?: UseEventListenerOptions
+	options?: UseEventListenerOptions,
 ): void;
 
 export function useEventListener(
 	elementOrType: unknown,
 	typeOrListener: unknown,
 	listenerOrOptions?: unknown,
-	options?: UseEventListenerOptions
+	options?: UseEventListenerOptions,
 ) {
 	let element: (Window & typeof globalThis) | Document | Element | undefined;
 	let type: keyof EventMap;
@@ -55,7 +56,7 @@ export function useEventListener(
 		type = elementOrType as keyof EventMap;
 		if (typeof typeOrListener !== "function") {
 			throw new Error(
-				`Expected event handler callback to be a function; received ${typeof typeOrListener}`
+				`Expected event handler callback to be a function; received ${typeof typeOrListener}`,
 			);
 		}
 		listener = typeOrListener as typeof listener;
@@ -69,14 +70,14 @@ export function useEventListener(
 		type = typeOrListener as keyof EventMap;
 		if (typeof listenerOrOptions !== "function") {
 			throw new Error(
-				`Expected event listener to be a function; received ${typeof listenerOrOptions}`
+				`Expected event listener to be a function; received ${typeof listenerOrOptions}`,
 			);
 		}
 		listener = listenerOrOptions as typeof listener;
 		options = options || {};
 	} else {
 		throw new Error(
-			`Expected first argument to be an event type string or element ref; received ${typeof elementOrType}`
+			`Expected first argument to be an event type string or element ref; received ${typeof elementOrType}`,
 		);
 	}
 
@@ -87,7 +88,7 @@ export function useEventListener(
 		// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#specifications
 		passive = false,
 		signal,
-		effectHook: useEffect = React.useEffect,
+		effectHook: useEffect = react_useEffect,
 	} = options || {};
 	useEffect(() => {
 		let element = elementRef ? elementRef.current : window;
@@ -131,5 +132,5 @@ export interface UseEventListenerOptions {
 	 * Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
 	 * `useEffect`.
 	 */
-	effectHook?: typeof React.useEffect;
+	effectHook?: (effect: EffectCallback, deps?: DependencyList) => void;
 }

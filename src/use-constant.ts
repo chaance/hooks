@@ -1,7 +1,7 @@
-import * as React from "react";
+import { useRef } from "react";
 
 export function useConstant<T>(fn: () => T): T {
-	let ref = React.useRef<{ v: T }>();
+	let ref = useRef<{ v: T }>();
 	if (!ref.current) {
 		ref.current = { v: fn() };
 	}

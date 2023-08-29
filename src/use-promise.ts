@@ -1,16 +1,16 @@
-import * as React from "react";
+import { useEffect, useReducer } from "react";
 
 const LOADING = 0;
 const RESOLVED = 1;
 const ERROR = 2;
 
 export function usePromise<ResolvedType = any, ErrorType = any>(
-	promise: () => Promise<ResolvedType>
+	promise: () => Promise<ResolvedType>,
 ) {
-	let [state, dispatch] = React.useReducer(
+	let [state, dispatch] = useReducer(
 		(
 			state: PromiseState<ResolvedType, ErrorType>,
-			action: PromiseActions<ResolvedType, ErrorType>
+			action: PromiseActions<ResolvedType, ErrorType>,
 		): PromiseState<ResolvedType, ErrorType> => {
 			switch (action.type) {
 				case LOADING:
@@ -35,10 +35,10 @@ export function usePromise<ResolvedType = any, ErrorType = any>(
 			loading: false,
 			response: null,
 			error: null,
-		}
+		},
 	);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		let isCurrent = true;
 		dispatch({ type: LOADING });
 		promise()

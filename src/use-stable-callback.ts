@@ -1,4 +1,5 @@
-import * as React from "react";
+import { useCallback, useRef } from "react";
+import type { EffectCallback, DependencyList } from "react";
 import { useLayoutEffect } from "./use-isomorphic-layout-effect";
 
 /**
@@ -16,23 +17,23 @@ import { useLayoutEffect } from "./use-isomorphic-layout-effect";
  */
 export function useStableCallback<T extends (...args: any[]) => any>(
 	callback: T,
-	effectHook?: typeof React.useEffect
+	effectHook?: (effect: EffectCallback, deps?: DependencyList) => void,
 ): T;
 
 export function useStableCallback<T extends (...args: any[]) => any>(
 	callback: T,
-	useEffect: typeof React.useEffect = useLayoutEffect
+	useEffect = useLayoutEffect,
 ): T {
-	let savedCallback = React.useRef<typeof callback>();
+	let savedCallback = useRef<typeof callback>();
 	useEffect(() => {
 		savedCallback.current = callback;
-	});
+	}, [callback]);
 
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	return React.useCallback(
+	return useCallback(
 		((...args) => {
 			savedCallback.current?.(...args);
 		}) as T,
-		[]
+		[],
 	);
 }

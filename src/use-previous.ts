@@ -1,37 +1,32 @@
-import * as React from "react";
-
-const SET = 0;
+import { useEffect, useReducer } from "react";
 
 export function usePrevious<ValueType = any>(
-	value: ValueType
+	value: ValueType,
 ): ValueType | null {
-	let [history, send] = React.useReducer(reducer, [null, value]);
-	React.useEffect(() => {
-		send({ type: SET, next: value });
+	const [history, send] = useReducer<Reducer<ValueType>>(reducer, [
+		null,
+		value,
+	]);
+	useEffect(() => {
+		send(value);
 	}, [value]);
-	return history[0] as ValueType;
+	return history[0];
 }
+
+type Reducer<ValueType> = (
+	state: State<ValueType>,
+	event: ValueType,
+) => State<ValueType>;
 
 function reducer<ValueType>(
 	state: State<ValueType>,
-	event: Event<ValueType>
+	next: ValueType,
 ): State<ValueType> {
-	switch (event.type) {
-		case SET: {
-			let prev = state[1];
-			if (Object.is(prev, event.next)) {
-				return state;
-			}
-			return [prev, event.next];
-		}
-		default:
-			return state;
+	let prev = state[1];
+	if (Object.is(prev, next)) {
+		return state;
 	}
+	return [prev, next];
 }
 
 type State<ValueType> = [ValueType | null, ValueType];
-
-type Event<ValueType> = {
-	type: typeof SET;
-	next: ValueType;
-};

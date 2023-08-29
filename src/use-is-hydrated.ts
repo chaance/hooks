@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect, useState } from "react";
 
 let isHydrating = true;
 
@@ -8,8 +8,8 @@ let isHydrating = true;
  * @returns Whether or not the component tree has been hydrated
  */
 export function useIsHydrated() {
-	let [isHydrated, setIsHydrated] = React.useState(() => !isHydrating);
-	React.useEffect(() => {
+	let [isHydrated, setIsHydrated] = useState(() => !isHydrating);
+	useEffect(() => {
 		isHydrating = false;
 		setIsHydrated(true);
 	}, []);

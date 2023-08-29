@@ -1,4 +1,5 @@
-import * as React from "react";
+import { useEffect as react_useEffect, useMemo, useState } from "react";
+import type { EffectCallback, DependencyList } from "react";
 import { json2mq } from "./lib/json2mq";
 
 /**
@@ -35,11 +36,11 @@ export function useMatchMedia(
 ): boolean {
 	let defaultState =
 		typeof optionsOrDefaultState === "boolean" ? optionsOrDefaultState : false;
-	let { effectHook: useEffect = React.useEffect } =
+	let { effectHook: useEffect = react_useEffect } =
 		options || (optionsOrDefaultState as UseMatchMediaOptions) || {};
 
-	let [state, setState] = React.useState(defaultState);
-	let query = React.useMemo(
+	let [state, setState] = useState(defaultState);
+	let query = useMemo(
 		() => (typeof rawQuery === "object" ? json2mq(rawQuery) : rawQuery),
 		[rawQuery],
 	);
@@ -72,5 +73,5 @@ export interface UseMatchMediaOptions {
 	 * Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
 	 * `useEffect`.
 	 */
-	effectHook?: typeof React.useEffect;
+	effectHook?: (effect: EffectCallback, deps?: DependencyList) => void;
 }

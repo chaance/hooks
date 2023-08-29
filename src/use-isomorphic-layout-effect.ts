@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useLayoutEffect as react_useLayoutEffect } from "react";
 
 const canUseDOM = !!(
 	typeof window !== "undefined" &&
@@ -13,7 +13,7 @@ const canUseDOM = !!(
  * See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
  */
 export const useIsomorphicLayoutEffect = canUseDOM
-	? React.useLayoutEffect
-	: function noop() {};
+	? react_useLayoutEffect
+	: function useLayoutEffect() {};
 
 export { useIsomorphicLayoutEffect as useLayoutEffect };

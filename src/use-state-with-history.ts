@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useCallback, useReducer } from "react";
 
 const SET = 0;
 const UNDO = 1;
@@ -13,46 +13,50 @@ const REDO = 2;
  */
 export function useStateWithHistory<ValueType>(
 	initialValue: ValueType | (() => ValueType),
-	opts: UseStateWithHistoryOptions = {}
+	opts: UseStateWithHistoryOptions = {},
 ): HistoryState<ValueType> {
 	let { limit = -1 } = opts;
-	let [{ history, currentIndex }, send] = React.useReducer(
-		reducer,
-		{ initialValue },
-		({ initialValue }) => {
-			let history: ValueType[] = [
-				typeof initialValue === "function"
-					? (initialValue as () => ValueType)()
-					: initialValue,
-			];
-			return {
-				history,
-				currentIndex: 0,
-			};
-		}
-	);
+	let [{ history, currentIndex }, send] = useReducer<
+		Reducer<ValueType>,
+		typeof initialValue
+	>(reducer, initialValue, (initialValue) => {
+		let history: ValueType[] = [
+			typeof initialValue === "function"
+				? (initialValue as () => ValueType)()
+				: initialValue,
+		];
+		return {
+			history,
+			currentIndex: 0,
+		};
+	});
 
-	let undo = React.useCallback(() => {
+	let undo = useCallback(() => {
 		send({ type: UNDO, limit });
 	}, [limit]);
 
-	let redo = React.useCallback(() => {
+	let redo = useCallback(() => {
 		send({ type: REDO, limit });
 	}, [limit]);
 
-	let setValue = React.useCallback(
+	let setValue = useCallback(
 		(newValue: ValueType | ((oldValue: ValueType) => ValueType)) => {
 			send({ type: SET, next: newValue, limit });
 		},
-		[limit]
+		[limit],
 	);
 
-	return [(history as ValueType[])[currentIndex], setValue, undo, redo];
+	return [history[currentIndex], setValue, undo, redo];
 }
+
+type Reducer<ValueType> = (
+	state: State<ValueType>,
+	event: Event<ValueType>,
+) => State<ValueType>;
 
 function reducer<ValueType>(
 	state: State<ValueType>,
-	event: Event<ValueType>
+	event: Event<ValueType>,
 ): State<ValueType> {
 	let limit = Number.isFinite(Number(event.limit))
 		? Math.round(event.limit)
@@ -62,7 +66,7 @@ function reducer<ValueType>(
 			let newValue =
 				typeof event.next === "function"
 					? (event.next as (val: ValueType) => ValueType)(
-							state.history[state.currentIndex]
+							state.history[state.currentIndex],
 					  )
 					: event.next;
 
@@ -123,7 +127,7 @@ export type HistoryState<ValueType> = [
 	State: ValueType,
 	Setter: React.Dispatch<React.SetStateAction<ValueType>>,
 	UndoFunction: () => void,
-	RedoFunction: () => void
+	RedoFunction: () => void,
 ];
 
 export interface UseStateWithHistoryOptions {

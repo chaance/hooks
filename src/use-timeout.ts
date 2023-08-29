@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useStableCallback } from "./use-stable-callback";
+import { useEffect, useRef } from "react";
 
 /**
  * Sets a timer which executes a function or specified piece of code once the
@@ -13,12 +12,18 @@ import { useStableCallback } from "./use-stable-callback";
  */
 export function useTimeout(
 	callback: () => void,
-	delay?: number | null | undefined
+	delay?: number | null | undefined,
 ) {
-	let stableCallback = useStableCallback(callback);
-	React.useEffect(() => {
-		let tick = () => stableCallback();
-		let id = window.setTimeout(tick, delay || 0);
-		return () => window.clearTimeout(id);
-	}, [delay, stableCallback]);
+	const savedCallback = useRef(callback);
+	useEffect(() => {
+		savedCallback.current = callback;
+	});
+
+	useEffect(() => {
+		let tick = () => savedCallback.current?.();
+		if (delay != null) {
+			let id = window.setTimeout(tick, delay);
+			return () => window.clearTimeout(id);
+		}
+	}, [delay]);
 }
