@@ -23,7 +23,6 @@
 	"devDependencies": {
 		"@testing-library/jest-dom": "^6.1.2",
 		"@testing-library/react": "^13.4.0",
-		"@types/json2mq": "0.2.0",
 		"@types/node": "^18.17.11",
 		"@types/react": "^18.2.21",
 		"@types/react-dom": "^18.2.7",
@@ -51,9 +50,7 @@
 		"vite": "^4.4.9",
 		"vitest": "^0.34.3"
 	},
-	"dependencies": {
-		"json2mq": "0.2.0"
-	},
+	"dependencies": {},
 	"peerDependencies": {
 		"react": ">=18.0",
 		"react-dom": ">=18.0"

@@ -1,5 +1,5 @@
 import * as React from "react";
-import json2mq from "json2mq";
+import { json2mq } from "./lib/json2mq";
 
 /**
  * Returns whether or not a CSS media query matches.
@@ -10,7 +10,7 @@ import json2mq from "json2mq";
  */
 export function useMatchMedia(
 	rawQuery: string | QueryObject | QueryObject[],
-	options?: UseMatchMediaOptions
+	options?: UseMatchMediaOptions,
 ): boolean;
 
 /**
@@ -25,13 +25,13 @@ export function useMatchMedia(
 export function useMatchMedia(
 	rawQuery: string | QueryObject | QueryObject[],
 	defaultState: boolean,
-	options?: UseMatchMediaOptions
+	options?: UseMatchMediaOptions,
 ): boolean;
 
 export function useMatchMedia(
 	rawQuery: string | QueryObject | QueryObject[],
 	optionsOrDefaultState?: boolean | UseMatchMediaOptions,
-	options?: UseMatchMediaOptions
+	options?: UseMatchMediaOptions,
 ): boolean {
 	let defaultState =
 		typeof optionsOrDefaultState === "boolean" ? optionsOrDefaultState : false;
@@ -41,7 +41,7 @@ export function useMatchMedia(
 	let [state, setState] = React.useState(defaultState);
 	let query = React.useMemo(
 		() => (typeof rawQuery === "object" ? json2mq(rawQuery) : rawQuery),
-		[rawQuery]
+		[rawQuery],
 	);
 
 	useEffect(() => {
