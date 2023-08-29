@@ -6,7 +6,7 @@
 		"build": "tsup",
 		"test": "vitest --reporter verbose",
 		"coverage": "vitest run --coverage",
-		"doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ --exclude \"**/test/**/*\" --entryPointStrategy expand ./src"
+		"doc": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ --exclude \"**/lib/**/*\" --exclude \"**/test/**/*\" --entryPointStrategy expand ./src"
 	},
 	"author": "Chance Strickland <hi@chance.dev>",
 	"repository": {

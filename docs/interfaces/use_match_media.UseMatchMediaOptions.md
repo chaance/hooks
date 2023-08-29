@@ -36,4 +36,4 @@ Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
 
 #### Defined in
 
-[src/use-match-media.ts:75](https://github.com/chaance/hooks/blob/2f16b01/src/use-match-media.ts#L75)
+[src/use-match-media.ts:76](https://github.com/chaance/hooks/blob/54553af/src/use-match-media.ts#L76)

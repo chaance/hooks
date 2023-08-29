@@ -12,14 +12,16 @@
 
 ### useInterval
 
-▸ **useInterval**(`callback`, `interval`): `void`
+▸ **useInterval**(`callback`, `interval?`): `void`
+
+Repeatedly executes a function at a set interval.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | () => `void` |
-| `interval` | `undefined` \| ``null`` \| `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | () => `void` | A function to be executed at each interval |
+| `interval?` | ``null`` \| `number` | The interval in milliseconds. If this parameter is `null` or `undefined` the timer will be canceled. |
 
 #### Returns
 
@@ -27,4 +29,4 @@
 
 #### Defined in
 
-[src/use-interval.ts:4](https://github.com/chaance/hooks/blob/2f16b01/src/use-interval.ts#L4)
+[src/use-interval.ts:10](https://github.com/chaance/hooks/blob/54553af/src/use-interval.ts#L10)

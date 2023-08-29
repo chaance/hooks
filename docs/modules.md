@@ -7,6 +7,8 @@
 ### Modules
 
 - [index](modules/index.md)
+- [use-composed-event-handlers](modules/use_composed_event_handlers.md)
+- [use-composed-refs](modules/use_composed_refs.md)
 - [use-constant](modules/use_constant.md)
 - [use-event-listener](modules/use_event_listener.md)
 - [use-force-update](modules/use_force_update.md)

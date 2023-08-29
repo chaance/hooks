@@ -33,4 +33,4 @@ readonly [``null`` \| `ResolvedType`, `boolean`, ``null`` \| `ErrorType`]
 
 #### Defined in
 
-[src/use-promise.ts:7](https://github.com/chaance/hooks/blob/2f16b01/src/use-promise.ts#L7)
+[src/use-promise.ts:7](https://github.com/chaance/hooks/blob/54553af/src/use-promise.ts#L7)

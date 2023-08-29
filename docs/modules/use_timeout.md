@@ -22,7 +22,7 @@ timer expires.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `callback` | () => `void` | A function to be executed after the timer expires |
-| `delay?` | ``null`` \| `number` | The time, in milliseconds that the timer should wait before the specified function or code is executed. If this parameter is omitted, a value of 0 is used, meaning execute in the next event cycle. |
+| `delay?` | ``null`` \| `number` | The time, in milliseconds, that the timer should wait before the specified function or code is executed. If this parameter is `null` or `undefined` the timeout will be canceled. |
 
 #### Returns
 
@@ -30,4 +30,4 @@ timer expires.
 
 #### Defined in
 
-[src/use-timeout.ts:14](https://github.com/chaance/hooks/blob/2f16b01/src/use-timeout.ts#L14)
+[src/use-timeout.ts:12](https://github.com/chaance/hooks/blob/54553af/src/use-timeout.ts#L12)

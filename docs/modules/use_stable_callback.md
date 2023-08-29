@@ -33,7 +33,7 @@ to use this hook with too much indirection to prevent unexpected behavior.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `callback` | `T` | The callback to be saved |
-| `effectHook?` | (`effect`: `EffectCallback`, `deps?`: `DependencyList`) => `void` | Accepts a function that contains imperative, possibly effectful code. **`Version`** 16.8.0 **`See`** https://reactjs.org/docs/hooks-reference.html#useeffect |
+| `effectHook?` | (`effect`: `EffectCallback`, `deps?`: `DependencyList`) => `void` | Save the callback in either `useEffect` or `useLayoutEffect`. Defaults to `useLayoutEffect`. |
 
 #### Returns
 
@@ -41,4 +41,4 @@ to use this hook with too much indirection to prevent unexpected behavior.
 
 #### Defined in
 
-[src/use-stable-callback.ts:17](https://github.com/chaance/hooks/blob/2f16b01/src/use-stable-callback.ts#L17)
+[src/use-stable-callback.ts:18](https://github.com/chaance/hooks/blob/54553af/src/use-stable-callback.ts#L18)

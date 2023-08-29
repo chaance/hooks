@@ -12,12 +12,7 @@
 
 ### usePrevious
 
-▸ **usePrevious**<`ValueType`\>(`value`): ``null`` \| `ValueType`
-
-**`Deprecated`**
-
-This hook will give you a bad time with concurrent features in
-React 18. Do not use, probably.
+▸ **usePrevious**<`ValueType`\>(`value`): `ValueType` \| ``null``
 
 #### Type parameters
 
@@ -33,8 +28,8 @@ React 18. Do not use, probably.
 
 #### Returns
 
-``null`` \| `ValueType`
+`ValueType` \| ``null``
 
 #### Defined in
 
-[src/use-previous.ts:7](https://github.com/chaance/hooks/blob/2f16b01/src/use-previous.ts#L7)
+[src/use-previous.ts:3](https://github.com/chaance/hooks/blob/54553af/src/use-previous.ts#L3)

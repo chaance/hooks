@@ -42,4 +42,4 @@ See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
 #### Defined in
 
-node_modules/.pnpm/@types+react@18.0.26/node_modules/@types/react/index.d.ts:1050
+node_modules/.pnpm/@types+react@18.2.21/node_modules/@types/react/index.d.ts:1092

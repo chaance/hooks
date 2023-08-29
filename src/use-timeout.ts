@@ -5,10 +5,9 @@ import { useEffect, useRef } from "react";
  * timer expires.
  *
  * @param callback A function to be executed after the timer expires
- * @param delay The time, in milliseconds that the timer should wait before the
+ * @param delay The time, in milliseconds, that the timer should wait before the
  *              specified function or code is executed. If this parameter is
- *              omitted, a value of 0 is used, meaning execute in the next event
- *              cycle.
+ *              `null` or `undefined` the timeout will be canceled.
  */
 export function useTimeout(
 	callback: () => void,

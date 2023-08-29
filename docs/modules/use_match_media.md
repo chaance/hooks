@@ -34,7 +34,7 @@ Returns whether or not a CSS media query matches.
 
 #### Defined in
 
-[src/use-match-media.ts:11](https://github.com/chaance/hooks/blob/2f16b01/src/use-match-media.ts#L11)
+[src/use-match-media.ts:12](https://github.com/chaance/hooks/blob/54553af/src/use-match-media.ts#L12)
 
 ▸ **useMatchMedia**(`rawQuery`, `defaultState`, `options?`): `boolean`
 
@@ -54,4 +54,4 @@ Returns whether or not a CSS media query matches.
 
 #### Defined in
 
-[src/use-match-media.ts:25](https://github.com/chaance/hooks/blob/2f16b01/src/use-match-media.ts#L25)
+[src/use-match-media.ts:26](https://github.com/chaance/hooks/blob/54553af/src/use-match-media.ts#L26)

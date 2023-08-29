@@ -6,12 +6,15 @@
 
 ### References
 
+- [AssignableRef](index.md#assignableref)
 - [EventMap](index.md#eventmap)
 - [HistoryState](index.md#historystate)
 - [QueryObject](index.md#queryobject)
 - [UseEventListenerOptions](index.md#useeventlisteneroptions)
 - [UseMatchMediaOptions](index.md#usematchmediaoptions)
 - [UseStateWithHistoryOptions](index.md#usestatewithhistoryoptions)
+- [useComposedEventHandlers](index.md#usecomposedeventhandlers)
+- [useComposedRefs](index.md#usecomposedrefs)
 - [useConstant](index.md#useconstant)
 - [useEventListener](index.md#useeventlistener)
 - [useForceUpdate](index.md#useforceupdate)
@@ -28,6 +31,12 @@
 - [useTimeout](index.md#usetimeout)
 
 ## References
+
+### AssignableRef
+
+Re-exports [AssignableRef](use_composed_refs.md#assignableref)
+
+___
 
 ### EventMap
 
@@ -62,6 +71,18 @@ ___
 ### UseStateWithHistoryOptions
 
 Re-exports [UseStateWithHistoryOptions](../interfaces/use_state_with_history.UseStateWithHistoryOptions.md)
+
+___
+
+### useComposedEventHandlers
+
+Re-exports [useComposedEventHandlers](use_composed_event_handlers.md#usecomposedeventhandlers)
+
+___
+
+### useComposedRefs
+
+Re-exports [useComposedRefs](use_composed_refs.md#usecomposedrefs)
 
 ___
 
