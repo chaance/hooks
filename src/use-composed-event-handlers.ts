@@ -15,10 +15,10 @@ import { useCallback } from "react";
  */
 export function useComposedEventHandlers<
 	T extends { defaultPrevented: boolean },
->(...handlers: Array<GenericEventHandler<T> | null | undefined>) {
+>(...handlers: Array<((event: T) => void) | null | undefined>) {
 	return useCallback(
 		(event: T) => {
-			let previousHandler: GenericEventHandler<T> | null | undefined;
+			let previousHandler: (typeof handlers)[number];
 			for (const handler of handlers) {
 				previousHandler?.(event);
 				if (!event.defaultPrevented) {
@@ -31,7 +31,3 @@ export function useComposedEventHandlers<
 		[...handlers],
 	);
 }
-
-type GenericEventHandler<T extends { defaultPrevented: boolean }> = (
-	event: T,
-) => void;

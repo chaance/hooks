@@ -26,15 +26,16 @@ export function useComposedRefs<RefValueType = unknown>(
 	}, refs);
 }
 
-type AssignableRef<ValueType> =
+/**
+ * Either a React ref object created with `useRef` or `createRef`, or a ref
+ * callback function
+ */
+export type AssignableRef<ValueType> =
 	| {
 			bivarianceHack(instance: ValueType | null): void;
 	  }["bivarianceHack"]
 	| React.MutableRefObject<ValueType | null>;
 
-/**
- * Passes or assigns an arbitrary value to a ref function or object.
- */
 function assignRef<RefValueType = unknown>(
 	ref: React.Ref<RefValueType> | null | undefined,
 	value: RefValueType,
