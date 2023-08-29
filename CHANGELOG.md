@@ -91,4 +91,5 @@
 
 ### Other Changes
 
+- Added `useComposedEventHandlers`, `useComposedRefs`
 - Updated build dependencies
