@@ -16,17 +16,15 @@
 - [useComposedEventHandlers](index.md#usecomposedeventhandlers)
 - [useComposedRefs](index.md#usecomposedrefs)
 - [useConstant](index.md#useconstant)
+- [useEffectEvent](index.md#useeffectevent)
 - [useEventListener](index.md#useeventlistener)
 - [useForceUpdate](index.md#useforceupdate)
 - [useInterval](index.md#useinterval)
 - [useIsHydrated](index.md#useishydrated)
-- [useIsomorphicLayoutEffect](index.md#useisomorphiclayouteffect)
 - [useLayoutEffect](index.md#uselayouteffect)
 - [useMatchMedia](index.md#usematchmedia)
 - [usePrefersReducedMotion](index.md#useprefersreducedmotion)
-- [usePrevious](index.md#useprevious)
 - [usePromise](index.md#usepromise)
-- [useStableCallback](index.md#usestablecallback)
 - [useStateWithHistory](index.md#usestatewithhistory)
 - [useTimeout](index.md#usetimeout)
 
@@ -92,6 +90,12 @@ Re-exports [useConstant](use_constant.md#useconstant)
 
 ___
 
+### useEffectEvent
+
+Re-exports [useEffectEvent](use_effect_event.md#useeffectevent)
+
+___
+
 ### useEventListener
 
 Re-exports [useEventListener](use_event_listener.md#useeventlistener)
@@ -116,15 +120,9 @@ Re-exports [useIsHydrated](use_is_hydrated.md#useishydrated)
 
 ___
 
-### useIsomorphicLayoutEffect
-
-Re-exports [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.md#useisomorphiclayouteffect)
-
-___
-
 ### useLayoutEffect
 
-Renames and re-exports [useIsomorphicLayoutEffect](use_isomorphic_layout_effect.md#useisomorphiclayouteffect)
+Re-exports [useLayoutEffect](use_layout_effect.md#uselayouteffect)
 
 ___
 
@@ -140,21 +138,9 @@ Re-exports [usePrefersReducedMotion](use_prefers_reduced_motion.md#useprefersred
 
 ___
 
-### usePrevious
-
-Re-exports [usePrevious](use_previous.md#useprevious)
-
-___
-
 ### usePromise
 
 Re-exports [usePromise](use_promise.md#usepromise)
-
-___
-
-### useStableCallback
-
-Re-exports [useStableCallback](use_stable_callback.md#usestablecallback)
 
 ___
 

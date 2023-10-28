@@ -20,4 +20,4 @@ The maximum number of entries to keep in the history
 
 #### Defined in
 
-[src/use-state-with-history.ts:137](https://github.com/chaance/hooks/blob/54553af/src/use-state-with-history.ts#L137)
+[use-state-with-history.ts:137](https://github.com/chaance/hooks/blob/99e93c4/src/use-state-with-history.ts#L137)

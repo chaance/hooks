@@ -51,4 +51,4 @@ not be called.
 
 #### Defined in
 
-[src/use-composed-event-handlers.ts:16](https://github.com/chaance/hooks/blob/54553af/src/use-composed-event-handlers.ts#L16)
+[use-composed-event-handlers.ts:16](https://github.com/chaance/hooks/blob/99e93c4/src/use-composed-event-handlers.ts#L16)

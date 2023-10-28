@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/use-event-listener.ts:103](https://github.com/chaance/hooks/blob/54553af/src/use-event-listener.ts#L103)
+[use-event-listener.ts:103](https://github.com/chaance/hooks/blob/99e93c4/src/use-event-listener.ts#L103)
 
 ## Functions
 
@@ -55,7 +55,7 @@ listener is attached in an effect hook and torn down in its cleanup phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:15](https://github.com/chaance/hooks/blob/54553af/src/use-event-listener.ts#L15)
+[use-event-listener.ts:15](https://github.com/chaance/hooks/blob/99e93c4/src/use-event-listener.ts#L15)
 
 ▸ **useEventListener**<`ElementType`, `ListenerType`\>(`elementRef`, `type`, `listener`, `options?`): `void`
 
@@ -85,4 +85,4 @@ phase.
 
 #### Defined in
 
-[src/use-event-listener.ts:35](https://github.com/chaance/hooks/blob/54553af/src/use-event-listener.ts#L35)
+[use-event-listener.ts:35](https://github.com/chaance/hooks/blob/99e93c4/src/use-event-listener.ts#L35)

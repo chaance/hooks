@@ -32,4 +32,4 @@
 
 #### Defined in
 
-[src/use-constant.ts:3](https://github.com/chaance/hooks/blob/54553af/src/use-constant.ts#L3)
+[use-constant.ts:3](https://github.com/chaance/hooks/blob/99e93c4/src/use-constant.ts#L3)

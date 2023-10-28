@@ -29,4 +29,4 @@ Repeatedly executes a function at a set interval.
 
 #### Defined in
 
-[src/use-interval.ts:10](https://github.com/chaance/hooks/blob/54553af/src/use-interval.ts#L10)
+[use-interval.ts:10](https://github.com/chaance/hooks/blob/99e93c4/src/use-interval.ts#L10)

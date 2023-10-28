@@ -29,7 +29,7 @@ callback function
 
 #### Defined in
 
-[src/use-composed-refs.ts:33](https://github.com/chaance/hooks/blob/54553af/src/use-composed-refs.ts#L33)
+[use-composed-refs.ts:33](https://github.com/chaance/hooks/blob/99e93c4/src/use-composed-refs.ts#L33)
 
 ## Functions
 
@@ -74,4 +74,4 @@ functions) the same value to all provided refs.
 
 #### Defined in
 
-[src/use-composed-refs.ts:15](https://github.com/chaance/hooks/blob/54553af/src/use-composed-refs.ts#L15)
+[use-composed-refs.ts:15](https://github.com/chaance/hooks/blob/99e93c4/src/use-composed-refs.ts#L15)

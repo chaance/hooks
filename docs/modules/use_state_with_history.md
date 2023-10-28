@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/use-state-with-history.ts:126](https://github.com/chaance/hooks/blob/54553af/src/use-state-with-history.ts#L126)
+[use-state-with-history.ts:126](https://github.com/chaance/hooks/blob/99e93c4/src/use-state-with-history.ts#L126)
 
 ## Functions
 
@@ -60,4 +60,4 @@ functions to navigate through the state's history.
 
 #### Defined in
 
-[src/use-state-with-history.ts:14](https://github.com/chaance/hooks/blob/54553af/src/use-state-with-history.ts#L14)
+[use-state-with-history.ts:14](https://github.com/chaance/hooks/blob/99e93c4/src/use-state-with-history.ts#L14)

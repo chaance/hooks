@@ -30,4 +30,4 @@ timer expires.
 
 #### Defined in
 
-[src/use-timeout.ts:12](https://github.com/chaance/hooks/blob/54553af/src/use-timeout.ts#L12)
+[use-timeout.ts:12](https://github.com/chaance/hooks/blob/99e93c4/src/use-timeout.ts#L12)
