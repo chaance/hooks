@@ -26,6 +26,7 @@ export default defineConfig((options) => {
 			external,
 			banner: { js: banner },
 			target,
+			outExtension: () => ({ js: ".cjs" }),
 		},
 
 		// esm + d.ts
@@ -36,6 +37,7 @@ export default defineConfig((options) => {
 			external,
 			banner: { js: banner },
 			target,
+			outExtension: () => ({ js: ".js" }),
 			dts: { banner },
 		},
 	];

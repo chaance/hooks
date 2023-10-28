@@ -14,6 +14,7 @@
 		"url": "git+https://github.com/chaance/hooks.git"
 	},
 	"license": "MIT",
+	"type": "module",
 	"files": [
 		"dist",
 		"src",
@@ -66,13 +67,78 @@
 		"exports": {
 			".": {
 				"types": "./dist/index.d.ts",
-				"import": "./dist/index.mjs",
-				"require": "./dist/index.js"
+				"import": "./dist/index.js",
+				"require": "./dist/index.cjs"
 			},
-			"./*": {
-				"types": "./dist/*.d.ts",
-				"import": "./dist/*.mjs",
-				"require": "./dist/*.js"
+			"./use-composed-event-handlers": {
+				"types": "./dist/use-composed-event-handlers.d.ts",
+				"import": "./dist/use-composed-event-handlers.js",
+				"require": "./dist/use-composed-event-handlers.cjs"
+			},
+			"./use-composed-refs": {
+				"types": "./dist/use-composed-refs.d.ts",
+				"import": "./dist/use-composed-refs.js",
+				"require": "./dist/use-composed-refs.cjs"
+			},
+			"./use-constant": {
+				"types": "./dist/use-constant.d.ts",
+				"import": "./dist/use-constant.js",
+				"require": "./dist/use-constant.cjs"
+			},
+			"./use-effect-event": {
+				"types": "./dist/use-effect-event.d.ts",
+				"import": "./dist/use-effect-event.js",
+				"require": "./dist/use-effect-event.cjs"
+			},
+			"./use-event-listener": {
+				"types": "./dist/use-event-listener.d.ts",
+				"import": "./dist/use-event-listener.js",
+				"require": "./dist/use-event-listener.cjs"
+			},
+			"./use-force-update": {
+				"types": "./dist/use-force-update.d.ts",
+				"import": "./dist/use-force-update.js",
+				"require": "./dist/use-force-update.cjs"
+			},
+			"./use-interval": {
+				"types": "./dist/use-interval.d.ts",
+				"import": "./dist/use-interval.js",
+				"require": "./dist/use-interval.cjs"
+			},
+			"./use-is-hydrated": {
+				"types": "./dist/use-is-hydrated.d.ts",
+				"import": "./dist/use-is-hydrated.js",
+				"require": "./dist/use-is-hydrated.cjs"
+			},
+			"./use-layout-effect": {
+				"types": "./dist/use-layout-effect.d.ts",
+				"import": "./dist/use-layout-effect.js",
+				"require": "./dist/use-layout-effect.cjs"
+			},
+			"./use-match-media": {
+				"types": "./dist/use-match-media.d.ts",
+				"import": "./dist/use-match-media.js",
+				"require": "./dist/use-match-media.cjs"
+			},
+			"./use-prefers-reduced-motion": {
+				"types": "./dist/use-prefers-reduced-motion.d.ts",
+				"import": "./dist/use-prefers-reduced-motion.js",
+				"require": "./dist/use-prefers-reduced-motion.cjs"
+			},
+			"./use-promise": {
+				"types": "./dist/use-promise.d.ts",
+				"import": "./dist/use-promise.js",
+				"require": "./dist/use-promise.cjs"
+			},
+			"./use-state-with-history": {
+				"types": "./dist/use-state-with-history.d.ts",
+				"import": "./dist/use-state-with-history.js",
+				"require": "./dist/use-state-with-history.cjs"
+			},
+			"./use-timeout": {
+				"types": "./dist/use-timeout.d.ts",
+				"import": "./dist/use-timeout.js",
+				"require": "./dist/use-timeout.cjs"
 			}
 		}
 	}

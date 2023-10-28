@@ -93,3 +93,15 @@
 
 - Added `useComposedEventHandlers`, `useComposedRefs`
 - Updated build dependencies
+
+## v0.5.0
+
+### Breaking Changes
+
+- Removed `usePrevious` hook
+- Renamed `useIsomorphicLayoutEffect` to `useLayoutEffect`. No more alias!
+- Removed `useStableCallback` in favor of `useEffectEvent`
+
+### Other Changes
+
+- Fixed export maps to support importing individual hook modules
