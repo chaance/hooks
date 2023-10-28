@@ -62,83 +62,98 @@
 	"publishConfig": {
 		"access": "public",
 		"types": "./dist/index.d.ts",
-		"module": "./dist/index.mjs",
-		"main": "./dist/index.js",
+		"module": "./dist/index.js",
+		"main": "./dist/index.cjs",
 		"exports": {
 			".": {
 				"types": "./dist/index.d.ts",
 				"import": "./dist/index.js",
-				"require": "./dist/index.cjs"
+				"require": "./dist/index.cjs",
+				"default": "./dist/index.js"
 			},
 			"./use-composed-event-handlers": {
 				"types": "./dist/use-composed-event-handlers.d.ts",
 				"import": "./dist/use-composed-event-handlers.js",
-				"require": "./dist/use-composed-event-handlers.cjs"
+				"require": "./dist/use-composed-event-handlers.cjs",
+				"default": "./dist/use-composed-event-handlers.js"
 			},
 			"./use-composed-refs": {
 				"types": "./dist/use-composed-refs.d.ts",
 				"import": "./dist/use-composed-refs.js",
-				"require": "./dist/use-composed-refs.cjs"
+				"require": "./dist/use-composed-refs.cjs",
+				"default": "./dist/use-composed-refs.js"
 			},
 			"./use-constant": {
 				"types": "./dist/use-constant.d.ts",
 				"import": "./dist/use-constant.js",
-				"require": "./dist/use-constant.cjs"
+				"require": "./dist/use-constant.cjs",
+				"default": "./dist/use-constant.js"
 			},
 			"./use-effect-event": {
 				"types": "./dist/use-effect-event.d.ts",
 				"import": "./dist/use-effect-event.js",
-				"require": "./dist/use-effect-event.cjs"
+				"require": "./dist/use-effect-event.cjs",
+				"default": "./dist/use-effect-event.js"
 			},
 			"./use-event-listener": {
 				"types": "./dist/use-event-listener.d.ts",
 				"import": "./dist/use-event-listener.js",
-				"require": "./dist/use-event-listener.cjs"
+				"require": "./dist/use-event-listener.cjs",
+				"default": "./dist/use-event-listener.js"
 			},
 			"./use-force-update": {
 				"types": "./dist/use-force-update.d.ts",
 				"import": "./dist/use-force-update.js",
-				"require": "./dist/use-force-update.cjs"
+				"require": "./dist/use-force-update.cjs",
+				"default": "./dist/use-force-update.js"
 			},
 			"./use-interval": {
 				"types": "./dist/use-interval.d.ts",
 				"import": "./dist/use-interval.js",
-				"require": "./dist/use-interval.cjs"
+				"require": "./dist/use-interval.cjs",
+				"default": "./dist/use-interval.js"
 			},
 			"./use-is-hydrated": {
 				"types": "./dist/use-is-hydrated.d.ts",
 				"import": "./dist/use-is-hydrated.js",
-				"require": "./dist/use-is-hydrated.cjs"
+				"require": "./dist/use-is-hydrated.cjs",
+				"default": "./dist/use-is-hydrated.js"
 			},
 			"./use-layout-effect": {
 				"types": "./dist/use-layout-effect.d.ts",
 				"import": "./dist/use-layout-effect.js",
-				"require": "./dist/use-layout-effect.cjs"
+				"require": "./dist/use-layout-effect.cjs",
+				"default": "./dist/use-layout-effect.js"
 			},
 			"./use-match-media": {
 				"types": "./dist/use-match-media.d.ts",
 				"import": "./dist/use-match-media.js",
-				"require": "./dist/use-match-media.cjs"
+				"require": "./dist/use-match-media.cjs",
+				"default": "./dist/use-match-media.js"
 			},
 			"./use-prefers-reduced-motion": {
 				"types": "./dist/use-prefers-reduced-motion.d.ts",
 				"import": "./dist/use-prefers-reduced-motion.js",
-				"require": "./dist/use-prefers-reduced-motion.cjs"
+				"require": "./dist/use-prefers-reduced-motion.cjs",
+				"default": "./dist/use-prefers-reduced-motion.js"
 			},
 			"./use-promise": {
 				"types": "./dist/use-promise.d.ts",
 				"import": "./dist/use-promise.js",
-				"require": "./dist/use-promise.cjs"
+				"require": "./dist/use-promise.cjs",
+				"default": "./dist/use-promise.js"
 			},
 			"./use-state-with-history": {
 				"types": "./dist/use-state-with-history.d.ts",
 				"import": "./dist/use-state-with-history.js",
-				"require": "./dist/use-state-with-history.cjs"
+				"require": "./dist/use-state-with-history.cjs",
+				"default": "./dist/use-state-with-history.js"
 			},
 			"./use-timeout": {
 				"types": "./dist/use-timeout.d.ts",
 				"import": "./dist/use-timeout.js",
-				"require": "./dist/use-timeout.cjs"
+				"require": "./dist/use-timeout.cjs",
+				"default": "./dist/use-timeout.js"
 			}
 		}
 	}
