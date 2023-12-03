@@ -36,7 +36,7 @@ export type AssignableRef<ValueType> =
 	  }["bivarianceHack"]
 	| React.MutableRefObject<ValueType | null>;
 
-function assignRef<RefValueType = unknown>(
+export function assignRef<RefValueType = unknown>(
 	ref: React.Ref<RefValueType> | null | undefined,
 	value: RefValueType,
 ) {

@@ -1,14 +1,31 @@
-export * from "./use-composed-event-handlers";
-export * from "./use-composed-refs";
-export * from "./use-constant";
-export * from "./use-effect-event";
-export * from "./use-event-listener";
-export * from "./use-force-update";
-export * from "./use-interval";
-export * from "./use-is-hydrated";
-export * from "./use-layout-effect";
-export * from "./use-match-media";
-export * from "./use-prefers-reduced-motion";
-export * from "./use-promise";
-export * from "./use-state-with-history";
-export * from "./use-timeout";
+export { useComposedEventHandlers } from "./use-composed-event-handlers";
+export {
+	type AssignableRef,
+	assignRef,
+	useComposedRefs,
+} from "./use-composed-refs";
+export { useConstant } from "./use-constant";
+export { useControllableState } from "./use-controllable-state";
+export { useEffectEvent } from "./use-effect-event";
+export {
+	type EventMap,
+	type UseEventListenerOptions,
+	useEventListener,
+} from "./use-event-listener";
+export { useForceUpdate } from "./use-force-update";
+export { useInterval } from "./use-interval";
+export { useIsHydrated } from "./use-is-hydrated";
+export { useLayoutEffect } from "./use-layout-effect";
+export {
+	type QueryObject,
+	type UseMatchMediaOptions,
+	useMatchMedia,
+} from "./use-match-media";
+export { usePrefersReducedMotion } from "./use-prefers-reduced-motion";
+export { usePromise } from "./use-promise";
+export {
+	type HistoryState,
+	type UseStateWithHistoryOptions,
+	useStateWithHistory,
+} from "./use-state-with-history";
+export { useTimeout } from "./use-timeout";
