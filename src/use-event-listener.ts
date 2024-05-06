@@ -1,107 +1,186 @@
-import type { EffectCallback, DependencyList } from "react";
-import { useEffect as react_useEffect } from "react";
+import { useEffect } from "react";
+
+// #region function overloads
 
 /**
- * A React hook that attaches an event listener to the global window. The
- * listener is attached in an effect hook and torn down in its cleanup phase.
+ * A React hook to attach an event listener to a DOM node. This is most useful
+ * for very simple one-off event listeners attached without conditions. The
+ * listener is attached in `useEffect` and torn down in its cleanup phase.
  *
- * @param type A case-sensitive string representing the [event
- * type](https://developer.mozilla.org/en-US/docs/Web/Events) to listen for
+ * If you need to attach multiple related events, it's generally better to set
+ * those up in `useEffect` directly to reduce overhead and simplify.
+ *
+ * @param element The node reference to which the event listener will be
+ * attached. This may take a few different shapes:
+ * - If you want to attach the event listener to the global `window` or
+ *   `document` objects, this can be a string of `"window"` or `"document"`
+ *   respectively. This is useful to avoid null-checking in your component so
+ *   that this is safe for SSR.
+ * - A React ref object that contains the node. **You should always pass the ref
+ *   itself rather than its current value.** The ref may not be attached when
+ *   the effect runs, and since refs aren't stateful its value change won't
+ *   re-trigger the effect, which means event listeners may never be attached.
+ * - A direct reference to a DOM node. This is useful if the node is stateful,
+ *   in which case the listener will be detached and re-attached to synchronize
+ *   with React state.
+ *
+ * @param type The name of the event to listen for.
+ *
  * @param listener The event listener callback that fires in response to the
- *                 event being dispatched
+ * event being dispatched.
+ *
+ * **This should always be stabilized between renders.** If the listener
+ * reference can be saved without memoization (meaning that its dependencies
+ * changing do not need to detach or re-attach the event listener), wrap the
+ * listener in `useEffectEvent` to prevent attaching/detaching on every render.
+ *
  * @param options An options object that specifies characteristics about the
- *                event listener
+ * event listener
  */
-export function useEventListener<ListenerType extends keyof EventMap>(
-	type: ListenerType,
-	listener: (event: EventMap[ListenerType]) => void,
+export function useEventListener<K extends keyof WindowEventMap>(
+	element: "window" | Window | Nullish,
+	type: K,
+	listener: ((evt: WindowEventMap[K]) => any) | Nullish,
 	options?: UseEventListenerOptions,
 ): void;
 
-/**
- * A React hook that attaches an event listener to an element stored in a ref.
- * The listener is attached in an effect hook and torn down in its cleanup
- * phase.
- *
- * @param elementRef A React ref object containing the element to which the
- *                   event listener will be attached
- * @param type A case-sensitive string representing the [event
- * type](https://developer.mozilla.org/en-US/docs/Web/Events) to listen for
- * @param listener The event listener callback that fires in response to the
- *                 event being dispatched
- * @param options An options object that specifies characteristics about the
- *                event listener
- */
+export function useEventListener<K extends keyof DocumentEventMap>(
+	element: "document" | Document | Nullish,
+	type: K,
+	listener: ((evt: DocumentEventMap[K]) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
 export function useEventListener<
-	ElementType extends (Window & typeof globalThis) | Document | Element,
-	ListenerType extends keyof EventMap,
+	T extends HTMLElement,
+	K extends keyof HTMLElementEventMap,
 >(
-	elementRef: React.RefObject<ElementType>,
-	type: ListenerType,
-	listener: (event: EventMap[ListenerType]) => void,
+	element: T | RefObject<T> | Nullish,
+	type: K,
+	listener: ((evt: SpecificEvent<HTMLElementEventMap[K], T>) => any) | Nullish,
 	options?: UseEventListenerOptions,
 ): void;
+
+export function useEventListener<K extends keyof HTMLElementEventMap>(
+	element: HTMLElement | RefObject<HTMLElement> | Nullish,
+	type: K,
+	listener: ((evt: HTMLElementEventMap[K]) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
+export function useEventListener<
+	T extends SVGElement,
+	K extends keyof SVGElementEventMap,
+>(
+	element: T | RefObject<T> | Nullish,
+	type: K,
+	listener: ((evt: SpecificEvent<SVGElementEventMap[K], T>) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
+export function useEventListener<K extends keyof SVGElementEventMap>(
+	element: SVGElement | RefObject<SVGElement> | Nullish,
+	type: K,
+	listener: ((evt: SVGElementEventMap[K]) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
+export function useEventListener<
+	T extends Element,
+	K extends keyof ElementEventMap,
+>(
+	element: T | RefObject<T> | Nullish,
+	type: K,
+	listener: ((evt: SpecificEvent<ElementEventMap[K], T>) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
+export function useEventListener<K extends keyof ElementEventMap>(
+	element: Element | RefObject<Element> | Nullish,
+	type: K,
+	listener: ((evt: ElementEventMap[K]) => any) | Nullish,
+	options?: UseEventListenerOptions,
+): void;
+
+// #endregion
 
 export function useEventListener(
-	elementOrType: unknown,
-	typeOrListener: unknown,
-	listenerOrOptions?: unknown,
+	elementOrRef: any,
+	type: string,
+	listener: ((event: Event) => any) | Nullish,
 	options?: UseEventListenerOptions,
-) {
-	let element: (Window & typeof globalThis) | Document | Element | undefined;
-	let type: keyof EventMap;
-	let listener: (event: EventMap[typeof type]) => void;
-	let elementRef: React.RefObject<typeof element> | null = null;
-	if (typeof elementOrType === "string") {
-		type = elementOrType as keyof EventMap;
-		if (typeof typeOrListener !== "function") {
-			throw new Error(
-				`Expected event handler callback to be a function; received ${typeof typeOrListener}`,
-			);
-		}
-		listener = typeOrListener as typeof listener;
-		options = (listenerOrOptions as UseEventListenerOptions) || {};
-	} else if (
-		elementOrType &&
-		typeof elementOrType === "object" &&
-		"current" in elementOrType
-	) {
-		elementRef = elementOrType as React.RefObject<typeof element>;
-		type = typeOrListener as keyof EventMap;
-		if (typeof listenerOrOptions !== "function") {
-			throw new Error(
-				`Expected event listener to be a function; received ${typeof listenerOrOptions}`,
-			);
-		}
-		listener = listenerOrOptions as typeof listener;
-		options = options || {};
-	} else {
-		throw new Error(
-			`Expected first argument to be an event type string or element ref; received ${typeof elementOrType}`,
-		);
-	}
-
+): void {
 	let {
 		capture,
 		once,
-		// default is inconsistent between browsers
+		// default for `passive` is inconsistent between browsers
 		// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#specifications
 		passive = false,
 		signal,
-		effectHook: useEffect = react_useEffect,
-	} = options || {};
+		skip = false,
+	} = options ?? {};
+
 	useEffect(() => {
-		let element = elementRef ? elementRef.current : window;
-		let opts = { capture, passive, once, signal };
-		element?.addEventListener(type, listener, opts);
+		if (!elementOrRef || !listener || skip) {
+			return;
+		}
+
+		let element: any;
+		if (typeof elementOrRef === "string") {
+			if (elementOrRef === "window") {
+				element = window;
+			} else if (elementOrRef === "document") {
+				element = document;
+			} else {
+				throw new Error(
+					`Invalid element reference: "${elementOrRef}". ` +
+						`Expected "window" or "document".`,
+				);
+			}
+		} else if (isReactRef(elementOrRef)) {
+			element = elementOrRef.current;
+		} else {
+			element = elementOrRef;
+		}
+
+		if (!element?.addEventListener) {
+			return;
+		}
+
+		let options = { capture, once, passive, signal };
+		element.addEventListener(type, listener, options);
 		return () => {
-			element?.removeEventListener(type, listener, opts);
+			element.removeEventListener(type, listener, options);
 		};
-	}, [listener, capture, elementRef, once, passive, signal, type]);
+	}, [listener, capture, elementOrRef, once, passive, signal, skip, type]);
 }
 
-export type EventMap = ElementEventMap & DocumentEventMap & WindowEventMap;
+function isReactRef(value: unknown): value is React.RefObject<unknown> {
+	const isRefMaybe =
+		typeof value === "object" &&
+		value !== null &&
+		"current" in value &&
+		value.current !== null;
+	if (!isRefMaybe) {
+		return false;
+	}
+	// it's technically possible that a `current` value is present. ie. it's
+	// assigned to `window` for some reason, or we're dealing with a Proxy or some
+	// other weird shit. In this context let's just make sure this is not a DOM
+	// node. Do not use an `instanceof` check here because it may fail for
+	// cross-origin iframes.
+	return !(
+		"document" in value ||
+		"createElement" in value ||
+		"tagName" in value
+	);
+}
 
+/**
+ * An object that specifies characteristics about an event listener.
+ *
+ * @see [MDN: `addEventListener` options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#options).
+ */
 export interface UseEventListenerOptions {
 	/**
 	 * A boolean value indicating that events of this type will be dispatched to
@@ -123,14 +202,27 @@ export interface UseEventListenerOptions {
 	 */
 	passive?: boolean;
 	/**
-	 * An `AbortSignal`. The `listener` will be removed when the given `AbortSignal`
-	 * object's `abort()` method is called. If not specified, no `AbortSignal` is
-	 * associated with the `listener`.
+	 * An `AbortSignal`. The `listener` will be removed when the given
+	 * `AbortSignal` object's `abort()` method is called. If not specified, no
+	 * `AbortSignal` is associated with the `listener`.
 	 */
 	signal?: AbortSignal;
 	/**
-	 * Add the listener in either `useEffect` or `useLayoutEffect`. Defaults to
-	 * `useEffect`.
+	 * A boolean value indicating whether or not the event listener should not be
+	 * attached under certain conditions.
 	 */
-	effectHook?: (effect: EffectCallback, deps?: DependencyList) => void;
+	skip?: boolean;
 }
+
+type Nullish = null | undefined;
+
+type RefObject<T> =
+	| React.RefObject<T | undefined>
+	| React.MutableRefObject<T | null | undefined>;
+
+type SpecificEvent<BaseEvent extends Event, Target> = Omit<
+	BaseEvent,
+	"currentTarget"
+> & {
+	currentTarget: Target;
+};

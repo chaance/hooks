@@ -1,22 +1,54 @@
-## v0.1.0
+## v0.6.0
 
-- Initial package released
+### Breaking Changes
 
-## v0.1.1
+- The `useEventListener` API has changed
+  - Arguments are no longer variadic, meaning that the first argument must
+    always point to a node or ref to a node rather than defaulting to `window` -
+  - The node reference can now be a ref, a stateful node, or a string reference
+    to `"window"` or `"document"` for global listeners.
+  - The `options` object now accepts a `skip` property which allows you to skip
+    adding the event listener under certain conditions.
+  - Removed the `effectHook` option. In practice it has not been particularly
+    useful and has been removed to simplify the API.
 
-- Made all types more readable
-- Export `PromiseStates` enum in ["usePromise"](docs/modules/_use_promise_.md)
+## v0.5.0
 
-## v0.2.0
+### Breaking Changes
 
-- Moved to the scope `@chance`; Install future versions with `npm i @chance/hooks`
-- Renamed `useMedia` to `useMatchMedia` and `useLayoutMedia` to `useMatchMediaLayoutEffect`
-- Renamed `useLayoutEventListener` to `useEventListenerLayoutEffect`
-- Added `useStableCallback`, `usePrefersReducedMotion`, `useIsomorphicLayoutEffect`
+- Removed `usePrevious` hook
+- Renamed `useIsomorphicLayoutEffect` to `useLayoutEffect`. No more alias!
+- Removed `useStableCallback` in favor of `useEffectEvent`
 
-## v0.2.1
+### Other Changes
 
-- `useEventListener`: Add support for options parameter
+- Fixed export maps to support importing individual hook modules
+
+## v0.4.0
+
+### Breaking Changes
+
+- `useInterval` and `useTimeout` will now cancel their timers if `null` or
+  `undefined` is passed as the time value. For the old behavior, pass `0`
+  instead.
+- Bumped build output target from ES2019 to ES2020
+
+### Other Changes
+
+- Added `useComposedEventHandlers`, `useComposedRefs`
+- Updated build dependencies
+
+## v0.3.1
+
+### Bug-fixes
+
+- `useStateWithHistory`: Do not update state or history state if the new value
+  is the same as the current value
+- Fixed known bugs with `usePrevious` and un-marked it for deprecation. We no
+  longer return a ref value (which is not stateful, won't trigger effects and is
+  not safe in React 18), but a stateful value that updates only when React would
+  update the value being tracked. This approach should be concurrent-safe and
+  more reliable for rendering.
 
 ## v0.3.0
 
@@ -68,40 +100,22 @@
 
 - Deprecated `usePrevious`, you probably shouldn't use it
 
-## v0.3.1
+## v0.2.1
 
-### Bug-fixes
+- `useEventListener`: Add support for options parameter
 
-- `useStateWithHistory`: Do not update state or history state if the new value
-  is the same as the current value
-- Fixed known bugs with `usePrevious` and un-marked it for deprecation. We no
-  longer return a ref value (which is not stateful, won't trigger effects and is
-  not safe in React 18), but a stateful value that updates only when React would
-  update the value being tracked. This approach should be concurrent-safe and
-  more reliable for rendering.
+## v0.2.0
 
-## v0.4.0
+- Moved to the scope `@chance`; Install future versions with `npm i @chance/hooks`
+- Renamed `useMedia` to `useMatchMedia` and `useLayoutMedia` to `useMatchMediaLayoutEffect`
+- Renamed `useLayoutEventListener` to `useEventListenerLayoutEffect`
+- Added `useStableCallback`, `usePrefersReducedMotion`, `useIsomorphicLayoutEffect`
 
-### Breaking Changes
+## v0.1.1
 
-- `useInterval` and `useTimeout` will now cancel their timers if `null` or
-  `undefined` is passed as the time value. For the old behavior, pass `0`
-  instead.
-- Bumped build output target from ES2019 to ES2020
+- Made all types more readable
+- Export `PromiseStates` enum in ["usePromise"](docs/modules/_use_promise_.md)
 
-### Other Changes
+## v0.1.0
 
-- Added `useComposedEventHandlers`, `useComposedRefs`
-- Updated build dependencies
-
-## v0.5.0
-
-### Breaking Changes
-
-- Removed `usePrevious` hook
-- Renamed `useIsomorphicLayoutEffect` to `useLayoutEffect`. No more alias!
-- Removed `useStableCallback` in favor of `useEffectEvent`
-
-### Other Changes
-
-- Fixed export maps to support importing individual hook modules
+- Initial package released
