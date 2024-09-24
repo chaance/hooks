@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@chance/utils':
+    specifier: ^0.0.13
+    version: 0.0.13
+
 devDependencies:
   '@testing-library/jest-dom':
     specifier: ^6.1.2
@@ -364,6 +369,10 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
+
+  /@chance/utils@0.0.13:
+    resolution: {integrity: sha512-2OYi3L/2DxRuc4OUrvKccA/2N60NIGkABfLVTy6KK4LggP0hMJoKQU61jNtX9cxlAeHxYgTNUnXn9YGBvchZew==}
+    dev: false
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
