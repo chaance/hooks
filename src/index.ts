@@ -1,4 +1,7 @@
-export { useComposedEventHandlers } from "./use-composed-event-handlers";
+export {
+	composeEventHandlers,
+	useComposedEventHandlers,
+} from "./use-composed-event-handlers";
 export {
 	type AssignableRef,
 	assignRef,
@@ -8,7 +11,6 @@ export { useConstant } from "./use-constant";
 export { useControllableState } from "./use-controllable-state";
 export { useEffectEvent } from "./use-effect-event";
 export {
-	type EventMap,
 	type UseEventListenerOptions,
 	useEventListener,
 } from "./use-event-listener";
@@ -16,6 +18,7 @@ export { useForceUpdate } from "./use-force-update";
 export { useInterval } from "./use-interval";
 export { useIsHydrated } from "./use-is-hydrated";
 export { useLayoutEffect } from "./use-layout-effect";
+export { useMap, type ReactiveMap } from "./use-map";
 export {
 	type QueryObject,
 	type UseMatchMediaOptions,
@@ -23,6 +26,7 @@ export {
 } from "./use-match-media";
 export { usePrefersReducedMotion } from "./use-prefers-reduced-motion";
 export { usePromise } from "./use-promise";
+export { useSet, type ReactiveSet } from "./use-set";
 export {
 	type HistoryState,
 	type UseStateWithHistoryOptions,

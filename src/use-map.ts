@@ -3,16 +3,16 @@ import { isFunction } from "@chance/utils";
 
 export function useMap<K = unknown, V = unknown>(
 	initialEntries?: readonly (readonly [K, V])[] | null,
-): ReactMap<K, V> {
+): ReactiveMap<K, V> {
 	let [map, setMap] = useState(() => new Map(initialEntries));
 
-	let clear = useCallback<ReactMap<K, V>["clear"]>(() => {
+	let clear = useCallback<ReactiveMap<K, V>["clear"]>(() => {
 		setMap((map) => {
 			return map.size === 0 ? map : new Map();
 		});
 	}, []);
 
-	let _delete = useCallback<ReactMap<K, V>["delete"]>((key) => {
+	let _delete = useCallback<ReactiveMap<K, V>["delete"]>((key) => {
 		setMap((map) => {
 			if (!map.has(key)) {
 				return map;
@@ -24,11 +24,11 @@ export function useMap<K = unknown, V = unknown>(
 		});
 	}, []);
 
-	let get = useCallback<ReactMap<K, V>["get"]>((key) => map.get(key), [map]);
+	let get = useCallback<ReactiveMap<K, V>["get"]>((key) => map.get(key), [map]);
 
-	let has = useCallback<ReactMap<K, V>["has"]>((key) => map.has(key), [map]);
+	let has = useCallback<ReactiveMap<K, V>["has"]>((key) => map.has(key), [map]);
 
-	let set = useCallback<ReactMap<K, V>["set"]>((key, action) => {
+	let set = useCallback<ReactiveMap<K, V>["set"]>((key, action) => {
 		setMap((map) => {
 			let current = map.get(key);
 			let next = isFunction(action) ? action(current, map) : action;
@@ -39,7 +39,7 @@ export function useMap<K = unknown, V = unknown>(
 		});
 	}, []);
 
-	let _map = useCallback<ReactMap<K, V>["map"]>(
+	let _map = useCallback<ReactiveMap<K, V>["map"]>(
 		(callbackFn) => {
 			let result: ReturnType<typeof callbackFn>[] = [];
 			for (let entry of map) {
@@ -65,7 +65,7 @@ export function useMap<K = unknown, V = unknown>(
 	}, [map]);
 }
 
-export interface ReactMap<K, V> {
+export interface ReactiveMap<K, V> {
 	raw: Map<K, V>;
 	clear(): void;
 	delete(key: K): void;

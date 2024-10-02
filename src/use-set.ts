@@ -3,10 +3,10 @@ import { isFunction } from "@chance/utils";
 
 export function useSet<T = unknown>(
 	initialValues?: readonly T[] | null,
-): ReactSet<T> {
+): ReactiveSet<T> {
 	let [set, setSet] = useState(() => new Set(initialValues));
 
-	let add = useCallback<ReactSet<T>["add"]>((action) => {
+	let add = useCallback<ReactiveSet<T>["add"]>((action) => {
 		setSet((set) => {
 			let value = isFunction(action) ? action(set) : action;
 			if (set.has(value)) {
@@ -18,13 +18,13 @@ export function useSet<T = unknown>(
 		});
 	}, []);
 
-	let clear = useCallback<ReactSet<T>["clear"]>(() => {
+	let clear = useCallback<ReactiveSet<T>["clear"]>(() => {
 		setSet((set) => {
 			return set.size === 0 ? set : new Set();
 		});
 	}, []);
 
-	let _delete = useCallback<ReactSet<T>["delete"]>(
+	let _delete = useCallback<ReactiveSet<T>["delete"]>(
 		(value) =>
 			setSet((set) => {
 				if (!set.has(value)) {
@@ -37,9 +37,12 @@ export function useSet<T = unknown>(
 		[],
 	);
 
-	let has = useCallback<ReactSet<T>["has"]>((value) => set.has(value), [set]);
+	let has = useCallback<ReactiveSet<T>["has"]>(
+		(value) => set.has(value),
+		[set],
+	);
 
-	let map = useCallback<ReactSet<T>["map"]>(
+	let map = useCallback<ReactiveSet<T>["map"]>(
 		(callbackFn) => {
 			let result: ReturnType<typeof callbackFn>[] = [];
 			for (let value of set) {
@@ -64,7 +67,7 @@ export function useSet<T = unknown>(
 	}, [set]);
 }
 
-export interface ReactSet<T> {
+export interface ReactiveSet<T> {
 	raw: Set<T>;
 	add(action: T | ((prevState: Set<T>) => T)): void;
 	clear(): void;
