@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useMemo } from "react";
 
 /**
  * Composes multiple event handlers into a single function. Any handler can call
@@ -16,18 +16,24 @@ import { useCallback } from "react";
 export function useComposedEventHandlers<
 	T extends { defaultPrevented: boolean },
 >(...handlers: Array<((event: T) => void) | null | undefined>) {
-	return useCallback(
-		(event: T) => {
-			let previousHandler: (typeof handlers)[number];
-			for (const handler of handlers) {
-				previousHandler?.(event);
-				if (!event.defaultPrevented) {
-					handler?.(event);
-				}
-				previousHandler = handler;
-			}
-		},
+	return useMemo(
+		() => composeEventHandlers(...handlers),
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[...handlers],
 	);
+}
+
+export function composeEventHandlers<T extends { defaultPrevented: boolean }>(
+	...handlers: Array<((event: T) => void) | null | undefined>
+) {
+	return (event: T) => {
+		let previousHandler: (typeof handlers)[number];
+		for (const handler of handlers) {
+			previousHandler?.(event);
+			if (!event.defaultPrevented) {
+				handler?.(event);
+			}
+			previousHandler = handler;
+		}
+	};
 }
