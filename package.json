@@ -117,6 +117,12 @@
 				"require": "./dist/use-layout-effect.cjs",
 				"default": "./dist/use-layout-effect.js"
 			},
+			"./use-map": {
+				"types": "./dist/use-map.d.ts",
+				"import": "./dist/use-map.js",
+				"require": "./dist/use-map.cjs",
+				"default": "./dist/use-map.js"
+			},
 			"./use-match-media": {
 				"types": "./dist/use-match-media.d.ts",
 				"import": "./dist/use-match-media.js",
@@ -134,6 +140,12 @@
 				"import": "./dist/use-promise.js",
 				"require": "./dist/use-promise.cjs",
 				"default": "./dist/use-promise.js"
+			},
+			"./use-set": {
+				"types": "./dist/use-set.d.ts",
+				"import": "./dist/use-set.js",
+				"require": "./dist/use-set.cjs",
+				"default": "./dist/use-set.js"
 			},
 			"./use-state-with-history": {
 				"types": "./dist/use-state-with-history.d.ts",
