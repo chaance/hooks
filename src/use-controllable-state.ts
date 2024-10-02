@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useEffectEvent } from "./use-effect-event";
+import { isFunction } from "@chance/utils";
 
 function useControllableStateWarning(controlledValue: unknown) {
 	const warned = React.useRef(false);
@@ -52,8 +53,4 @@ export function useControllableState<T>({
 		[_getControlledValue, _onChange, setInternalState],
 	);
 	return [isControlled ? controlledValue : internalState, setState];
-}
-
-function isFunction(value: unknown): value is Function {
-	return typeof value === "function";
 }
