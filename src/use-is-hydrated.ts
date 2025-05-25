@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
-let isHydrating = true;
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
+const subscribe = () => () => void 0;
 
 /**
  * Determines whether or not the component tree has been hydrated.
@@ -8,10 +10,5 @@ let isHydrating = true;
  * @returns Whether or not the component tree has been hydrated
  */
 export function useIsHydrated() {
-	let [isHydrated, setIsHydrated] = useState(() => !isHydrating);
-	useEffect(() => {
-		isHydrating = false;
-		setIsHydrated(true);
-	}, []);
-	return isHydrated;
+	return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
