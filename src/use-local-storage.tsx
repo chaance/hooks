@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import type { BaseStorage } from "./lib/local-storage.js";
 import { LocalStorage } from "./lib/local-storage.js";

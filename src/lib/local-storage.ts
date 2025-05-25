@@ -1,5 +1,3 @@
-"use client";
-
 const CUSTOM_EVENT_NAME = "chance:localstorage";
 
 const canUseStorage = !!(
