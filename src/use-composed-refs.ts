@@ -12,12 +12,33 @@ import { useCallback } from "react";
  * @returns A callback ref that will assign (or call with, in the case of
  * functions) the same value to all provided refs.
  */
-export function useComposedRefs<RefValueType = unknown>(
-	...refs: (AssignableRef<RefValueType> | null | undefined)[]
-) {
-	return useCallback((node: RefValueType) => {
-		for (const ref of refs) {
-			assignRef(ref, node);
+export function useComposedRefs<RefValue = unknown>(
+	...refs: (React.Ref<RefValue> | undefined | null | undefined)[]
+): React.RefCallback<RefValue> {
+	return useCallback((node: RefValue) => {
+		let hasCleanup = false;
+		const cleanups = refs.map((ref) => {
+			const cleanup = assignRef(ref, node);
+			if (!hasCleanup && typeof cleanup == "function") {
+				hasCleanup = true;
+			}
+			return cleanup as undefined | (() => void);
+		});
+
+		// React <19 will log an error to the console if a callback ref returns a
+		// value. Conditionally return only if the consumer of this hook returns a
+		// function from one or more refs.
+		if (hasCleanup) {
+			return () => {
+				for (let i = 0; i < cleanups.length; i++) {
+					const cleanup = cleanups[i];
+					if (typeof cleanup == "function") {
+						cleanup();
+					} else {
+						assignRef(refs[i], null);
+					}
+				}
+			};
 		}
 		// IMPORTANT: We always expect refs to persist between renders so we can
 		// ignore the lint rule in this case. Never ever pass anything other than an
@@ -25,16 +46,6 @@ export function useComposedRefs<RefValueType = unknown>(
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, refs);
 }
-
-/**
- * Either a React ref object created with `useRef` or `createRef`, or a ref
- * callback function
- */
-export type AssignableRef<ValueType> =
-	| {
-			bivarianceHack(instance: ValueType | null): void;
-	  }["bivarianceHack"]
-	| React.MutableRefObject<ValueType | null>;
 
 export function assignRef<RefValueType = unknown>(
 	ref: React.Ref<RefValueType> | null | undefined,
