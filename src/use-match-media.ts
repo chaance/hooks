@@ -2,43 +2,12 @@ import { useEffect as react_useEffect, useMemo, useState } from "react";
 import type { EffectCallback, DependencyList } from "react";
 import { json2mq } from "./lib/json2mq";
 
-/**
- * Returns whether or not a CSS media query matches.
- *
- * @param rawQuery A string, object or array of objects representing CSS media
- *                 queries
- * @param options
- */
 export function useMatchMedia(
 	rawQuery: string | QueryObject | QueryObject[],
-	options?: UseMatchMediaOptions,
-): boolean;
-
-/**
- * Returns whether or not a CSS media query matches.
- *
- * @param rawQuery A string, object or array of objects representing CSS media
- *                 queries
- * @param defaultState The default state to return before the media query can be
- *                     evaluated
- * @param options
- */
-export function useMatchMedia(
-	rawQuery: string | QueryObject | QueryObject[],
-	defaultState: boolean,
-	options?: UseMatchMediaOptions,
-): boolean;
-
-export function useMatchMedia(
-	rawQuery: string | QueryObject | QueryObject[],
-	optionsOrDefaultState?: boolean | UseMatchMediaOptions,
-	options?: UseMatchMediaOptions,
+	defaultState: boolean = false,
+	options: UseMatchMediaOptions = {},
 ): boolean {
-	let defaultState =
-		typeof optionsOrDefaultState === "boolean" ? optionsOrDefaultState : false;
-	let { effectHook: useEffect = react_useEffect } =
-		options || (optionsOrDefaultState as UseMatchMediaOptions) || {};
-
+	let { effectHook: useEffect = react_useEffect } = options;
 	let [state, setState] = useState(defaultState);
 	let query = useMemo(
 		() => (typeof rawQuery === "object" ? json2mq(rawQuery) : rawQuery),
@@ -46,19 +15,13 @@ export function useMatchMedia(
 	);
 
 	useEffect(() => {
-		let current = true;
 		let mql = window.matchMedia(query);
-		mql.addEventListener("change", handleChange);
+		let controller = new AbortController();
+		mql.addEventListener("change", (event) => setState(event.matches), {
+			signal: controller.signal,
+		});
 		setState(mql.matches);
-		return () => {
-			current = false;
-			mql.removeEventListener("change", handleChange);
-		};
-		function handleChange() {
-			if (current) {
-				setState(mql.matches);
-			}
-		}
+		return () => controller.abort();
 	}, [query]);
 
 	return state;
