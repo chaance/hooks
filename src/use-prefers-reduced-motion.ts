@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect as react_useEffect, useState } from "react";
+import type { UseMatchMediaOptions } from "./use-match-media.js";
 
 const PREFERS_REDUCED_MOTION_NO_PREF_QUERY =
 	"(prefers-reduced-motion: no-preference)";
 
-export function usePrefersReducedMotion(nodeRef: React.RefObject<Element>) {
+export function usePrefersReducedMotion(
+	nodeRef: React.RefObject<Element>,
+	options: UseMatchMediaOptions = {},
+) {
+	let { effectHook: useEffect = react_useEffect } = options;
 	let [state, setState] = useState(false);
 	useEffect(() => {
 		const globalWindow = nodeRef.current?.ownerDocument?.defaultView || window;
