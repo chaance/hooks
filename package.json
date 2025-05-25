@@ -45,7 +45,8 @@
 		"vitest": "^2.1.1"
 	},
 	"dependencies": {
-		"@chance/utils": "^0.1.1"
+		"@chance/utils": "^0.1.1",
+		"type-fest": "^4.0.0"
 	},
 	"peerDependencies": {
 		"react": ">=18.0",
@@ -116,6 +117,12 @@
 				"import": "./dist/use-layout-effect.js",
 				"require": "./dist/use-layout-effect.cjs",
 				"default": "./dist/use-layout-effect.js"
+			},
+			"./use-local-storage": {
+				"types": "./dist/use-local-storage.d.ts",
+				"import": "./dist/use-local-storage.js",
+				"require": "./dist/use-local-storage.cjs",
+				"default": "./dist/use-local-storage.js"
 			},
 			"./use-map": {
 				"types": "./dist/use-map.d.ts",

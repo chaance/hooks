@@ -18,6 +18,11 @@ export { useForceUpdate } from "./use-force-update";
 export { useInterval } from "./use-interval";
 export { useIsHydrated } from "./use-is-hydrated";
 export { useLayoutEffect } from "./use-layout-effect";
+export {
+	type LocalStorageProviderProps,
+	LocalStorageProvider,
+	useLocalStorage,
+} from "./use-local-storage";
 export { useMap, type ReactiveMap } from "./use-map";
 export {
 	type QueryObject,
