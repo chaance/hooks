@@ -74,18 +74,6 @@ Re-exports [useEffectEvent](../use-effect-event/functions/useEffectEvent.md)
 
 ---
 
-### useEventListener
-
-Re-exports [useEventListener](../use-event-listener/functions/useEventListener.md)
-
----
-
-### UseEventListenerOptions
-
-Re-exports [UseEventListenerOptions](../use-event-listener/interfaces/UseEventListenerOptions.md)
-
----
-
 ### useForceUpdate
 
 Re-exports [useForceUpdate](../use-force-update/functions/useForceUpdate.md)

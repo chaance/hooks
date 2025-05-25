@@ -5,10 +5,6 @@ export {
 export { assignRef, useComposedRefs } from "./use-composed-refs";
 export { useConstant } from "./use-constant";
 export { useEffectEvent } from "./use-effect-event";
-export {
-	type UseEventListenerOptions,
-	useEventListener,
-} from "./use-event-listener";
 export { useForceUpdate } from "./use-force-update";
 export { useInterval } from "./use-interval";
 export { useIsHydrated } from "./use-is-hydrated";

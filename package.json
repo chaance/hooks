@@ -93,12 +93,6 @@
 				"require": "./dist/use-effect-event.cjs",
 				"default": "./dist/use-effect-event.js"
 			},
-			"./use-event-listener": {
-				"types": "./dist/use-event-listener.d.ts",
-				"import": "./dist/use-event-listener.js",
-				"require": "./dist/use-event-listener.cjs",
-				"default": "./dist/use-event-listener.js"
-			},
 			"./use-force-update": {
 				"types": "./dist/use-force-update.d.ts",
 				"import": "./dist/use-force-update.js",

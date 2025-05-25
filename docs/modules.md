@@ -11,7 +11,6 @@
 - [use-composed-refs](use-composed-refs/README.md)
 - [use-constant](use-constant/README.md)
 - [use-effect-event](use-effect-event/README.md)
-- [use-event-listener](use-event-listener/README.md)
 - [use-force-update](use-force-update/README.md)
 - [use-interval](use-interval/README.md)
 - [use-is-hydrated](use-is-hydrated/README.md)
