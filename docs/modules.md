@@ -19,7 +19,6 @@
 - [use-map](use-map/README.md)
 - [use-match-media](use-match-media/README.md)
 - [use-prefers-reduced-motion](use-prefers-reduced-motion/README.md)
-- [use-promise](use-promise/README.md)
 - [use-set](use-set/README.md)
 - [use-state-with-history](use-state-with-history/README.md)
 - [use-timeout](use-timeout/README.md)

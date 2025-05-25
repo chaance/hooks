@@ -17,7 +17,6 @@ export {
 	useMatchMedia,
 } from "./use-match-media";
 export { usePrefersReducedMotion } from "./use-prefers-reduced-motion";
-export { usePromise } from "./use-promise";
 export { useSet, type ReactiveSet } from "./use-set";
 export {
 	type HistoryState,

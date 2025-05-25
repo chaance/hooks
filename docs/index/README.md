@@ -128,12 +128,6 @@ Re-exports [usePrefersReducedMotion](../use-prefers-reduced-motion/functions/use
 
 ---
 
-### usePromise
-
-Re-exports [usePromise](../use-promise/functions/usePromise.md)
-
----
-
 ### useSet
 
 Re-exports [useSet](../use-set/functions/useSet.md)

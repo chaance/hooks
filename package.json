@@ -141,12 +141,6 @@
 				"require": "./dist/use-prefers-reduced-motion.cjs",
 				"default": "./dist/use-prefers-reduced-motion.js"
 			},
-			"./use-promise": {
-				"types": "./dist/use-promise.d.ts",
-				"import": "./dist/use-promise.js",
-				"require": "./dist/use-promise.cjs",
-				"default": "./dist/use-promise.js"
-			},
 			"./use-set": {
 				"types": "./dist/use-set.d.ts",
 				"import": "./dist/use-set.js",
