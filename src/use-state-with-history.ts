@@ -60,14 +60,15 @@ function reducer<ValueType>(
 ): State<ValueType> {
 	let limit = Number.isFinite(Number(event.limit))
 		? Math.round(event.limit)
-		: -1;
+		: // roughly equivalent to max memory limit for arrays in V8
+			2 ** 32 - 1;
 	switch (event.type) {
 		case SET: {
 			let newValue =
 				typeof event.next === "function"
 					? (event.next as (val: ValueType) => ValueType)(
 							state.history[state.currentIndex],
-					  )
+						)
 					: event.next;
 
 			if (Object.is(newValue, state.history[state.currentIndex])) {
@@ -132,7 +133,8 @@ export type HistoryState<ValueType> = [
 
 export interface UseStateWithHistoryOptions {
 	/**
-	 * The maximum number of entries to keep in the history
+	 * The maximum number of entries to keep in the history.
+	 * @default 4_294_967_295
 	 */
 	limit?: number;
 }
