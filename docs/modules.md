@@ -1,6 +1,6 @@
 [**@chance/hooks**](README.md) • **Docs**
 
-***
+---
 
 # @chance/hooks
 
@@ -10,7 +10,6 @@
 - [use-composed-event-handlers](use-composed-event-handlers/README.md)
 - [use-composed-refs](use-composed-refs/README.md)
 - [use-constant](use-constant/README.md)
-- [use-controllable-state](use-controllable-state/README.md)
 - [use-effect-event](use-effect-event/README.md)
 - [use-event-listener](use-event-listener/README.md)
 - [use-force-update](use-force-update/README.md)

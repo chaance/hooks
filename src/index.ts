@@ -2,13 +2,8 @@ export {
 	composeEventHandlers,
 	useComposedEventHandlers,
 } from "./use-composed-event-handlers";
-export {
-	type AssignableRef,
-	assignRef,
-	useComposedRefs,
-} from "./use-composed-refs";
+export { assignRef, useComposedRefs } from "./use-composed-refs";
 export { useConstant } from "./use-constant";
-export { useControllableState } from "./use-controllable-state";
 export { useEffectEvent } from "./use-effect-event";
 export {
 	type UseEventListenerOptions,
