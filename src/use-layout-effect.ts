@@ -1,16 +1,5 @@
-import {
-	useLayoutEffect as react_useLayoutEffect,
-	type EffectCallback,
-	type DependencyList,
-} from "react";
-
-const canUseDOM = !!(
-	typeof window !== "undefined" &&
-	window.document &&
-	window.document.createElement
-);
-
-const noop: (...args: any) => void = () => {};
+import { useLayoutEffect as react_useLayoutEffect } from "react";
+import { noop, canUseDOM } from "./lib/utils.js";
 
 /**
  * Same as React's `useLayoutEffect` but without the annoying hydration warning
@@ -21,10 +10,6 @@ const noop: (...args: any) => void = () => {};
  *
  * See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
  */
-export function useLayoutEffect(effect: EffectCallback, deps?: DependencyList) {
-	if (canUseDOM) {
-		return react_useLayoutEffect(effect, deps);
-	} else {
-		return noop(effect, deps);
-	}
-}
+export const useLayoutEffect: typeof react_useLayoutEffect = canUseDOM
+	? react_useLayoutEffect
+	: noop;
