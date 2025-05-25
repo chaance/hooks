@@ -9,7 +9,7 @@ export function usePrefersReducedMotion(
 	options: UseMatchMediaOptions = {},
 ) {
 	let { effectHook: useEffect = react_useEffect } = options;
-	let [state, setState] = useState(false);
+	let [state, setState] = useState(true);
 	useEffect(() => {
 		const globalWindow = nodeRef.current?.ownerDocument?.defaultView || window;
 		let mql = globalWindow.matchMedia(PREFERS_REDUCED_MOTION_NO_PREF_QUERY);
