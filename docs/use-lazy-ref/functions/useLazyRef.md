@@ -38,7 +38,7 @@ A function that returns the initial value of the ref.
 
 ### Defined in
 
-[use-lazy-ref.ts:9](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-lazy-ref.ts#L9)
+[src/use-lazy-ref.ts:9](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-lazy-ref.ts#L9)
 
 ## useLazyRef(init, initArg)
 
@@ -72,4 +72,4 @@ A function that returns the initial value of the ref.
 
 ### Defined in
 
-[use-lazy-ref.ts:16](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-lazy-ref.ts#L16)
+[src/use-lazy-ref.ts:16](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-lazy-ref.ts#L16)

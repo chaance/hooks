@@ -6,53 +6,20 @@
 
 # Function: useMatchMedia()
 
-## useMatchMedia(rawQuery, options)
+> **useMatchMedia**(`rawQuery`, `defaultState`, `options`): `boolean`
 
-> **useMatchMedia**(`rawQuery`, `options`?): `boolean`
-
-Returns whether or not a CSS media query matches.
-
-### Parameters
+## Parameters
 
 • **rawQuery**: `string` \| [`QueryObject`](../interfaces/QueryObject.md) \| [`QueryObject`](../interfaces/QueryObject.md)[]
 
-A string, object or array of objects representing CSS media
-                queries
+• **defaultState**: `boolean` = `false`
 
-• **options?**: [`UseMatchMediaOptions`](../interfaces/UseMatchMediaOptions.md)
+• **options**: [`UseMatchMediaOptions`](../interfaces/UseMatchMediaOptions.md) = `{}`
 
-### Returns
-
-`boolean`
-
-### Defined in
-
-[use-match-media.ts:12](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-match-media.ts#L12)
-
-## useMatchMedia(rawQuery, defaultState, options)
-
-> **useMatchMedia**(`rawQuery`, `defaultState`, `options`?): `boolean`
-
-Returns whether or not a CSS media query matches.
-
-### Parameters
-
-• **rawQuery**: `string` \| [`QueryObject`](../interfaces/QueryObject.md) \| [`QueryObject`](../interfaces/QueryObject.md)[]
-
-A string, object or array of objects representing CSS media
-                queries
-
-• **defaultState**: `boolean`
-
-The default state to return before the media query can be
-                    evaluated
-
-• **options?**: [`UseMatchMediaOptions`](../interfaces/UseMatchMediaOptions.md)
-
-### Returns
+## Returns
 
 `boolean`
 
-### Defined in
+## Defined in
 
-[use-match-media.ts:26](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-match-media.ts#L26)
+[src/use-match-media.ts:5](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-match-media.ts#L5)

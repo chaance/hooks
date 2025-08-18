@@ -8,10 +8,6 @@
 
 ## Index
 
-### Type Aliases
-
-- [AssignableRef](type-aliases/AssignableRef.md)
-
 ### Functions
 
 - [assignRef](functions/assignRef.md)

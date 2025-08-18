@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[use-composed-refs.ts:39](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-composed-refs.ts#L39)
+[src/use-composed-refs.ts:50](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-composed-refs.ts#L50)

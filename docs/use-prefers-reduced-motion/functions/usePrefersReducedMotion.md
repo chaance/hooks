@@ -6,11 +6,13 @@
 
 # Function: usePrefersReducedMotion()
 
-> **usePrefersReducedMotion**(`nodeRef`): `boolean`
+> **usePrefersReducedMotion**(`nodeRef`, `options`): `boolean`
 
 ## Parameters
 
 • **nodeRef**: `RefObject`\<`Element`\>
+
+• **options**: [`UseMatchMediaOptions`](../../use-match-media/interfaces/UseMatchMediaOptions.md) = `{}`
 
 ## Returns
 
@@ -18,4 +20,4 @@
 
 ## Defined in
 
-[use-prefers-reduced-motion.ts:6](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-prefers-reduced-motion.ts#L6)
+[src/use-prefers-reduced-motion.ts:7](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-prefers-reduced-motion.ts#L7)

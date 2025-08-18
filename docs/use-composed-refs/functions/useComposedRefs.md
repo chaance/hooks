@@ -6,7 +6,7 @@
 
 # Function: useComposedRefs()
 
-> **useComposedRefs**\<`RefValueType`\>(...`refs`): (`node`) => `void`
+> **useComposedRefs**\<`RefValue`\>(...`refs`): `React.RefCallback`\<`RefValue`\>
 
 Passes or assigns a value to multiple refs (typically a DOM node). Useful for
 dealing with components that need an explicit ref for DOM calculations but
@@ -14,11 +14,11 @@ also forwards refs assigned by an app.
 
 ## Type Parameters
 
-• **RefValueType** = `unknown`
+• **RefValue** = `unknown`
 
 ## Parameters
 
-• ...**refs**: (`undefined` \| `null` \| [`AssignableRef`](../type-aliases/AssignableRef.md)\<`RefValueType`\>)[]
+• ...**refs**: (`undefined` \| `Ref`\<`RefValue`\>)[]
 
 The refs to assign. These may be objects created with `useRef` or
 `createRef`, or ref callback functions. It is important that callback refs
@@ -27,19 +27,11 @@ directly.
 
 ## Returns
 
-`Function`
+`React.RefCallback`\<`RefValue`\>
 
 A callback ref that will assign (or call with, in the case of
 functions) the same value to all provided refs.
 
-### Parameters
-
-• **node**: `RefValueType`
-
-### Returns
-
-`void`
-
 ## Defined in
 
-[use-composed-refs.ts:15](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-composed-refs.ts#L15)
+[src/use-composed-refs.ts:15](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-composed-refs.ts#L15)

@@ -30,4 +30,4 @@
 
 ## Defined in
 
-[use-composed-event-handlers.ts:26](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-composed-event-handlers.ts#L26)
+[src/use-composed-event-handlers.ts:26](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-composed-event-handlers.ts#L26)

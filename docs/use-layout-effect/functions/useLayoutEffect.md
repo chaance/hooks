@@ -26,6 +26,14 @@ See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
 `void`
 
+## Version
+
+16.8.0
+
+## See
+
+[https://react.dev/reference/react/useLayoutEffect](https://react.dev/reference/react/useLayoutEffect)
+
 ## Defined in
 
-[use-layout-effect.ts:24](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-layout-effect.ts#L24)
+[src/use-layout-effect.ts:13](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-layout-effect.ts#L13)
