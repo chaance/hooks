@@ -32,7 +32,7 @@
 
 ### Defined in
 
-[src/use-controllable-state.ts:17](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-controllable-state.ts#L17)
+[src/use-controllable-state.ts:17](https://github.com/chaance/hooks/blob/7d344c9759f36ef1d85cfbe0dde8739840c07970/src/use-controllable-state.ts#L17)
 
 ## useControllableState(value, defaultValue, onChange)
 
@@ -60,4 +60,4 @@
 
 ### Defined in
 
-[src/use-controllable-state.ts:23](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-controllable-state.ts#L23)
+[src/use-controllable-state.ts:23](https://github.com/chaance/hooks/blob/7d344c9759f36ef1d85cfbe0dde8739840c07970/src/use-controllable-state.ts#L23)

@@ -31,4 +31,4 @@ Optional options object
 
 ## Defined in
 
-[src/use-state-with-history.ts:14](https://github.com/chaance/hooks/blob/7d20cff8743741a411549973aea6ff2c66f90d38/src/use-state-with-history.ts#L14)
+[src/use-state-with-history.ts:14](https://github.com/chaance/hooks/blob/7d344c9759f36ef1d85cfbe0dde8739840c07970/src/use-state-with-history.ts#L14)
