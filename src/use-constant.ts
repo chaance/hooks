@@ -1,9 +1,6 @@
-import { useRef } from "react";
+import { useLazyRef } from "./use-lazy-ref";
 
 export function useConstant<T>(fn: () => T): T {
-	let ref = useRef<{ v: T }>();
-	if (!ref.current) {
-		ref.current = { v: fn() };
-	}
-	return ref.current.v;
+	let ref = useLazyRef(fn);
+	return ref.current;
 }

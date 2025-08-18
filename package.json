@@ -123,6 +123,12 @@
 				"require": "./dist/use-layout-effect.cjs",
 				"default": "./dist/use-layout-effect.js"
 			},
+			"./use-lazy-ref": {
+				"types": "./dist/use-lazy-ref.d.ts",
+				"import": "./dist/use-lazy-ref.js",
+				"require": "./dist/use-lazy-ref.cjs",
+				"default": "./dist/use-lazy-ref.js"
+			},
 			"./use-map": {
 				"types": "./dist/use-map.d.ts",
 				"import": "./dist/use-map.js",

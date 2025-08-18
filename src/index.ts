@@ -18,6 +18,7 @@ export { useForceUpdate } from "./use-force-update";
 export { useInterval } from "./use-interval";
 export { useIsHydrated } from "./use-is-hydrated";
 export { useLayoutEffect } from "./use-layout-effect";
+export { useLazyRef } from "./use-lazy-ref";
 export { useMap, type ReactiveMap } from "./use-map";
 export {
 	type QueryObject,
