@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[use-set.ts:71](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L71)
+[use-set.ts:71](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L71)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[use-set.ts:77](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L77)
+[use-set.ts:77](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L77)
 
 ## Methods
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[use-set.ts:72](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L72)
+[use-set.ts:72](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L72)
 
 ***
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[use-set.ts:73](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L73)
+[use-set.ts:73](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L73)
 
 ***
 
@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[use-set.ts:74](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L74)
+[use-set.ts:74](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L74)
 
 ***
 
@@ -96,7 +96,7 @@
 
 #### Defined in
 
-[use-set.ts:75](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L75)
+[use-set.ts:75](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L75)
 
 ***
 
@@ -118,4 +118,4 @@
 
 #### Defined in
 
-[use-set.ts:76](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-set.ts#L76)
+[use-set.ts:76](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-set.ts#L76)

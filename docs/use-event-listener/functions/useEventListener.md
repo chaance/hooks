@@ -64,7 +64,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:40](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L40)
+[use-event-listener.ts:40](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L40)
 
 ## useEventListener(element, type, listener, options)
 
@@ -90,7 +90,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:47](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L47)
+[use-event-listener.ts:47](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L47)
 
 ## useEventListener(element, type, listener, options)
 
@@ -118,7 +118,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:54](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L54)
+[use-event-listener.ts:54](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L54)
 
 ## useEventListener(element, type, listener, options)
 
@@ -144,7 +144,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:64](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L64)
+[use-event-listener.ts:64](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L64)
 
 ## useEventListener(element, type, listener, options)
 
@@ -172,7 +172,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:71](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L71)
+[use-event-listener.ts:71](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L71)
 
 ## useEventListener(element, type, listener, options)
 
@@ -198,7 +198,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:81](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L81)
+[use-event-listener.ts:81](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L81)
 
 ## useEventListener(element, type, listener, options)
 
@@ -226,7 +226,7 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:88](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L88)
+[use-event-listener.ts:88](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L88)
 
 ## useEventListener(element, type, listener, options)
 
@@ -252,4 +252,4 @@ event listener
 
 ### Defined in
 
-[use-event-listener.ts:98](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L98)
+[use-event-listener.ts:98](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L98)

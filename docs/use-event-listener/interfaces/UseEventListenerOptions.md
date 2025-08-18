@@ -24,7 +24,7 @@ beneath it in the DOM tree. If not specified, defaults to `false`.
 
 #### Defined in
 
-[use-event-listener.ts:190](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L190)
+[use-event-listener.ts:190](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L190)
 
 ***
 
@@ -38,7 +38,7 @@ removed when invoked. If not specified, defaults to `false`.
 
 #### Defined in
 
-[use-event-listener.ts:196](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L196)
+[use-event-listener.ts:196](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L196)
 
 ***
 
@@ -53,7 +53,7 @@ a console warning. If not specified, defaults to `false`.
 
 #### Defined in
 
-[use-event-listener.ts:203](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L203)
+[use-event-listener.ts:203](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L203)
 
 ***
 
@@ -67,7 +67,7 @@ An `AbortSignal`. The `listener` will be removed when the given
 
 #### Defined in
 
-[use-event-listener.ts:209](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L209)
+[use-event-listener.ts:209](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L209)
 
 ***
 
@@ -80,4 +80,4 @@ attached under certain conditions.
 
 #### Defined in
 
-[use-event-listener.ts:214](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-event-listener.ts#L214)
+[use-event-listener.ts:214](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-event-listener.ts#L214)

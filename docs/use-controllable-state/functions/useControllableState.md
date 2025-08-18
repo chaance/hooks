@@ -6,28 +6,58 @@
 
 # Function: useControllableState()
 
-> **useControllableState**\<`T`\>(`__namedParameters`): [`T`, `React.Dispatch`\<`React.SetStateAction`\<`T`\>\>]
+## useControllableState(value, defaultValue, onChange)
 
-## Type Parameters
+> **useControllableState**\<`T`, `C`, `A`\>(`value`, `defaultValue`, `onChange`?): [`T`, (`value`, ...`args`) => `void`]
+
+### Type Parameters
 
 • **T**
 
-## Parameters
+• **C** = `T`
 
-• **\_\_namedParameters**
+• **A** *extends* `any`[] = []
 
-• **\_\_namedParameters.controlledValue**: `undefined` \| `T`
+### Parameters
 
-• **\_\_namedParameters.internalState**: `T`
+• **value**: `Exclude`\<`T`, `undefined`\>
 
-• **\_\_namedParameters.onChange**: `undefined` \| (`value`) => `void`
+• **defaultValue**: `undefined` \| `Exclude`\<`T`, `undefined`\>
 
-• **\_\_namedParameters.setInternalState**: `Dispatch`\<`SetStateAction`\<`T`\>\>
+• **onChange?**
 
-## Returns
+### Returns
 
-[`T`, `React.Dispatch`\<`React.SetStateAction`\<`T`\>\>]
+[`T`, (`value`, ...`args`) => `void`]
 
-## Defined in
+### Defined in
 
-[use-controllable-state.ts:28](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-controllable-state.ts#L28)
+[use-controllable-state.ts:17](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-controllable-state.ts#L17)
+
+## useControllableState(value, defaultValue, onChange)
+
+> **useControllableState**\<`T`, `C`, `A`\>(`value`, `defaultValue`, `onChange`?): [`T`, (`value`, ...`args`) => `void`]
+
+### Type Parameters
+
+• **T**
+
+• **C** = `T`
+
+• **A** *extends* `any`[] = []
+
+### Parameters
+
+• **value**: `undefined` \| `Exclude`\<`T`, `undefined`\>
+
+• **defaultValue**: `Exclude`\<`T`, `undefined`\>
+
+• **onChange?**
+
+### Returns
+
+[`T`, (`value`, ...`args`) => `void`]
+
+### Defined in
+
+[use-controllable-state.ts:23](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-controllable-state.ts#L23)

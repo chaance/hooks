@@ -17,4 +17,4 @@ callback function
 
 ## Defined in
 
-[use-composed-refs.ts:33](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-composed-refs.ts#L33)
+[use-composed-refs.ts:33](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-composed-refs.ts#L33)

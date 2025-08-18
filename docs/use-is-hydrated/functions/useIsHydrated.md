@@ -18,4 +18,4 @@ Whether or not the component tree has been hydrated
 
 ## Defined in
 
-[use-is-hydrated.ts:10](https://github.com/chaance/hooks/blob/3a106812f998ae2dc116bc6963936377cd0af671/src/use-is-hydrated.ts#L10)
+[use-is-hydrated.ts:10](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-is-hydrated.ts#L10)
