@@ -27,7 +27,7 @@ A string, object or array of objects representing CSS media
 
 ### Defined in
 
-[use-match-media.ts:12](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-match-media.ts#L12)
+[use-match-media.ts:12](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-match-media.ts#L12)
 
 ## useMatchMedia(rawQuery, defaultState, options)
 
@@ -55,4 +55,4 @@ The default state to return before the media query can be
 
 ### Defined in
 
-[use-match-media.ts:26](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-match-media.ts#L26)
+[use-match-media.ts:26](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-match-media.ts#L26)

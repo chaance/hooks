@@ -116,6 +116,12 @@ Re-exports [useLayoutEffect](../use-layout-effect/functions/useLayoutEffect.md)
 
 ***
 
+### useLazyRef
+
+Re-exports [useLazyRef](../use-lazy-ref/functions/useLazyRef.md)
+
+***
+
 ### useMap
 
 Re-exports [useMap](../use-map/functions/useMap.md)

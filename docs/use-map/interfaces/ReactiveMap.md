@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[use-map.ts:69](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L69)
+[use-map.ts:69](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L69)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[use-map.ts:79](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L79)
+[use-map.ts:79](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L79)
 
 ## Methods
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[use-map.ts:70](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L70)
+[use-map.ts:70](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L70)
 
 ***
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[use-map.ts:71](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L71)
+[use-map.ts:71](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L71)
 
 ***
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-[use-map.ts:72](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L72)
+[use-map.ts:72](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L72)
 
 ***
 
@@ -98,7 +98,7 @@
 
 #### Defined in
 
-[use-map.ts:73](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L73)
+[use-map.ts:73](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L73)
 
 ***
 
@@ -120,7 +120,7 @@
 
 #### Defined in
 
-[use-map.ts:78](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L78)
+[use-map.ts:78](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L78)
 
 ***
 
@@ -140,4 +140,4 @@
 
 #### Defined in
 
-[use-map.ts:74](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-map.ts#L74)
+[use-map.ts:74](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-map.ts#L74)

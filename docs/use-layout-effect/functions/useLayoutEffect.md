@@ -28,4 +28,4 @@ See: https://reactjs.org/docs/hooks-reference.html#uselayouteffect
 
 ## Defined in
 
-[use-layout-effect.ts:24](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-layout-effect.ts#L24)
+[use-layout-effect.ts:24](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-layout-effect.ts#L24)

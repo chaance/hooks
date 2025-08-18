@@ -32,4 +32,4 @@ https://react.dev/learn/separating-events-from-effects#declaring-an-effect-event
 
 ## Defined in
 
-[use-effect-event.ts:12](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-effect-event.ts#L12)
+[use-effect-event.ts:12](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-effect-event.ts#L12)

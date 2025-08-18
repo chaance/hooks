@@ -29,4 +29,4 @@ The time, in milliseconds, that the timer should wait before the
 
 ## Defined in
 
-[use-timeout.ts:12](https://github.com/chaance/hooks/blob/851d651b2ed834da6a860ee30c8810dc2da005af/src/use-timeout.ts#L12)
+[use-timeout.ts:12](https://github.com/chaance/hooks/blob/0cacdc50fca9d664ac982d22f2ca80053abd43bf/src/use-timeout.ts#L12)

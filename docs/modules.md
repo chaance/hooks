@@ -17,6 +17,7 @@
 - [use-interval](use-interval/README.md)
 - [use-is-hydrated](use-is-hydrated/README.md)
 - [use-layout-effect](use-layout-effect/README.md)
+- [use-lazy-ref](use-lazy-ref/README.md)
 - [use-map](use-map/README.md)
 - [use-match-media](use-match-media/README.md)
 - [use-prefers-reduced-motion](use-prefers-reduced-motion/README.md)
