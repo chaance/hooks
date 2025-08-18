@@ -81,6 +81,12 @@
 				"require": "./dist/use-constant.cjs",
 				"default": "./dist/use-constant.js"
 			},
+			"./use-controllable-state": {
+				"types": "./dist/use-controllable-state.d.ts",
+				"import": "./dist/use-controllable-state.js",
+				"require": "./dist/use-controllable-state.cjs",
+				"default": "./dist/use-controllable-state.js"
+			},
 			"./use-effect-event": {
 				"types": "./dist/use-effect-event.d.ts",
 				"import": "./dist/use-effect-event.js",
