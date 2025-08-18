@@ -1,3 +1,7 @@
+## v0.6.1
+
+- Added `useControllableState` and `useLazyRef` hooks
+
 ## v0.6.0
 
 ### Breaking Changes
